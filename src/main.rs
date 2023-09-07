@@ -14,20 +14,21 @@ use update_worker::UpdateWorker;
 
 type DbState = Vec<String>;
 type Query = String;
+type Subject = String;
 
 #[derive(Parser)]
 struct Opts {
     #[clap(short = 'r', long)]
     num_random_readers: usize,
 
+    #[clap(long, default_value_t = 500)]
+    random_reader_period_ms: u64,
+
     #[clap(short = 'w', long)]
     num_update_workers: usize,
 
     #[clap(short = 'q', long)]
     query_dir: PathBuf,
-
-    #[clap(long)]
-    random_reader_period_ms: u64,
 
     query_endpoint: Url,
     update_endpoint: Url,
@@ -42,22 +43,22 @@ async fn main() -> anyhow::Result<()> {
     let (update_workers, random_read_workers) = {
         let mut update_workers = Vec::with_capacity(opts.num_update_workers);
         for worker in 1..=opts.num_update_workers {
-            let mut w = UpdateWorker::new(
-                Path::new(&format!("rdf/worker_{worker}")),
+            let w = UpdateWorker::new(
+                worker,
+                Path::new(&opts.query_dir.join(format!("worker_{worker}"))),
                 opts.query_endpoint.clone(),
                 opts.update_endpoint.clone(),
             )?;
 
-            w.prepare().await?;
             update_workers.push(w);
         }
 
         let mut random_read_workers = Vec::with_capacity(opts.num_random_readers);
-        let query = std::fs::read_to_string(opts.query_dir.join("random_read.sparql"))?;
+        let random_read_query = std::fs::read_to_string(opts.query_dir.join("random_read.ru"))?;
 
         for _ in 0..opts.num_random_readers {
             let w = RandomReadWorker::new(
-                query.clone(),
+                random_read_query.clone(),
                 Duration::from_millis(opts.random_reader_period_ms),
                 opts.query_endpoint.clone(),
             );
@@ -76,7 +77,7 @@ async fn main() -> anyhow::Result<()> {
 
         tokio::spawn(async move {
             start_barrier.wait().await;
-            tracing::info!("Starting update worker {worker_id}");
+            tracing::info!("Starting update worker {}", worker_id + 1);
 
             if let Err(e) = update_worker.execute().await {
                 tracing::error!("{e}");
@@ -94,7 +95,7 @@ async fn main() -> anyhow::Result<()> {
 
         tokio::spawn(async move {
             start_barrier.wait().await;
-            tracing::info!("Starting random read worker {worker_id}");
+            tracing::info!("Starting random read worker {}", worker_id + 1);
 
             if let Err(e) = rr_worker.execute(stop_notify).await {
                 tracing::error!("{e}");
