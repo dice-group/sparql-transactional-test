@@ -1,8 +1,10 @@
-use std::fmt::{Display, Formatter};
 use crate::{DbState, Query, Subject};
-use anyhow::{ensure};
-use reqwest::{Client, header, Url};
-use std::path::Path;
+use anyhow::ensure;
+use reqwest::{header, Client, Url};
+use std::{
+    fmt::{Display, Formatter},
+    path::Path,
+};
 
 #[derive(Debug)]
 pub struct DiffError {
@@ -29,7 +31,11 @@ fn format_insert_or_delete_data(f: &mut Formatter<'_>, q: &str) -> std::fmt::Res
 
 impl Display for DiffError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(f, "Unexpected result from worker {} at update {}\n\nquery:\n", self.worker_id, self.update_id)?;
+        write!(
+            f,
+            "Unexpected result from worker {} at update {}\n\nquery:\n",
+            self.worker_id, self.update_id
+        )?;
 
         if self.update.starts_with("INSERT DATA") || self.update.starts_with("DELETE DATA") {
             format_insert_or_delete_data(f, &self.update)?;
@@ -120,7 +126,13 @@ impl UpdateWorker {
 
             ensure!(
                 &actual_state == expected_state,
-                DiffError { worker_id: self.id, update_id: id, update: update.to_owned(), expected: expected_state.join("\n"), actual: actual_state.join("\n") }
+                DiffError {
+                    worker_id: self.id,
+                    update_id: id,
+                    update: update.to_owned(),
+                    expected: expected_state.join("\n"),
+                    actual: actual_state.join("\n")
+                }
             );
         }
 
