@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # creates a list of update operations (INSERT DATA or DELETE DATA) for a predefined number of workers
 # generates a directory for each worker 
 # each directory contains the the updated operations (.ru files), the validation files for each query (.nt files) and their corresponding subject (.txt files)
