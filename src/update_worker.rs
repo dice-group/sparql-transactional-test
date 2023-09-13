@@ -22,7 +22,7 @@ fn format_insert_or_delete_data(f: &mut Formatter<'_>, q: &str) -> std::fmt::Res
     writeln!(f, "{head}{{")?;
 
     for triple in body.split(". <") {
-        writeln!(f, "    <{triple} .")?;
+        writeln!(f, "    <{triple}.")?;
     }
 
     writeln!(f, "}}")?;
@@ -128,7 +128,7 @@ impl UpdateWorker {
                 &actual_state == expected_state,
                 DiffError {
                     worker_id: self.id,
-                    update_id: id,
+                    update_id: id + 1,
                     update: update.to_owned(),
                     expected: expected_state.join("\n"),
                     actual: actual_state.join("\n")
