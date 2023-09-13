@@ -48,7 +48,7 @@ do
         if [[ "$op" == "0" ]]
         # delete
         then
-            delete_template=$(grep "^$current_subject" $N_TRIPLES_FILE | head -n $template_size | tr '\n' ' ' )
+            delete_template=$(cat $N_TRIPLES_FILE | grep "^$current_subject" | grep -Ei '> _:.+?\.$' | head -n $template_size | tr '\n' ' ' )
             op_str="DELETE DATA { $delete_template }"
             echo $op_str > "$worker_dir/op_$j.ru"
         # insert
@@ -63,7 +63,7 @@ do
             echo $op_str > "$worker_dir/op_$j.ru"
         fi
         curl -X POST "$UPDATE_ENDPOINT_URL" -H 'Content-Type: application/sparql-update' -d "$op_str" 
-        curl -G --data-urlencode "query=CONSTRUCT WHERE { $current_subject ?p ?o }" "$ENDPOINT_URL" -H 'Accept: text/plain' > "$worker_dir/op_$j.nt"
+        curl -G --data-urlencode "query=CONSTRUCT { $current_subject ?p ?o } WHERE { $current_subject ?p ?o . FILTER(!isBlank(?o)) }" "$ENDPOINT_URL" -H 'Accept: text/plain' > "$worker_dir/op_$j.nt"
         echo $current_subject > "$worker_dir/op_$j.txt"
     done
     # increase current subject counter by N_OPERATIONS -> no overlap between workers

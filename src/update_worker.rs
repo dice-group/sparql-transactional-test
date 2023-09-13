@@ -60,7 +60,7 @@ pub struct UpdateWorker {
 
 impl UpdateWorker {
     fn make_verify_query(subject: &str) -> String {
-        format!("CONSTRUCT WHERE {{ {subject} ?p ?o }}")
+        format!("CONSTRUCT {{ {subject} ?p ?o }} WHERE {{ {subject} ?p ?o . FILTER(!isBlank(?o)) }}")
     }
 
     pub fn new(id: usize, base_dir: &Path, query_endpoint: Url, update_endpoint: Url) -> anyhow::Result<Self> {
