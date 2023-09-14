@@ -50,7 +50,7 @@ do
         if [[ "$op" == "0" ]]
         # delete
         then
-            delete_template=$(cat $N_TRIPLES_FILE | grep "^$current_subject" | grep -Ei '> _:.+?\.$' | head -n $template_size | tr '\n' ' ' )
+            delete_template=$(cat $N_TRIPLES_FILE | grep "^$current_subject" | grep -Ev '> _:.+?\.$' | head -n $template_size | tr '\n' ' ' )
             op_str="DELETE DATA { $delete_template }"
             echo $op_str > "$worker_dir/op_$j.ru"
         # insert
