@@ -13,3 +13,4 @@ clap = { version = "4.3.12", features = ["derive", "string"] }
 tracing = "0.1.37"
 tracing-subscriber = "0.3.17"
 prettydiff = "0.6.4"
+rand = "0.8.5"

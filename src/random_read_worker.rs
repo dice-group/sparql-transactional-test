@@ -1,22 +1,29 @@
-use crate::Query;
+use crate::{Query, QPS};
 use reqwest::{Client, Url};
-use std::{sync::Arc, time::Duration};
+use std::{
+    sync::{
+        atomic::{AtomicUsize, Ordering},
+        Arc,
+    },
+    time::Instant,
+};
 use tokio::sync::Notify;
 
 pub struct RandomReadWorker {
     endpoint: Url,
     client: Client,
     query: Query,
-    period: Duration,
 }
 
 impl RandomReadWorker {
-    pub fn new(query: Query, period: Duration, endpoint: Url) -> Self {
-        Self { endpoint, client: Client::new(), query, period }
+    pub fn new(query: Query, endpoint: Url) -> Self {
+        Self { endpoint, client: Client::new(), query }
     }
 
-    pub async fn execute(&self, stop: Arc<Notify>) -> anyhow::Result<()> {
-        let task = async move {
+    pub async fn execute(&self, stop: Arc<Notify>) -> anyhow::Result<QPS> {
+        let n_queries = AtomicUsize::new(0);
+
+        let task = async {
             loop {
                 self.client
                     .get(self.endpoint.clone())
@@ -25,13 +32,20 @@ impl RandomReadWorker {
                     .await?
                     .error_for_status()?;
 
-                tokio::time::sleep(self.period).await;
+                n_queries.fetch_add(1, Ordering::Relaxed);
             }
         };
 
-        tokio::select! {
+        let start_time = Instant::now();
+
+        let res = tokio::select! {
             _ = stop.notified() => Ok(()),
             res = task => res,
-        }
+        };
+
+        let end_time = Instant::now();
+
+        let qps = n_queries.load(Ordering::Relaxed) as f64 / end_time.duration_since(start_time).as_secs_f64();
+        res.map(|_| qps)
     }
 }
