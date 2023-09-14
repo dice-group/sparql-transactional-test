@@ -1,4 +1,4 @@
-use crate::{Query, QPS};
+use crate::QPS;
 use reqwest::{Client, Url};
 use std::{
     sync::{
@@ -7,27 +7,42 @@ use std::{
     },
     time::Instant,
 };
+use rand::Rng;
 use tokio::sync::Notify;
+
+pub trait QueryGenerator {
+    fn next_query(&mut self) -> String;
+}
+
+pub struct RandomLimitSelectStartQueryGenerator;
+
+impl QueryGenerator for RandomLimitSelectStartQueryGenerator {
+    fn next_query(&mut self) -> String {
+        let limit = rand::thread_rng().gen_range(200..500);
+        format!("SELECT * WHERE {{ ?s ?p ?o }} LIMIT {limit}")
+    }
+}
+
 
 pub struct RandomReadWorker {
     endpoint: Url,
     client: Client,
-    query: Query,
+    query_gen: Box<dyn QueryGenerator + Send>,
 }
 
 impl RandomReadWorker {
-    pub fn new(query: Query, endpoint: Url) -> Self {
-        Self { endpoint, client: Client::new(), query }
+    pub fn new(query_gen: Box<dyn QueryGenerator + Send>, endpoint: Url) -> Self {
+        Self { endpoint, client: Client::new(), query_gen }
     }
 
-    pub async fn execute(&self, stop: Arc<Notify>) -> anyhow::Result<QPS> {
+    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<QPS> {
         let n_queries = AtomicUsize::new(0);
 
         let task = async {
             loop {
                 self.client
                     .get(self.endpoint.clone())
-                    .query(&[("query", &self.query)])
+                    .query(&[("query", &self.query_gen.next_query())])
                     .send()
                     .await?
                     .error_for_status()?;

@@ -2,8 +2,7 @@ mod random_read_worker;
 mod update_worker;
 
 use clap::Parser;
-use rand::Rng;
-use random_read_worker::RandomReadWorker;
+use random_read_worker::{RandomLimitSelectStartQueryGenerator, RandomReadWorker};
 use reqwest::Url;
 use std::{
     path::{Path, PathBuf},
@@ -56,10 +55,8 @@ fn make_random_readers(query_endpoint: &Url, num_random_readers: usize) -> Vec<R
     let mut random_read_workers = Vec::with_capacity(num_random_readers);
 
     for _ in 0..num_random_readers {
-        let limit = rand::thread_rng().gen_range(100..500);
-
         let w = RandomReadWorker::new(
-            format!("SELECT * WHERE {{ ?s ?p ?o }} LIMIT {limit}"),
+            Box::new(RandomLimitSelectStartQueryGenerator),
             query_endpoint.clone(),
         );
         random_read_workers.push(w);
@@ -136,7 +133,7 @@ async fn main() -> anyhow::Result<()> {
 
     let stop_notify = Arc::new(Notify::new());
 
-    for (worker_id, rr_worker) in random_read_workers.into_iter().enumerate() {
+    for (worker_id, mut rr_worker) in random_read_workers.into_iter().enumerate() {
         let start_barrier = start_barrier.clone();
         let finished_tx = finished_tx.clone();
         let stop_notify = stop_notify.clone();
