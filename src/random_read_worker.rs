@@ -1,28 +1,60 @@
-use crate::QPS;
+use crate::{Query, QPS};
+use rand::Rng;
 use reqwest::{Client, Url};
 use std::{
+    borrow::Cow,
+    io,
+    path::Path,
     sync::{
         atomic::{AtomicUsize, Ordering},
         Arc,
     },
     time::Instant,
 };
-use rand::Rng;
 use tokio::sync::Notify;
 
 pub trait QueryGenerator {
-    fn next_query(&mut self) -> String;
+    fn next_query(&mut self) -> Cow<str>;
 }
 
+#[derive(Copy, Clone)]
 pub struct RandomLimitSelectStartQueryGenerator;
 
 impl QueryGenerator for RandomLimitSelectStartQueryGenerator {
-    fn next_query(&mut self) -> String {
+    fn next_query(&mut self) -> Cow<str> {
         let limit = rand::thread_rng().gen_range(200..500);
-        format!("SELECT * WHERE {{ ?s ?p ?o }} LIMIT {limit}")
+        Cow::Owned(format!("SELECT * WHERE {{ ?s ?p ?o }} LIMIT {limit}"))
     }
 }
 
+#[derive(Clone)]
+pub struct FileSourceQueryGenerator {
+    queries: Vec<Query>,
+    ix: usize,
+}
+
+impl FileSourceQueryGenerator {
+    pub fn new<P: AsRef<Path>>(query_file: P) -> io::Result<Self> {
+        let query_file = query_file.as_ref();
+
+        let queries = std::fs::read_to_string(query_file)?
+            .lines()
+            .filter(|l| !l.is_empty())
+            .map(ToOwned::to_owned)
+            .collect();
+
+        Ok(Self { queries, ix: 0 })
+    }
+}
+
+impl QueryGenerator for FileSourceQueryGenerator {
+    fn next_query(&mut self) -> Cow<str> {
+        let cur_ix = self.ix;
+        self.ix = (self.ix + 1) % self.queries.len();
+
+        Cow::Borrowed(&self.queries[cur_ix])
+    }
+}
 
 pub struct RandomReadWorker {
     endpoint: Url,

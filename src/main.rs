@@ -1,6 +1,7 @@
 mod random_read_worker;
 mod update_worker;
 
+use crate::random_read_worker::{FileSourceQueryGenerator, QueryGenerator};
 use clap::Parser;
 use random_read_worker::{RandomLimitSelectStartQueryGenerator, RandomReadWorker};
 use reqwest::Url;
@@ -18,10 +19,19 @@ type Subject = String;
 type QPS = f64;
 
 #[derive(Parser)]
+struct ReaderOpts {
+    #[clap(short = 'r', long)]
+    num_random_read_workers: usize,
+
+    #[clap(short = 'q', long)]
+    random_read_workers_query_file: Option<PathBuf>,
+}
+
+#[derive(Parser)]
 enum Opts {
     Stress {
-        #[clap(short = 'r', long)]
-        num_random_readers: usize,
+        #[clap(flatten)]
+        reader_opts: ReaderOpts,
 
         #[clap(short = 't', long)]
         duration_s: u64,
@@ -29,17 +39,17 @@ enum Opts {
         query_endpoint: Url,
     },
     Verify {
-        #[clap(short = 'r', long)]
-        num_random_read_workers: usize,
+        #[clap(flatten)]
+        reader_opts: ReaderOpts,
 
         #[clap(short = 'w', long)]
         num_update_workers: usize,
 
+        #[clap(short = 'Q', long)]
+        update_query_dir: PathBuf,
+
         #[clap(short = 't', long, default_value_t = 0)]
         runtime_s: u64,
-
-        #[clap(short = 'q', long)]
-        query_dir: PathBuf,
 
         query_endpoint: Url,
         update_endpoint: Url,
@@ -51,18 +61,24 @@ enum WorkerType {
     Reader,
 }
 
-fn make_random_readers(query_endpoint: &Url, num_random_readers: usize) -> Vec<RandomReadWorker> {
-    let mut random_read_workers = Vec::with_capacity(num_random_readers);
+fn make_random_readers(
+    query_endpoint: &Url,
+    ReaderOpts { num_random_read_workers, random_read_workers_query_file }: &ReaderOpts,
+) -> anyhow::Result<Vec<RandomReadWorker>> {
+    let mut random_read_workers = Vec::with_capacity(*num_random_read_workers);
 
-    for _ in 0..num_random_readers {
-        let w = RandomReadWorker::new(
-            Box::new(RandomLimitSelectStartQueryGenerator),
-            query_endpoint.clone(),
-        );
+    for _ in 0..*num_random_read_workers {
+        let query_gen: Box<dyn QueryGenerator + Send> = if let Some(query_file) = &random_read_workers_query_file {
+            Box::new(FileSourceQueryGenerator::new(query_file)?)
+        } else {
+            Box::new(RandomLimitSelectStartQueryGenerator)
+        };
+
+        let w = RandomReadWorker::new(query_gen, query_endpoint.clone());
         random_read_workers.push(w);
     }
 
-    random_read_workers
+    Ok(random_read_workers)
 }
 
 fn make_update_workers(
@@ -93,19 +109,19 @@ async fn main() -> anyhow::Result<()> {
     tracing_subscriber::fmt::init();
 
     let (update_workers, random_read_workers) = match opts {
-        Opts::Stress { num_random_readers, duration_s: _, ref query_endpoint } => {
-            (vec![], make_random_readers(query_endpoint, num_random_readers))
+        Opts::Stress { ref reader_opts, duration_s: _, ref query_endpoint } => {
+            (vec![], make_random_readers(query_endpoint, reader_opts)?)
         },
         Opts::Verify {
-            num_random_read_workers,
+            ref reader_opts,
             num_update_workers,
             runtime_s: _,
-            ref query_dir,
+            ref update_query_dir,
             ref query_endpoint,
             ref update_endpoint,
         } => (
-            make_update_workers(query_endpoint, update_endpoint, num_update_workers, query_dir)?,
-            make_random_readers(query_endpoint, num_random_read_workers),
+            make_update_workers(query_endpoint, update_endpoint, num_update_workers, update_query_dir)?,
+            make_random_readers(query_endpoint, reader_opts)?,
         ),
     };
 
