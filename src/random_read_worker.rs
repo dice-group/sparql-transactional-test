@@ -11,6 +11,7 @@ use std::{
     },
     time::Instant,
 };
+use rand::seq::SliceRandom;
 use tokio::sync::Notify;
 
 pub trait QueryGenerator {
@@ -50,6 +51,10 @@ impl FileSourceQueryGenerator {
 impl QueryGenerator for FileSourceQueryGenerator {
     fn next_query(&mut self) -> Cow<str> {
         let cur_ix = self.ix;
+        if cur_ix == 0 {
+            self.queries.shuffle(&mut rand::thread_rng());
+        }
+
         self.ix = (self.ix + 1) % self.queries.len();
 
         Cow::Borrowed(&self.queries[cur_ix])
