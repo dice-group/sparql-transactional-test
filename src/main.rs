@@ -178,6 +178,7 @@ async fn main() -> anyhow::Result<()> {
     let mut n_readers_finished = 0;
     let mut n_errors = 0;
     let mut qps_sum = 0.0;
+    let mut iguana_qps_sum = 0.0;
 
     while let Some((wtype, wid, res)) = finished_rx.recv().await {
         if let Err(e) = res.as_ref() {
@@ -213,6 +214,7 @@ async fn main() -> anyhow::Result<()> {
 
                     tracing::info!("Reader {} achieved {qps} QPS / {iguana_qps} IGUANA QPS and spent {total_secs:.2} seconds / {iguana_total_secs:.2} IGUANA seconds querying", wid + 1);
                     qps_sum += qps;
+                    iguana_qps_sum += iguana_qps;
                 }
             },
         }
@@ -223,8 +225,9 @@ async fn main() -> anyhow::Result<()> {
     }
 
     tracing::info!(
-        "The readers achieved {} AvgQPS",
-        qps_sum / num_random_read_workers as f64
+        "The readers achieved {} AvgQPS / {} IGUANA AvgQPS",
+        qps_sum / num_random_read_workers as f64,
+        iguana_qps_sum / num_random_read_workers as f64,
     );
 
     Ok(())
