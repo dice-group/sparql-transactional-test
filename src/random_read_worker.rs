@@ -1,18 +1,11 @@
-use crate::{Query, QPS};
-use rand::Rng;
+use crate::Query;
+use rand::{seq::SliceRandom, Rng};
 use reqwest::{Client, Url};
-use std::{
-    borrow::Cow,
-    io,
-    path::Path,
-    sync::{
-        atomic::{AtomicUsize, Ordering},
-        Arc,
-    },
-    time::Instant,
+use std::{borrow::Cow, io, path::Path, sync::Arc};
+use tokio::{
+    sync::Notify,
+    time::{Duration, Instant},
 };
-use rand::seq::SliceRandom;
-use tokio::sync::Notify;
 
 pub trait QueryGenerator {
     fn next_query(&mut self) -> Cow<str>;
@@ -72,32 +65,36 @@ impl RandomReadWorker {
         Self { endpoint, client: Client::new(), query_gen }
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<QPS> {
-        let n_queries = AtomicUsize::new(0);
-
-        let task = async {
-            loop {
-                self.client
-                    .get(self.endpoint.clone())
-                    .query(&[("query", &self.query_gen.next_query())])
-                    .send()
-                    .await?
-                    .error_for_status()?;
-
-                n_queries.fetch_add(1, Ordering::Relaxed);
-            }
-        };
+    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<(Vec<Duration>, Duration)> {
+        let mut query_times = vec![];
 
         let start_time = Instant::now();
 
-        let res = tokio::select! {
-            _ = stop.notified() => Ok(()),
-            res = task => res,
+        let worker = async {
+            loop {
+                let query = self
+                    .client
+                    .get(self.endpoint.clone())
+                    .query(&[("query", &self.query_gen.next_query())])
+                    .send();
+
+                let start = Instant::now();
+                let resp = query.await?.error_for_status()?.text().await?;
+                std::hint::black_box(resp);
+                let end = Instant::now();
+
+                query_times.push(end.duration_since(start));
+            }
         };
 
-        let end_time = Instant::now();
+        let success: anyhow::Result<()> = tokio::select! {
+            res = worker => res,
+            _ = stop.notified() => Ok(())
+        };
 
-        let qps = n_queries.load(Ordering::Relaxed) as f64 / end_time.duration_since(start_time).as_secs_f64();
-        res.map(|_| qps)
+        success?;
+
+        let end_time = Instant::now();
+        Ok((query_times, end_time.duration_since(start_time)))
     }
 }

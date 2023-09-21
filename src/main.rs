@@ -16,7 +16,6 @@ use update_worker::UpdateWorker;
 type DbState = Vec<String>;
 type Query = String;
 type Subject = String;
-type QPS = f64;
 
 #[derive(Parser)]
 struct ReaderOpts {
@@ -141,7 +140,11 @@ async fn main() -> anyhow::Result<()> {
 
             let res = update_worker.execute().await;
             finished_tx
-                .send((WorkerType::Update, worker_id, res.map(|_| 0.0)))
+                .send((
+                    WorkerType::Update,
+                    worker_id,
+                    res.map(|_| (vec![], Duration::from_secs(0))),
+                ))
                 .await
                 .unwrap();
         });
@@ -164,7 +167,7 @@ async fn main() -> anyhow::Result<()> {
     }
 
     start_barrier.wait().await;
-    let start_time = std::time::Instant::now();
+    let start_time = tokio::time::Instant::now();
 
     if let Opts::Stress { duration_s, .. } = opts {
         tokio::time::sleep(Duration::from_secs(duration_s)).await;
@@ -187,7 +190,7 @@ async fn main() -> anyhow::Result<()> {
                 n_writers_finished += 1;
 
                 if n_writers_finished == num_update_workers {
-                    let end_time = std::time::Instant::now();
+                    let end_time = tokio::time::Instant::now();
 
                     tracing::info!(
                         "All updates completed in {}ms, {n_errors} workers encountered errors",
@@ -199,8 +202,16 @@ async fn main() -> anyhow::Result<()> {
             WorkerType::Reader => {
                 n_readers_finished += 1;
 
-                if let Ok(qps) = res {
-                    tracing::info!("Reader {} achieved {qps} QPS", wid + 1);
+                if let Ok((query_timings, total_time)) = res {
+                    let qps = query_timings.len() as f64 / total_time.as_secs_f64();
+
+                    let iguana_qps =
+                        query_timings.iter().map(|d| 1.0 / d.as_secs_f64()).sum::<f64>() / query_timings.len() as f64;
+
+                    let total_secs = total_time.as_secs_f64();
+                    let iguana_total_secs = query_timings.iter().sum::<Duration>().as_secs_f64();
+
+                    tracing::info!("Reader {} achieved {qps} QPS / {iguana_qps} IGUANA QPS and spent {total_secs:.2} seconds / {iguana_total_secs:.2} IGUANA seconds querying", wid + 1);
                     qps_sum += qps;
                 }
             },
