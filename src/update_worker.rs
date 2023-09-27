@@ -1,5 +1,5 @@
 use crate::{DbState, Query, Subject};
-use anyhow::ensure;
+use anyhow::{Context, ensure};
 use reqwest::{header, Client, Url};
 use std::{
     fmt::{Display, Formatter},
@@ -75,9 +75,14 @@ impl UpdateWorker {
                 break;
             }
 
-            let subject = std::fs::read_to_string(subject)?;
-            let update = std::fs::read_to_string(update)?;
-            let mut update_result: Vec<_> = std::fs::read_to_string(update_result)?
+            let subject = std::fs::read_to_string(&subject)
+                .context(format!("Worker {id} is unable to read subject of query {op} from {}", subject.display()))?;
+
+            let update = std::fs::read_to_string(&update)
+                .context(format!("Worker {id} is unable to read update of query {op} from {}", update.display()))?;
+
+            let mut update_result: Vec<_> = std::fs::read_to_string(&update_result)
+                .context(format!("Worker {id} is unable to read result of query {op} from {}", update_result.display()))?
                 .lines()
                 .map(ToOwned::to_owned)
                 .collect();
