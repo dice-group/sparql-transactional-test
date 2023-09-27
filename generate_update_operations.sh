@@ -31,7 +31,7 @@ readarray -t subjects_array <<<"$subjects"
 current_subject_counter=0
 
 # iterate over the number of workers
-for ((i=0;i<N_WORKERS;i++));
+for ((i=1;i<=N_WORKERS;i++));
 do
     # create directory for the worker
     worker_dir=$OUTPUT_DIRECTORY/worker_"$i"
