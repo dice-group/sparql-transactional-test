@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/research/91> .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "19772055ed41bc7cc69398ddf428149c731d21b4" .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://www.example.org/test> "355" .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://xmlns.com/foaf/0.1/name> "Ahmad Iqbal" .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-new-south-wales> .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-ict-australia> .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://www.w3.org/2000/01/rdf-schema#label> "Ahmad Iqbal" .
+<http://data.semanticweb.org/person/ahmad-iqbal> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Australia> .

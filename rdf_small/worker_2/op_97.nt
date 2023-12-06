@@ -1,0 +1,14 @@
+<http://data.semanticweb.org/person/alberto-massari> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/eu/13> .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.example.org/test> "576" .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.example.org/test> "579" .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.example.org/test> "575" .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.example.org/test> "578" .
+<http://data.semanticweb.org/person/alberto-massari> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "475d7a8db825066c01eaec723e46cf68dfb17d8e" .
+<http://data.semanticweb.org/person/alberto-massari> <http://xmlns.com/foaf/0.1/lastName> "Massari" .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.w3.org/2000/01/rdf-schema#label> "Alberto Massari" .
+<http://data.semanticweb.org/person/alberto-massari> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-genova> .
+<http://data.semanticweb.org/person/alberto-massari> <http://xmlns.com/foaf/0.1/firstName> "Alberto" .
+<http://data.semanticweb.org/person/alberto-massari> <http://xmlns.com/foaf/0.1/name> "Alberto Massari" .
+<http://data.semanticweb.org/person/alberto-massari> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/alberto-massari> <http://www.example.org/test> "577" .

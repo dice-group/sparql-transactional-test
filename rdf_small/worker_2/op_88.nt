@@ -1,0 +1,14 @@
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.example.org/test> "548" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.example.org/test> "553" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.example.org/test> "552" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Alastair_Weakley> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Alastair_Weakley> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.example.org/test> "551" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.example.org/test> "550" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Alastair_Weakley> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/511> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/creativity-cognition-studios> .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "33cf536864263aece06dc1fdf511b9109807458c" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://www.example.org/test> "549" .
+<http://data.semanticweb.org/person/alastair-weakley> <http://xmlns.com/foaf/0.1/name> "Alastair Weakley" .

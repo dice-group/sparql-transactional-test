@@ -1,0 +1,20 @@
+<http://data.semanticweb.org/person/adam-barth> <http://www.example.org/test> "130" .
+<http://data.semanticweb.org/person/adam-barth> <http://www.example.org/test> "129" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/lastName> "Barth" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9770b7e1a81ef91e9573770a23608b8bd95563a3" .
+<http://data.semanticweb.org/person/adam-barth> <http://www.example.org/test> "127" .
+<http://data.semanticweb.org/person/adam-barth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-barth> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Barth" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "a992c024cd0319f000404a4a7f97047060306110" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5952028c1675c3abc5035d98cc8df602d0546f76" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/adam-barth> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/security-track-committee-member> .
+<http://data.semanticweb.org/person/adam-barth> <http://www.example.org/test> "128" .
+<http://data.semanticweb.org/person/adam-barth> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/name> "Adam Barth" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/firstName> "Adam" .
+<http://data.semanticweb.org/person/adam-barth> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-berkeley> .
+<http://data.semanticweb.org/person/adam-barth> <http://www.example.org/test> "126" .
+<http://data.semanticweb.org/person/adam-barth> <http://www.example.org/test> "131" .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/872> .
+<http://data.semanticweb.org/person/adam-barth> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2008/paper/524> .

@@ -1,0 +1,20 @@
+<http://data.semanticweb.org/person/aiman-erbad> <http://xmlns.com/foaf/0.1/firstName> "Aiman" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "408" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "403" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "407" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "400" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ec30812422f527d7a2289d4619f1451cbd8f94d4" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/paper/104/talk/speaker> .
+<http://data.semanticweb.org/person/aiman-erbad> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-british-columbia> .
+<http://data.semanticweb.org/person/aiman-erbad> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "402" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aiman-erbad> <http://xmlns.com/foaf/0.1/name> "Aiman Erbad" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "406" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "401" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/104> .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "399" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.w3.org/2000/01/rdf-schema#label> "Aiman Erbad" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "404" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://xmlns.com/foaf/0.1/lastName> "Erbad" .
+<http://data.semanticweb.org/person/aiman-erbad> <http://www.example.org/test> "405" .

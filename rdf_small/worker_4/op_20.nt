@@ -1,0 +1,18 @@
+<http://data.semanticweb.org/person/alexandre-gerber> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/at-t-labs-research> .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/name> "Alexandre Gerber" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/firstName> "Alexandre" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/lastName> "Gerber" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "886" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/family_name> "Gerber" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "884" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "885" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.w3.org/2000/01/rdf-schema#label> "Alexandre Gerber" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "883" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/17> .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/30> .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "882" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "bdf03d67156fb0f2a33e46fa41f3cbe3a514bab3" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "881" .
+<http://data.semanticweb.org/person/alexandre-gerber> <http://www.example.org/test> "880" .

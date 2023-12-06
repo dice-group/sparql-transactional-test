@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/alberto-simoes> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/760> .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.w3.org/2000/01/rdf-schema#label> "Alberto Simões" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.example.org/test> "588" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://xmlns.com/foaf/0.1/name> "Alberto Simões" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.example.org/test> "587" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.example.org/test> "586" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.example.org/test> "585" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.example.org/test> "584" .
+<http://data.semanticweb.org/person/alberto-simoes> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universidade-do-minho> .
+<http://data.semanticweb.org/person/alberto-simoes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

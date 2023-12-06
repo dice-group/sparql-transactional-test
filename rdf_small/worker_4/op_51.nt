@@ -1,0 +1,17 @@
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "977" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2013/semantic-technologies-coordinator> .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "975" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "979" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "978" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "981" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://xmlns.com/foaf/0.1/lastName> "Oberhauser" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "976" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "972" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "973" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "980" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://xmlns.com/foaf/0.1/name> "Alex Oberhauser" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.example.org/test> "974" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://xmlns.com/foaf/0.1/firstName> "Alex" .
+<http://data.semanticweb.org/person/alex-oberhauser> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Oberhauser" .

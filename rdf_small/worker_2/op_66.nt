@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/alain-giboin> <http://xmlns.com/foaf/0.1/name> "Alain Giboin" .
+<http://data.semanticweb.org/person/alain-giboin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2010/main/pcmember> .
+<http://data.semanticweb.org/person/alain-giboin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .
+<http://data.semanticweb.org/person/alain-giboin> <http://xmlns.com/foaf/0.1/lastName> "Giboin" .
+<http://data.semanticweb.org/person/alain-giboin> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
+<http://data.semanticweb.org/person/alain-giboin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/VISSW/2009/main/pcmember> .
+<http://data.semanticweb.org/person/alain-giboin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/proceedings/paper-31> .
+<http://data.semanticweb.org/person/alain-giboin> <http://xmlns.com/foaf/0.1/firstName> "Alain" .
+<http://data.semanticweb.org/person/alain-giboin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inria-rhone-alpes> .
+<http://data.semanticweb.org/person/alain-giboin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inria-sophia-antipolis-mediterranee> .

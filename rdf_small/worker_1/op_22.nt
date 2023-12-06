@@ -1,0 +1,17 @@
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "71" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "64" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "69" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "65" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.w3.org/2000/01/rdf-schema#label> "Abhita Chugh" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "67" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8a5e6d67c8c4cc0428e475e1ad74d0a511160986" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://xmlns.com/foaf/0.1/family_name> "Chugh" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://xmlns.com/foaf/0.1/firstName> "Abhita" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "70" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2006/paper-32> .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "66" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "68" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://www.example.org/test> "63" .
+<http://data.semanticweb.org/person/abhita-chugh> <http://xmlns.com/foaf/0.1/name> "Abhita Chugh" .

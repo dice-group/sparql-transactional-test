@@ -1,0 +1,20 @@
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "443" .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aixin-sun> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Singapore> .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "437" .
+<http://data.semanticweb.org/person/aixin-sun> <http://xmlns.com/foaf/0.1/firstName> "Aixin" .
+<http://data.semanticweb.org/person/aixin-sun> <http://xmlns.com/foaf/0.1/name> "Aixin Sun" .
+<http://data.semanticweb.org/person/aixin-sun> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/demo/28/talk/speaker> .
+<http://data.semanticweb.org/person/aixin-sun> <http://xmlns.com/foaf/0.1/lastName> "Sun" .
+<http://data.semanticweb.org/person/aixin-sun> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/demo/28> .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "438" .
+<http://data.semanticweb.org/person/aixin-sun> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/nanyang-technological-university> .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "442" .
+<http://data.semanticweb.org/person/aixin-sun> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/msnd/2012/programme-committee-member> .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "441" .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "436" .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "435" .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.w3.org/2000/01/rdf-schema#label> "Aixin Sun" .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "439" .
+<http://data.semanticweb.org/person/aixin-sun> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5a1e9f7f98a3ea4a3e5987afcbbe2f8bd4a98a14" .
+<http://data.semanticweb.org/person/aixin-sun> <http://www.example.org/test> "440" .

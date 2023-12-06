@@ -1,0 +1,12 @@
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "28" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "32" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/172> .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "34" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "33" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-francois-rabelais-tours> .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "30" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "31" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://xmlns.com/foaf/0.1/name> "Abdenour Mokrane" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.example.org/test> "29" .
+<http://data.semanticweb.org/person/abdenour-mokrane> <http://www.w3.org/2000/01/rdf-schema#label> "Abdenour Mokrane" .

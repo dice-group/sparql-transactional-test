@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/alex-halderman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alex-halderman> <http://www.example.org/test> "959" .
+<http://data.semanticweb.org/person/alex-halderman> <http://xmlns.com/foaf/0.1/name> "Alex Halderman" .
+<http://data.semanticweb.org/person/alex-halderman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-michigan-at-ann-arbor-usa> .
+<http://data.semanticweb.org/person/alex-halderman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "33bb34afcdcc377c019f1c460b83fc5fd1731248" .
+<http://data.semanticweb.org/person/alex-halderman> <http://www.example.org/test> "958" .
+<http://data.semanticweb.org/person/alex-halderman> <http://www.example.org/test> "960" .
+<http://data.semanticweb.org/person/alex-halderman> <http://www.example.org/test> "957" .
+<http://data.semanticweb.org/person/alex-halderman> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Halderman" .
+<http://data.semanticweb.org/person/alex-halderman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/613> .

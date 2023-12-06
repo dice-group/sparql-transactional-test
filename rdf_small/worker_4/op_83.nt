@@ -1,0 +1,9 @@
+<http://data.semanticweb.org/person/ali-martinez> <http://www.example.org/test> "1041" .
+<http://data.semanticweb.org/person/ali-martinez> <http://www.example.org/test> "1040" .
+<http://data.semanticweb.org/person/ali-martinez> <http://www.example.org/test> "1039" .
+<http://data.semanticweb.org/person/ali-martinez> <http://www.example.org/test> "1038" .
+<http://data.semanticweb.org/person/ali-martinez> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universidad-nacional-autonoma-de-mexico> .
+<http://data.semanticweb.org/person/ali-martinez> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/poster/ab-691> .
+<http://data.semanticweb.org/person/ali-martinez> <http://xmlns.com/foaf/0.1/name> "Alí Martínez" .
+<http://data.semanticweb.org/person/ali-martinez> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ali-martinez> <http://www.w3.org/2000/01/rdf-schema#label> "Alí Martínez" .

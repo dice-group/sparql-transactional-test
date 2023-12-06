@@ -1,0 +1,22 @@
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/lastName> "Khalili" .
+<http://data.semanticweb.org/person/ali-khalili> <http://www.example.org/test> "1030" .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/ali-khalili> <http://www.w3.org/2000/01/rdf-schema#label> "Ali Khalili" .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/13> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/in-use/36> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/firstName> "Ali" .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/mashUp/5> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/AliKhalili> .
+<http://data.semanticweb.org/person/ali-khalili> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/name> "Ali Khalili" .
+<http://data.semanticweb.org/person/ali-khalili> <http://www.example.org/test> "1028" .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e843d4b473420b273a5835a63046f967623ee6a2" .
+<http://data.semanticweb.org/person/ali-khalili> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/leipzig-university> .
+<http://data.semanticweb.org/person/ali-khalili> <http://www.example.org/test> "1029" .
+<http://data.semanticweb.org/person/ali-khalili> <http://www.example.org/test> "1027" .
+<http://data.semanticweb.org/person/ali-khalili> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2012/paper/demonstation/304> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "60be4baa8b5973152bfcd152a5ba4d66311e5ffb" .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/depiction> <http://wit.istc.cnr.it/eswc-stc/images/authors/resized/citationsview_opview_photo&userdSMSH2wAAAAJ&citpid3.JPEG> .
+<http://data.semanticweb.org/person/ali-khalili> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universitaet-leipzig> .
+<http://data.semanticweb.org/person/ali-khalili> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ekaw/2012/paper/research/8> .

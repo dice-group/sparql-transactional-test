@@ -1,0 +1,7 @@
+<http://data.semanticweb.org/person/abelardo-pardo> <http://www.example.org/test> "52" .
+<http://data.semanticweb.org/person/abelardo-pardo> <http://xmlns.com/foaf/0.1/homepage> <http://www.it.uc3m.es/abel> .
+<http://data.semanticweb.org/person/abelardo-pardo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/carlos-iii-university-of-madrid> .
+<http://data.semanticweb.org/person/abelardo-pardo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/20> .
+<http://data.semanticweb.org/person/abelardo-pardo> <http://xmlns.com/foaf/0.1/name> "Abelardo Pardo" .
+<http://data.semanticweb.org/person/abelardo-pardo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abelardo-pardo> <http://www.w3.org/2000/01/rdf-schema#label> "Abelardo Pardo" .

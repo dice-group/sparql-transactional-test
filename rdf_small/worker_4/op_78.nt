@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/ali-dasdan> <http://xmlns.com/foaf/0.1/family_name> "Dasdan" .
+<http://data.semanticweb.org/person/ali-dasdan> <http://xmlns.com/foaf/0.1/firstName> "Ali" .
+<http://data.semanticweb.org/person/ali-dasdan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-inc> .
+<http://data.semanticweb.org/person/ali-dasdan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/145> .
+<http://data.semanticweb.org/person/ali-dasdan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/116> .
+<http://data.semanticweb.org/person/ali-dasdan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

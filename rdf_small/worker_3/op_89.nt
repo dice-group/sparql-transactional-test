@@ -1,0 +1,14 @@
+<http://data.semanticweb.org/person/alexander-kubias> <http://xmlns.com/foaf/0.1/homepage> <http://www.uni-koblenz.de/~kubias> .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Kubias" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://data.semanticweb.org/ns/swc/ontology#affiliation> "University of Koblenz-Landau" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/demo-1> .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.example.org/test> "804" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://xmlns.com/foaf/0.1/family_name> "Kubias" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.example.org/test> "806" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.example.org/test> "805" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8f4d9d5ce94a5037eb58893fe59fdc09e5ffba08" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://xmlns.com/foaf/0.1/firstName> "Alexander" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://xmlns.com/foaf/0.1/name> "Alexander Kubias" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.example.org/test> "808" .
+<http://data.semanticweb.org/person/alexander-kubias> <http://www.example.org/test> "807" .

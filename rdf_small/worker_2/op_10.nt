@@ -1,0 +1,15 @@
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "366" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "372" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/106> .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "371" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/semantic-web-in-use/38> .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "370" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://xmlns.com/foaf/0.1/name> "Ahmed Elsayed Mostafa" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-fribourg> .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "369" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "368" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "373" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.w3.org/2000/01/rdf-schema#label> "Ahmed Elsayed Mostafa" .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://xmlns.com/foaf/0.1/homepage> <http://www.linkedin.com/in/ahmedsmostafa> .
+<http://data.semanticweb.org/person/ahmed-elsayed-mostafa> <http://www.example.org/test> "367" .

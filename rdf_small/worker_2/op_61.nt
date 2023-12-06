@@ -1,0 +1,12 @@
+<http://data.semanticweb.org/person/ak-sinha> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "75753862369a787f4a8ed6d512c84e10c126bc3d" .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.example.org/test> "492" .
+<http://data.semanticweb.org/person/ak-sinha> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/virginia-tech> .
+<http://data.semanticweb.org/person/ak-sinha> <http://xmlns.com/foaf/0.1/name> "AK Sinha" .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.example.org/test> "494" .
+<http://data.semanticweb.org/person/ak-sinha> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/poster_demo/71> .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.w3.org/2000/01/rdf-schema#label> "AK Sinha" .
+<http://data.semanticweb.org/person/ak-sinha> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.example.org/test> "491" .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.example.org/test> "493" .
+<http://data.semanticweb.org/person/ak-sinha> <http://www.example.org/test> "490" .

@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.example.org/test> "295" .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.example.org/test> "297" .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.example.org/test> "294" .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.w3.org/2000/01/rdf-schema#label> "Advaith Siddharthan" .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.example.org/test> "296" .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://xmlns.com/foaf/0.1/name> "Advaith Siddharthan" .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/computer-laboratory-university-of-cambridge> .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/556> .
+<http://data.semanticweb.org/person/advaith-siddharthan> <http://www.example.org/test> "293" .

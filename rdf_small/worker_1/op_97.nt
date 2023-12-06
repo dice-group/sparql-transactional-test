@@ -1,0 +1,17 @@
+<http://data.semanticweb.org/person/agathe-merceron> <http://xmlns.com/foaf/0.1/name> "Agathe Merceron" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "313" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "319" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "c8d6eb7540c1d1df3c42bc06cb6bdf8b50eb747d" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "314" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "311" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "312" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "317" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "318" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/poster-proceedings/paper-09> .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.w3.org/2000/01/rdf-schema#label> "Agathe Merceron" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "315" .
+<http://data.semanticweb.org/person/agathe-merceron> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/beuth-university-of-applied-sciences-berlin> .
+<http://data.semanticweb.org/person/agathe-merceron> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ewfe/2012/programme-committee-member> .
+<http://data.semanticweb.org/person/agathe-merceron> <http://www.example.org/test> "316" .

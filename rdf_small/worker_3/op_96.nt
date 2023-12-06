@@ -1,0 +1,9 @@
+<http://data.semanticweb.org/person/alexander-oconnor> <http://www.example.org/test> "821" .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://www.example.org/test> "820" .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://www.example.org/test> "819" .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://www.example.org/test> "818" .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/trinity-college-dublin> .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/msw/2011/paper/8> .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://xmlns.com/foaf/0.1/name> "Alexander O?connor" .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-oconnor> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander O?connor" .

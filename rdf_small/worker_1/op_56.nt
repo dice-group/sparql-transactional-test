@@ -1,0 +1,15 @@
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/adam-wyner> <http://www.example.org/test> "208" .
+<http://data.semanticweb.org/person/adam-wyner> <http://www.example.org/test> "207" .
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/name> "Adam Wyner" .
+<http://data.semanticweb.org/person/adam-wyner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-aberdeen> .
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/lastName> "Wyner" .
+<http://data.semanticweb.org/person/adam-wyner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/firstName> "Adam" .
+<http://data.semanticweb.org/person/adam-wyner> <http://www.example.org/test> "209" .
+<http://data.semanticweb.org/person/adam-wyner> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Wyner" .
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ekaw/2012/paper/position/87> .
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "66615ded55d394c4619270a15fcf5f6c384574ee" .
+<http://data.semanticweb.org/person/adam-wyner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-liverpool> .
+<http://data.semanticweb.org/person/adam-wyner> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "c908225aab65b78307d8484c1476f87ea310cf88" .
+<http://data.semanticweb.org/person/adam-wyner> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .

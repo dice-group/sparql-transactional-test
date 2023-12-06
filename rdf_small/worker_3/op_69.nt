@@ -1,0 +1,14 @@
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/firstName> "Artikis" .
+<http://data.semanticweb.org/person/alexander-artikis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ncsr-demokritos> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ruleml-eu/2011/paper/99> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "112b7c546d2e341f9660290a496b236a1d3d6cb5" .
+<http://data.semanticweb.org/person/alexander-artikis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Greece> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://www.w3.org/2000/01/rdf-schema#comment> "152778" .
+<http://data.semanticweb.org/person/alexander-artikis> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/ruleml-eu/2011/track/event/chair> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/ruleml-eu/2011/research/pcmember> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/family_name> "Alexander" .
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/homepage> <http://www.iit.demokritos.gr/~a.artikis/> .
+<http://data.semanticweb.org/person/alexander-artikis> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Artikis" .
+<http://data.semanticweb.org/person/alexander-artikis> <http://xmlns.com/foaf/0.1/name> "Alexander Artikis" .
+<http://data.semanticweb.org/person/alexander-artikis> <http://www.example.org/test> "759" .

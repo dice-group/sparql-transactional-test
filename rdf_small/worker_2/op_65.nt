@@ -1,0 +1,12 @@
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "510" .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "507" .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.w3.org/2000/01/rdf-schema#label> "Alain Désilets" .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "511" .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "506" .
+<http://data.semanticweb.org/person/alain-desilets> <http://xmlns.com/foaf/0.1/name> "Alain Désilets" .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "509" .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "508" .
+<http://data.semanticweb.org/person/alain-desilets> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/220> .
+<http://data.semanticweb.org/person/alain-desilets> <http://www.example.org/test> "505" .
+<http://data.semanticweb.org/person/alain-desilets> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-research-council-of-canada> .

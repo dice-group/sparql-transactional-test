@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/adrien-guille> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/eric-universite-lumiere-lyon-2> .
+<http://data.semanticweb.org/person/adrien-guille> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
+<http://data.semanticweb.org/person/adrien-guille> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/msnd/2012/paper/10> .
+<http://data.semanticweb.org/person/adrien-guille> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "eb79c84496f9646a979da6ff6169904ef95f1f1b" .
+<http://data.semanticweb.org/person/adrien-guille> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adrien-guille> <http://www.w3.org/2000/01/rdf-schema#label> "Adrien Guille" .

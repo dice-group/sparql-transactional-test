@@ -1,0 +1,7 @@
+<http://data.semanticweb.org/person/alice-hermann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/insa-de-rennes> .
+<http://data.semanticweb.org/person/alice-hermann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/irisa-universite-rennes-1> .
+<http://data.semanticweb.org/person/alice-hermann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/irisa> .
+<http://data.semanticweb.org/person/alice-hermann> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
+<http://data.semanticweb.org/person/alice-hermann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/18> .
+<http://data.semanticweb.org/person/alice-hermann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/research/57> .
+<http://data.semanticweb.org/person/alice-hermann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ekaw/2012/paper/demos/7> .

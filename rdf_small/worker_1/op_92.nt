@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/adrien-yepdieu> <http://www.example.org/test> "292" .
+<http://data.semanticweb.org/person/adrien-yepdieu> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/politecnico-di-torino> .
+<http://data.semanticweb.org/person/adrien-yepdieu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-778> .
+<http://data.semanticweb.org/person/adrien-yepdieu> <http://xmlns.com/foaf/0.1/name> "Adrien Yepdieu" .
+<http://data.semanticweb.org/person/adrien-yepdieu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adrien-yepdieu> <http://www.w3.org/2000/01/rdf-schema#label> "Adrien Yepdieu" .

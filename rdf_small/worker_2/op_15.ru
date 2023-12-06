@@ -1,0 +1,1 @@
+DELETE DATA { <http://data.semanticweb.org/person/ahmet-cosar> <http://xmlns.com/foaf/0.1/name> "Ahmet Cosar" . <http://data.semanticweb.org/person/ahmet-cosar> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/17> . <http://data.semanticweb.org/person/ahmet-cosar> <http://xmlns.com/foaf/0.1/firstName> "Ahmet" . }

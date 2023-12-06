@@ -1,0 +1,25 @@
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/name> "Adeline Nazarenko" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/lipn-umr-cnrs-7030-universite-paris-13> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "210" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.w3.org/2000/01/rdf-schema#label> "Adeline Nazarenko" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.w3.org/2000/01/rdf-schema#comment> "31140" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "217" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "215" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2013/eswc-2013-track-committee-member> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ruleml-eu/2011/paper/19> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/lastName> "Nazarenko" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2539519c7c9db7a93bed21926637d58d51380d22" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "213" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "216" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "214" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/firstName> "Nazarenko" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/homepage> <http://www-lipn.univ-paris13.fr/~nazarenko/> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-paris-nord> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "211" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/firstName> "Adeline" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "218" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://www.example.org/test> "212" .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
+<http://data.semanticweb.org/person/adeline-nazarenko> <http://xmlns.com/foaf/0.1/family_name> "Adeline" .

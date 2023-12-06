@@ -1,0 +1,9 @@
+<http://data.semanticweb.org/person/alireza-rahimi> <http://www.example.org/test> "1050" .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://www.example.org/test> "1049" .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://www.example.org/test> "1048" .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-new-south-wales> .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/poster-demo-proceedings/paper-16> .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b74d4194174f9149f3dcae1e1904f485ab942dc5" .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://xmlns.com/foaf/0.1/name> "Alireza Rahimi" .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alireza-rahimi> <http://www.w3.org/2000/01/rdf-schema#label> "Alireza Rahimi" .

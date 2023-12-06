@@ -1,0 +1,22 @@
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b7fa3f5910f534d9de3f9b9b8396af685eaf44e7" .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#affiliation> "France Telecom R&D - Research" .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/session-3c/chair> .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9570c18162067dc8c4bea7b4ad45fd002e61b1b8" .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/homepage> <http://www.francetelecom.com/en/> .
+<http://data.semanticweb.org/person/alain-leger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/france-telecom-r-d-research-and-cnrs-associated-researcher> .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/pickme/2008/main/pcmember> .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/proceedings/paper-39> .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/name> "Alain Leger" .
+<http://data.semanticweb.org/person/alain-leger> <http://www.w3.org/2000/01/rdf-schema#label> "Alain Leger" .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/firstName> "Alain" .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2003/pc-member> .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5fbf9893d1fa7f2088ea6494871fbf964c38b81c" .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/pc-member-at-iswc2005-industrial-track> .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2011/programme-committee-member> .
+<http://data.semanticweb.org/person/alain-leger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/france-telekom> .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2006/paper-35> .
+<http://data.semanticweb.org/person/alain-leger> <http://www.w3.org/2000/01/rdf-schema#label> "Alain Léger" .
+<http://data.semanticweb.org/person/alain-leger> <http://xmlns.com/foaf/0.1/family_name> "Léger" .
+<http://data.semanticweb.org/person/alain-leger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/france-telecom> .
+<http://data.semanticweb.org/person/alain-leger> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/event-16/workshop-chair> .

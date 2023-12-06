@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/alipio-mario-jorge> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/faculty-of-science-university-of-porto> .
+<http://data.semanticweb.org/person/alipio-mario-jorge> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Portugal> .
+<http://data.semanticweb.org/person/alipio-mario-jorge> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/2> .
+<http://data.semanticweb.org/person/alipio-mario-jorge> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "71c1e3d39c07e07a3ca56793185eb8c46bfeea59" .
+<http://data.semanticweb.org/person/alipio-mario-jorge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alipio-mario-jorge> <http://www.w3.org/2000/01/rdf-schema#label> "Alípio Mário Jorge" .

@@ -1,0 +1,12 @@
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "380" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "374" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-santa-barbara> .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "375" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "377" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2007/paper/main/70> .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "378" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "376" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.example.org/test> "379" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://xmlns.com/foaf/0.1/name> "Ahmed Metwally" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.w3.org/2000/01/rdf-schema#label> "Ahmed Metwally" .
+<http://data.semanticweb.org/person/ahmed-metwally> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

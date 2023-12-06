@@ -1,0 +1,16 @@
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/firstName> "Alejandro" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/demo/demo-committee-member> .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "0e74635935abae455677e7cc40b117b7b58b487e" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/name> "Alejandro Jaimes" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://www.w3.org/2000/01/rdf-schema#label> "Alejandro Jaimes" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/smane/2012> .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-research> .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/lastName> "Jaimes" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://www.example.org/test> "626" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://www.example.org/test> "627" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Spain> .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://www.example.org/test> "628" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "81cea2d03f3e497fe4350a9503065c103d3eee7e" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://www.example.org/test> "629" .
+<http://data.semanticweb.org/person/alejandro-jaimes> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/unknown> .

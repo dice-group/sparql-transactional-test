@@ -1,0 +1,9 @@
+<http://data.semanticweb.org/person/alberto-musetti> <http://www.example.org/test> "583" .
+<http://data.semanticweb.org/person/alberto-musetti> <http://www.example.org/test> "582" .
+<http://data.semanticweb.org/person/alberto-musetti> <http://www.example.org/test> "581" .
+<http://data.semanticweb.org/person/alberto-musetti> <http://www.example.org/test> "580" .
+<http://data.semanticweb.org/person/alberto-musetti> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bologna> .
+<http://data.semanticweb.org/person/alberto-musetti> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/proceedings-2/paper-13> .
+<http://data.semanticweb.org/person/alberto-musetti> <http://xmlns.com/foaf/0.1/name> "Alberto Musetti" .
+<http://data.semanticweb.org/person/alberto-musetti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alberto-musetti> <http://www.w3.org/2000/01/rdf-schema#label> "Alberto Musetti" .

@@ -1,0 +1,4 @@
+<http://data.semanticweb.org/person/alejandro-rodriguez-gonzalez> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/satbi-swim/2012/chair> .
+<http://data.semanticweb.org/person/alejandro-rodriguez-gonzalez> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bioinformatics-at-centre-for-plant-biotechnology-and-genomics-upm-inia> .
+<http://data.semanticweb.org/person/alejandro-rodriguez-gonzalez> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alejandro-rodriguez-gonzalez> <http://www.w3.org/2000/01/rdf-schema#label> "Alejandro Rodríguez González" .

@@ -1,0 +1,8 @@
+<http://data.semanticweb.org/person/alexandros-marinos> <http://xmlns.com/foaf/0.1/firstName> "Alexandros" .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://xmlns.com/foaf/0.1/lastName> "Marinos" .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/wsrest/2012/programme-committee-member> .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-surrey> .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "9c72aee259c7b4e4830b2018b69bef645c866ed6" .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexandros-marinos> <http://www.w3.org/2000/01/rdf-schema#label> "Alexandros Marinos" .

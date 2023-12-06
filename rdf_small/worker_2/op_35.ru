@@ -1,0 +1,1 @@
+INSERT DATA { <http://data.semanticweb.org/person/ajay-chander> <http://www.example.org/test> "444" . <http://data.semanticweb.org/person/ajay-chander> <http://www.example.org/test> "445" . <http://data.semanticweb.org/person/ajay-chander> <http://www.example.org/test> "446" . }

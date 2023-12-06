@@ -1,0 +1,1 @@
+DELETE DATA { <http://data.semanticweb.org/person/aimin-pan> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aimin Pan" . <http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/name> "Aimin Pan" . <http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "36fdfa1e6f555dc5676df07518a4b12ad6aa7fc8" . }

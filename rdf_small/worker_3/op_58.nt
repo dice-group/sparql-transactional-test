@@ -1,0 +1,12 @@
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://xmlns.com/foaf/0.1/family_name> "Panconesi" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://www.example.org/test> "728" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://xmlns.com/foaf/0.1/firstName> "Alessandro" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/milgram-routing-in-social-networks> .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "61864321dc8b0d270166f982769bc95f47e6c7c7" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://www.w3.org/2000/01/rdf-schema#label> "Alessandro Panconesi" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://xmlns.com/foaf/0.1/name> "Alessandro Panconesi" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://www.example.org/test> "725" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sapienza-university-of-rome> .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://www.example.org/test> "726" .
+<http://data.semanticweb.org/person/alessandro-panconesi> <http://www.example.org/test> "727" .

@@ -1,0 +1,16 @@
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/posters/FP06-Mazzieri> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/posters-demos/papers/398> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/esoe/2007/papers/562> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.example.org/test> "605" .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/name> "Aldo Franco Dragoni" .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "40e203bc6eb7e19f107b4fe10c52acddd1f35a22" .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Aldo_Franco_Dragoni> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Aldo_Franco_Dragoni> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universita-politecnica-delle-marche> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/posters-demos/papers/389> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.example.org/test> "606" .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.example.org/test> "607" .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#aldo-franco-dragoni> .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.example.org/test> "604" .
+<http://data.semanticweb.org/person/aldo-franco-dragoni> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Aldo_Franco_Dragoni> .

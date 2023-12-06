@@ -1,0 +1,11 @@
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/poster/a-feature-pair-based-associative-classification-ap> .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1d072b315554893ddf08263bfd757fde0013f551" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://www.example.org/test> "91" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://www.example.org/test> "92" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://www.w3.org/2000/01/rdf-schema#label> "Abraham Bagherjeiran" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://www.example.org/test> "90" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-laboratories> .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://xmlns.com/foaf/0.1/name> "Abraham Bagherjeiran" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://xmlns.com/foaf/0.1/family_name> "Bagherjeiran" .
+<http://data.semanticweb.org/person/abraham-bagherjeiran> <http://xmlns.com/foaf/0.1/firstName> "Abraham" .

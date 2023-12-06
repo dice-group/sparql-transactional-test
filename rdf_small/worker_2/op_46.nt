@@ -1,0 +1,11 @@
+<http://data.semanticweb.org/person/akira-maeda> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2004/sponsor-chair> .
+<http://data.semanticweb.org/person/akira-maeda> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/poster/ab-632> .
+<http://data.semanticweb.org/person/akira-maeda> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ritsumeikan-university> .
+<http://data.semanticweb.org/person/akira-maeda> <http://www.example.org/test> "455" .
+<http://data.semanticweb.org/person/akira-maeda> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "3954b8b2eb5150a59544c69ec8e9c755b90280b8" .
+<http://data.semanticweb.org/person/akira-maeda> <http://xmlns.com/foaf/0.1/name> "Akira Maeda" .
+<http://data.semanticweb.org/person/akira-maeda> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/hitachi> .
+<http://data.semanticweb.org/person/akira-maeda> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2004/local-organizing-committee-member> .
+<http://data.semanticweb.org/person/akira-maeda> <http://www.w3.org/2000/01/rdf-schema#label> "Akira Maeda" .
+<http://data.semanticweb.org/person/akira-maeda> <http://www.example.org/test> "456" .
+<http://data.semanticweb.org/person/akira-maeda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

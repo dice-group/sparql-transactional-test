@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/adil-hameed> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-22> .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "232" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "230" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "226" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.w3.org/2000/01/rdf-schema#label> "Adil Hameed" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "228" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adil-hameed> <http://xmlns.com/foaf/0.1/name> "Adil Hameed" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "225" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "229" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "224" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "227" .
+<http://data.semanticweb.org/person/adil-hameed> <http://www.example.org/test> "231" .

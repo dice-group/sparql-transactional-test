@@ -1,0 +1,1 @@
+INSERT DATA { <http://data.semanticweb.org/person/adriana-iamnitchi> <http://www.example.org/test> "252" . <http://data.semanticweb.org/person/adriana-iamnitchi> <http://www.example.org/test> "253" . <http://data.semanticweb.org/person/adriana-iamnitchi> <http://www.example.org/test> "254" . }

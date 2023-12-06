@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/alex-smola> <http://xmlns.com/foaf/0.1/firstName> "Alex" .
+<http://data.semanticweb.org/person/alex-smola> <http://xmlns.com/foaf/0.1/lastName> "Smola" .
+<http://data.semanticweb.org/person/alex-smola> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/mining-track-committee-member> .
+<http://data.semanticweb.org/person/alex-smola> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-inc> .
+<http://data.semanticweb.org/person/alex-smola> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/1261> .
+<http://data.semanticweb.org/person/alex-smola> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6922dee0151ab5fe20e6a456ce22c8dcd4f3c94a" .

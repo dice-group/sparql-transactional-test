@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/aisha-naseer> <http://xmlns.com/foaf/0.1/name> "Aisha Naseer" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/cold/2013/proceedings/paper-11> .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "411" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "412" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "413" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "414" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.w3.org/2000/01/rdf-schema#label> "Aisha Naseer" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "409" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fujitsu> .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "410" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "415" .
+<http://data.semanticweb.org/person/aisha-naseer> <http://www.example.org/test> "416" .

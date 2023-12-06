@@ -1,0 +1,22 @@
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/name> "Ahmed Abdelrahman" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2013/paper/eswc-2013/209> .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/firstName> "Ahmed" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.w3.org/2000/01/rdf-schema#label> "Ahmed Abdelrahman" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b93d2c9f8b14a400d1cac356f63ac311cb801aa7" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/lastName> "Abdelrahman" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "361" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "365" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "364" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "360" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "357" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Ireland> .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-galway> .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "363" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d831360cc8f8ba4ef5f1915378c36088fd5dd390" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "356" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/deri-nui-galway> .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "362" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "358" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://www.example.org/test> "359" .
+<http://data.semanticweb.org/person/ahmed-abdelrahman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/proceedings-1/paper-16> .

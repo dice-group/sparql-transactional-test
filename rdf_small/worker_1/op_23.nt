@@ -1,0 +1,19 @@
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.w3.org/2000/01/rdf-schema#label> "Abigail Sellen" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "76" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/abigail-sellen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft-research-cambridge> .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "79" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://xmlns.com/foaf/0.1/lastName> "Sellen" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "81" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "77" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://xmlns.com/foaf/0.1/name> "Abigail Sellen" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "74" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1948ab6ea33f18fac51ddb62845ff23ceb0fd2dc" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "72" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/945> .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "80" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://xmlns.com/foaf/0.1/firstName> "Abigail" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "75" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "78" .
+<http://data.semanticweb.org/person/abigail-sellen> <http://www.example.org/test> "73" .
