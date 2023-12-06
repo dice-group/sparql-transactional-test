@@ -230,5 +230,7 @@ async fn main() -> anyhow::Result<()> {
         iguana_qps_sum / num_random_read_workers as f64,
     );
 
+
+    anyhow::ensure!(n_errors == 0, "Test failed");
     Ok(())
 }
