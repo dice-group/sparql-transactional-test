@@ -1,6 +1,8 @@
 # SPARQL Transactional Test
 A tool for testing the correctness of a triplestore's transaction implementation.
 
+⚠️ This tool is in prototype stage. ⚠️
+
 ## Stresstest
 The `stress` subcommand of this tool simply stresses
 a triplestore with a given number of read workers.
