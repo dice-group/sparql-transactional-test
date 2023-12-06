@@ -1,0 +1,11 @@
+<http://data.semanticweb.org/person/alan-rubenstein> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/805> .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.example.org/test> "545" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.example.org/test> "542" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.example.org/test> "547" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/the-mitre-corporation> .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.example.org/test> "544" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.example.org/test> "543" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://xmlns.com/foaf/0.1/name> "Alan Rubenstein" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.example.org/test> "546" .
+<http://data.semanticweb.org/person/alan-rubenstein> <http://www.w3.org/2000/01/rdf-schema#label> "Alan Rubenstein" .

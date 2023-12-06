@@ -1,0 +1,8 @@
+<http://data.semanticweb.org/person/alberto-messina> <http://xmlns.com/foaf/0.1/lastName> "Messina" .
+<http://data.semanticweb.org/person/alberto-messina> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rai-radiotelevisione-italiana-centre-for-research-and-technological-innovation> .
+<http://data.semanticweb.org/person/alberto-messina> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rai-radiotelevisione-italiana> .
+<http://data.semanticweb.org/person/alberto-messina> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/alberto-messina> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/demo/40> .
+<http://data.semanticweb.org/person/alberto-messina> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2ceacd59e691d9d0c5d415efd5ccd2541ef3d5a0" .
+<http://data.semanticweb.org/person/alberto-messina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alberto-messina> <http://www.w3.org/2000/01/rdf-schema#label> "Alberto Messina" .

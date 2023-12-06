@@ -1,0 +1,20 @@
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "153" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/lexical-computing-ltd> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "157" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "150" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/lastName> "Kilgarriff" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/537> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f1b02c47905dfedaadcaf09c628256f4a24971d7" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/wac7/2012> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "152" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "151" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Kilgarriff" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/wac7/2012/programme-chair> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "156" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/firstName> "Adam" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "154" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/162> .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://xmlns.com/foaf/0.1/name> "Adam Kilgarriff" .
+<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> "155" .

@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/ales-buh> <http://www.example.org/test> "677" .
+<http://data.semanticweb.org/person/ales-buh> <http://www.example.org/test> "681" .
+<http://data.semanticweb.org/person/ales-buh> <http://www.w3.org/2000/01/rdf-schema#label> "Ales Buh" .
+<http://data.semanticweb.org/person/ales-buh> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Slovenia> .
+<http://data.semanticweb.org/person/ales-buh> <http://www.example.org/test> "678" .
+<http://data.semanticweb.org/person/ales-buh> <http://xmlns.com/foaf/0.1/name> "Ales Buh" .
+<http://data.semanticweb.org/person/ales-buh> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2011/programme-committee-member> .
+<http://data.semanticweb.org/person/ales-buh> <http://www.example.org/test> "682" .
+<http://data.semanticweb.org/person/ales-buh> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/jozef-stefan-institute> .
+<http://data.semanticweb.org/person/ales-buh> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e3c09e1bed2be4574c91788cdbcadab37c693400" .
+<http://data.semanticweb.org/person/ales-buh> <http://www.example.org/test> "679" .
+<http://data.semanticweb.org/person/ales-buh> <http://www.example.org/test> "680" .
+<http://data.semanticweb.org/person/ales-buh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

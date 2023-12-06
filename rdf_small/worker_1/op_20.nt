@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/abhinav-mishra> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-labs-bangalore> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/lastName> "Mishra" .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://www.w3.org/2000/01/rdf-schema#label> "Abhinav Mishra" .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/finding-the-bias-and-prestige-of-nodes-in-networks> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "0710462fb97369e598cf0a06725f4077dffed0ec" .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/family_name> "Mishra" .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/paper/71/talk/speaker> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/indian-institute-of-technology-kanpur> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "4e5d855e6758e45146690a2f9dc9561d941495bb" .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/India> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/71> .
+<http://data.semanticweb.org/person/abhinav-mishra> <http://xmlns.com/foaf/0.1/firstName> "Abhinav" .

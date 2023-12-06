@@ -1,0 +1,22 @@
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.example.org/test> "871" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2009/paper/230> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2010/paper/278> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/name> "Alexandra Poulovassilis" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/status> "Academia" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/birkbeck-university-of-london> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/firstName> "Alexandra" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.example.org/test> "874" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.w3.org/2000/01/rdf-schema#label> "Alexandra Poulovassilis" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.example.org/test> "875" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2012/pc-member-at-iswc2012-research-track> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-london> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/homepage> <http://www.dcs.bbk.ac.uk/~ap/> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.example.org/test> "872" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.example.org/test> "873" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/family_name> "Poulovassilis" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://www.w3.org/2004/02/skos/core#altLabel> "Alexandra Poulovassilis" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2008/research/pcmember> .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b804c68178a28ccde3196f5512affec2d7ded34c" .
+<http://data.semanticweb.org/person/alexandra-poulovassilis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2006/paper-19> .

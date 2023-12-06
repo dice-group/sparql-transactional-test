@@ -1,0 +1,20 @@
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1059" .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1058" .
+<http://data.semanticweb.org/person/alistair-miles> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/paper/vanassem-malais> .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1060" .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alistair-miles> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2011/programme-committee-member> .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#alistair-miles> .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1057" .
+<http://data.semanticweb.org/person/alistair-miles> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-oxford> .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1065" .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1063" .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.w3.org/2000/01/rdf-schema#label> "Alistair Miles" .
+<http://data.semanticweb.org/person/alistair-miles> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/dc/2010/programme-committee-member> .
+<http://data.semanticweb.org/person/alistair-miles> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/poster-demo-proceedings/paper-60> .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1064" .
+<http://data.semanticweb.org/person/alistair-miles> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/alistair-miles> <http://xmlns.com/foaf/0.1/name> "Alistair Miles" .
+<http://data.semanticweb.org/person/alistair-miles> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8e6dac865da03fb62351a66a6852d1a6c6df4ce2" .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1062" .
+<http://data.semanticweb.org/person/alistair-miles> <http://www.example.org/test> "1061" .

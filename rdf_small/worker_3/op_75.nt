@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/alexander-deleon> <http://xmlns.com/foaf/0.1/family_name> "Deleon" .
+<http://data.semanticweb.org/person/alexander-deleon> <http://www.w3.org/2004/02/skos/core#prefLabel> "Alexander De León" .
+<http://data.semanticweb.org/person/alexander-deleon> <http://xmlns.com/foaf/0.1/homepage> <http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/masterstudents/47-alexdeleon> .
+<http://data.semanticweb.org/person/alexander-deleon> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2010/research/reviewer> .
+<http://data.semanticweb.org/person/alexander-deleon> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universidad-politecnica-de-madrid> .
+<http://data.semanticweb.org/person/alexander-deleon> <http://xmlns.com/foaf/0.1/name> "Alexander Deleon" .

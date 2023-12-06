@@ -1,0 +1,2 @@
+<http://data.semanticweb.org/person/adam-ghandar> <http://www.w3.org/2000/01/rdf-schema#comment> "255097" .
+<http://data.semanticweb.org/person/adam-ghandar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-adelaide> .

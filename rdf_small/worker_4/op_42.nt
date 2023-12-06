@@ -1,0 +1,15 @@
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "941" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "940" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://xmlns.com/foaf/0.1/name> "Alexey Tsymbal" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "64d57897e860a4173a76e23af4b62053f1f2bf53" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "947" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/in_use/33> .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "946" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/corporate-technology-division-siemens-ag-erlangen-germany> .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "945" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.w3.org/2000/01/rdf-schema#label> "Alexey Tsymbal" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "943" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "942" .
+<http://data.semanticweb.org/person/alexey-tsymbal> <http://www.example.org/test> "944" .

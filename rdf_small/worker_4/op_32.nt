@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/alex-bocharov> <http://www.example.org/test> "929" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alex-bocharov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/518> .
+<http://data.semanticweb.org/person/alex-bocharov> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b319b3a835dca606a2f097a76c8ad67afdb811a6" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft> .
+<http://data.semanticweb.org/person/alex-bocharov> <http://xmlns.com/foaf/0.1/name> "Alex Bocharov" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Bocharov" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://xmlns.com/foaf/0.1/firstName> "Alex" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://www.example.org/test> "926" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://www.example.org/test> "928" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://xmlns.com/foaf/0.1/lastName> "Bocharov" .
+<http://data.semanticweb.org/person/alex-bocharov> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .
+<http://data.semanticweb.org/person/alex-bocharov> <http://www.example.org/test> "927" .

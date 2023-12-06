@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/alessio-fabiani> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://xmlns.com/foaf/0.1/name> "Alessio Fabiani" .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://xmlns.com/foaf/0.1/firstName> "Alessio" .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2012/paper/research/199> .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://www.w3.org/2000/01/rdf-schema#label> "Alessio Fabiani" .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-illinois-at-chicago> .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://xmlns.com/foaf/0.1/lastName> "Fabiani" .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "332bf1cb6fd0a845cdd5d1196dbf151f25cc2acb" .
+<http://data.semanticweb.org/person/alessio-fabiani> <http://www.example.org/test> "738" .

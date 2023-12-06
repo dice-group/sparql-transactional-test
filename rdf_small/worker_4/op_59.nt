@@ -1,0 +1,21 @@
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "987" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "982" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnr-istc-italy> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/lastName> "Gliozzo" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "985" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1ffe1e94590e58eb3db39e3e8302cad1567bbe84" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Alfio_Gliozzo> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "988" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/in-use/papers/757> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "46742c227bbbac21fefbf0701dea19299f53afe3" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "984" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/firstName> "Alfio" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-watson-research-center> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "986" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.example.org/test> "983" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Alfio_Gliozzo> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Alfio_Gliozzo> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2012/research-track-committee-member> .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://www.w3.org/2000/01/rdf-schema#label> "Alfio Gliozzo" .
+<http://data.semanticweb.org/person/alfio-gliozzo> <http://xmlns.com/foaf/0.1/name> "Alfio Gliozzo" .

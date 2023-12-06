@@ -1,0 +1,20 @@
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "834" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "832" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Sellner" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/firstName> "Sellner" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/joanneum-research> .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "835" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "836" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "833" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "840" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/mbox> <mailto:alexander.sellner@fh-joanneum.at> .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "838" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/mbox> " d2ed24da67a6b3b36a97de4d5985ed16b8027437 " .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "841" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "837" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.example.org/test> "839" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/family_name> "Alexander" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/name> "Alexander Sellner" .
+<http://data.semanticweb.org/person/alexander-sellner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-sellner> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ruleml-eu/2011/paper/102> .

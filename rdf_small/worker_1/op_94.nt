@@ -1,0 +1,21 @@
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.w3.org/2000/01/rdf-schema#label> "Adwait Ratnaparkhi" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "307" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-laboratories> .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "302" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/family_name> "Ratnaparkhi" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "304" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "306" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "301" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/33across-inc> .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "299" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "303" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/name> "Adwait Ratnaparkhi" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "300" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/poster/a-feature-pair-based-associative-classification-ap> .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "305" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/firstName> "Adwait" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/66> .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://www.example.org/test> "298" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "2e955ab1a38c99afa662a47eb8fdf6b16211bd57" .
+<http://data.semanticweb.org/person/adwait-ratnaparkhi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "b1caff3b3a2ec63268b6f437e11b126afc0948e9" .

@@ -1,0 +1,4 @@
+<http://data.semanticweb.org/person/alexander-borgida> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rutgers-university> .
+<http://data.semanticweb.org/person/alexander-borgida> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/proceedings-2/paper-29> .
+<http://data.semanticweb.org/person/alexander-borgida> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/proceedings/paper-21> .
+<http://data.semanticweb.org/person/alexander-borgida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

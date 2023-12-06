@@ -1,0 +1,5 @@
+<http://data.semanticweb.org/person/aleksander-pohl> <http://xmlns.com/foaf/0.1/status> "Academia" .
+<http://data.semanticweb.org/person/aleksander-pohl> <http://xmlns.com/foaf/0.1/homepage> <http://www.apohllo.pl/> .
+<http://data.semanticweb.org/person/aleksander-pohl> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/jagiellonian-university> .
+<http://data.semanticweb.org/person/aleksander-pohl> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2010/paper/521> .
+<http://data.semanticweb.org/person/aleksander-pohl> <http://www.w3.org/2000/01/rdf-schema#label> "Aleksander Pohl" .

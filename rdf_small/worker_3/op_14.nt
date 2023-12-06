@@ -1,0 +1,19 @@
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://xmlns.com/foaf/0.1/name> "Alejandro A. Vaisman" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "621" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.w3.org/2000/01/rdf-schema#label> "Alejandro A. Vaisman" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Belgium> .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "617" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2013/eswc-2013-track-committee-member> .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "620" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "616" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://xmlns.com/foaf/0.1/firstName> "Alejandro A." .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "623" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "619" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "622" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "618" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://www.example.org/test> "624" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://xmlns.com/foaf/0.1/lastName> "Vaisman" .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-libre-de-bruxelles> .
+<http://data.semanticweb.org/person/alejandro-a-vaisman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5153393e4f436d141cc87f7b2a39b07cfa1fe4f7" .

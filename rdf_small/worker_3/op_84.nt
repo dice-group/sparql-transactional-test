@@ -1,0 +1,19 @@
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "786" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "789" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://xmlns.com/foaf/0.1/name> "Alexander J. Smola" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-research> .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander J. Smola" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "790" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2011/event/T-11/organiser> .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "788" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://xmlns.com/foaf/0.1/firstName> "Alexander" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "793" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "792" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "76407a61acbf16588b2809a3117f32bd9a408b7b" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "785" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "622786368e2bef0d3a0460410bb15a09f8158457" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "787" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/unified-analysis-of-streaming-news> .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://xmlns.com/foaf/0.1/family_name> "Smola" .
+<http://data.semanticweb.org/person/alexander-j-smola> <http://www.example.org/test> "791" .

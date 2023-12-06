@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.w3.org/2000/01/rdf-schema#label> "Aleksandar Savkov" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/97> .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://xmlns.com/foaf/0.1/name> "Aleksandar Savkov" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "650" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-tuebingen> .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "648" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "652" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "646" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "647" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "651" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "645" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.example.org/test> "649" .
+<http://data.semanticweb.org/person/aleksandar-savkov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

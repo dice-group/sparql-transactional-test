@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/alessandro-caio> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/politenico-di-milano> .
+<http://data.semanticweb.org/person/alessandro-caio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/162> .
+<http://data.semanticweb.org/person/alessandro-caio> <http://www.example.org/test> "709" .
+<http://data.semanticweb.org/person/alessandro-caio> <http://xmlns.com/foaf/0.1/name> "Alessandro Caio" .
+<http://data.semanticweb.org/person/alessandro-caio> <http://www.example.org/test> "708" .
+<http://data.semanticweb.org/person/alessandro-caio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alessandro-caio> <http://www.w3.org/2000/01/rdf-schema#label> "Alessandro Caio" .
+<http://data.semanticweb.org/person/alessandro-caio> <http://www.example.org/test> "710" .
+<http://data.semanticweb.org/person/alessandro-caio> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "7c005cee23349aa470a87fcb85809c91a702abd4" .
+<http://data.semanticweb.org/person/alessandro-caio> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .

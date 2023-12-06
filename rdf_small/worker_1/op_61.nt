@@ -1,0 +1,9 @@
+<http://data.semanticweb.org/person/adil-aijaz> <http://www.example.org/test> "223" .
+<http://data.semanticweb.org/person/adil-aijaz> <http://www.example.org/test> "222" .
+<http://data.semanticweb.org/person/adil-aijaz> <http://www.example.org/test> "220" .
+<http://data.semanticweb.org/person/adil-aijaz> <http://www.example.org/test> "221" .
+<http://data.semanticweb.org/person/adil-aijaz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cornell-university> .
+<http://data.semanticweb.org/person/adil-aijaz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/699> .
+<http://data.semanticweb.org/person/adil-aijaz> <http://xmlns.com/foaf/0.1/name> "Adil Aijaz" .
+<http://data.semanticweb.org/person/adil-aijaz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adil-aijaz> <http://www.w3.org/2000/01/rdf-schema#label> "Adil Aijaz" .

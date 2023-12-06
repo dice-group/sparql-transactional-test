@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/adam-wierman> <http://www.example.org/test> "196" .
+<http://data.semanticweb.org/person/adam-wierman> <http://xmlns.com/foaf/0.1/name> "Adam Wierman" .
+<http://data.semanticweb.org/person/adam-wierman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "afb4c7ca0b9a70db9651a17f5aba0ed69c377236" .
+<http://data.semanticweb.org/person/adam-wierman> <http://xmlns.com/foaf/0.1/firstName> "Adam" .
+<http://data.semanticweb.org/person/adam-wierman> <http://www.example.org/test> "198" .
+<http://data.semanticweb.org/person/adam-wierman> <http://www.example.org/test> "197" .
+<http://data.semanticweb.org/person/adam-wierman> <http://xmlns.com/foaf/0.1/lastName> "Wierman" .
+<http://data.semanticweb.org/person/adam-wierman> <http://www.example.org/test> "199" .
+<http://data.semanticweb.org/person/adam-wierman> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Wierman" .
+<http://data.semanticweb.org/person/adam-wierman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-wierman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/performance-track-committee-member> .
+<http://data.semanticweb.org/person/adam-wierman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .
+<http://data.semanticweb.org/person/adam-wierman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/california-institute-of-technology> .

@@ -1,0 +1,11 @@
+<http://data.semanticweb.org/person/aimin-pan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aimin-pan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft-research-asia> .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/494> .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/136> .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/firstName> "Aimin" .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/family_name> "Pan" .
+<http://data.semanticweb.org/person/aimin-pan> <http://www.w3.org/2000/01/rdf-schema#label> "Aimin Pan" .
+<http://data.semanticweb.org/person/aimin-pan> <http://www.w3.org/2000/01/rdf-schema#label> "Pan Aimin" .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/China> .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/name> "Pan Aimin" .
+<http://data.semanticweb.org/person/aimin-pan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2008/paper/916> .

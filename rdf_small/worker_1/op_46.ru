@@ -1,0 +1,1 @@
+DELETE DATA { <http://data.semanticweb.org/person/adam-marcus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . <http://data.semanticweb.org/person/adam-marcus> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/massachusetts-institute-of-technology> . }

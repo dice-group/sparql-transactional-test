@@ -1,0 +1,14 @@
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "417" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "420" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "418" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "421" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "419" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "422" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "423" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://www.example.org/test> "424" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/arizona-state-university> .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/187> .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://xmlns.com/foaf/0.1/firstName> "Aisling" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://xmlns.com/foaf/0.1/name> "Aisling Kelliher" .
+<http://data.semanticweb.org/person/aisling-kelliher> <http://xmlns.com/foaf/0.1/family_name> "Kelliher" .

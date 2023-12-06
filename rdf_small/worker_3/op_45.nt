@@ -1,0 +1,12 @@
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://xmlns.com/foaf/0.1/firstName> "Alessandra" .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://xmlns.com/foaf/0.1/lastName> "Toninelli" .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universita-di-bologna> .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/engineering-ingegneria-informatica-spa> .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e2fab5a7f8352fce6cb7d3a9a70fe9a7c22c73d1" .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/sdow/2011/pcmember> .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://xmlns.com/foaf/0.1/family_name> "Toninelli" .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://www.w3.org/2004/02/skos/core#prefLabel> "Alessandra Toninelli" .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2006/paper-51> .
+<http://data.semanticweb.org/person/alessandra-toninelli> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2012/research-track-committee-member> .

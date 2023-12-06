@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/alexander-haas> <http://www.example.org/test> "772" .
+<http://data.semanticweb.org/person/alexander-haas> <http://www.example.org/test> "771" .
+<http://data.semanticweb.org/person/alexander-haas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwiki/2010/paper/main/16> .
+<http://data.semanticweb.org/person/alexander-haas> <http://xmlns.com/foaf/0.1/name> "Alexander Haas" .
+<http://data.semanticweb.org/person/alexander-haas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-haas> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Haas" .

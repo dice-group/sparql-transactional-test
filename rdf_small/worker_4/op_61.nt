@@ -1,0 +1,15 @@
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "991" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "997" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "994" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/22> .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://xmlns.com/foaf/0.1/name> "Alfons Juan-Císcar" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.w3.org/2000/01/rdf-schema#label> "Alfons Juan-Císcar" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "995" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "992" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/departamento-de-sistemas-informaticos-y-computacio> .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "998" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "990" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "989" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "996" .
+<http://data.semanticweb.org/person/alfons-juan-ciscar> <http://www.example.org/test> "993" .

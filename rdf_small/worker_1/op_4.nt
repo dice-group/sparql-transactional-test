@@ -1,0 +1,18 @@
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/name> "Aaron Kershenbaum" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Aaron_Kershenbaum> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Aaron_Kershenbaum> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-research> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d0edbdad029f771a777df806ce970fe89a1b4271" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-watson-research-center> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2006/paper-8> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.example.org/test> "3" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/firstName> "Aaron" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Aaron_Kershenbaum> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.w3.org/2000/01/rdf-schema#label> "Aaron Kershenbaum" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/research/papers/99> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.example.org/test> "0" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/family_name> "Kershenbaum" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.example.org/test> "2" .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/in-use/papers/809> .
+<http://data.semanticweb.org/person/aaron-kershenbaum> <http://www.example.org/test> "1" .

@@ -1,0 +1,8 @@
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://www.example.org/test> "482" .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://www.example.org/test> "481" .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-insititute-of-advanced-industrial-science-and-technology-japan> .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/poster-demo-proceedings/paper-45> .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d521b1bb0a1bf1c31532a451c92019f2dfe09bd2" .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://xmlns.com/foaf/0.1/name> "Akiyoshi Matono" .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/akiyoshi-matono> <http://www.w3.org/2000/01/rdf-schema#label> "Akiyoshi Matono" .

@@ -1,0 +1,7 @@
+<http://data.semanticweb.org/person/abdul-majid> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/poster/35/talk/speaker> .
+<http://data.semanticweb.org/person/abdul-majid> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/China> .
+<http://data.semanticweb.org/person/abdul-majid> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "f909d4e6ac218296426472d40423cb3473a97e81" .
+<http://data.semanticweb.org/person/abdul-majid> <http://xmlns.com/foaf/0.1/name> " Abdul Majid" .
+<http://data.semanticweb.org/person/abdul-majid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/abdul-majid> <http://www.w3.org/2000/01/rdf-schema#label> " Abdul Majid" .
+<http://data.semanticweb.org/person/abdul-majid> <http://www.w3.org/2000/01/rdf-schema#label> "Abdul Majid" .

@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://www.example.org/test> "1019" .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://www.w3.org/2000/01/rdf-schema#label> "Ali Anil Sinaci" .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2012/paper/demonstation/301> .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://xmlns.com/foaf/0.1/lastName> "Sinaci" .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Turkey> .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/srdc-software-research-development-and-consultancy-limited> .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://xmlns.com/foaf/0.1/name> "Ali Anil Sinaci" .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://xmlns.com/foaf/0.1/firstName> "Ali Anil" .
+<http://data.semanticweb.org/person/ali-anil-sinaci> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "1e2180e497098e40def3e449bec61d932acb3930" .

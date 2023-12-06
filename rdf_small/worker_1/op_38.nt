@@ -1,0 +1,9 @@
+<http://data.semanticweb.org/person/adam-finkelstein> <http://www.example.org/test> "134" .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://www.example.org/test> "132" .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://www.example.org/test> "133" .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/princeton-university> .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/613> .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "cf473407d0a8fa0e200a1d27531391992bed12bf" .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://xmlns.com/foaf/0.1/name> "Adam Finkelstein" .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-finkelstein> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Finkelstein" .

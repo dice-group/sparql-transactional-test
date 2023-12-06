@@ -1,0 +1,16 @@
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "205" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "206" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "170c33247b74dde9b39ad98422dcd227b1702274" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/polish-japanese-institute-of-information-technology-pjiit> .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "200" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://xmlns.com/foaf/0.1/name> "Adam Wierzbicki" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "201" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "202" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/webquality/2012/paper/20> .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Wierzbicki" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://xmlns.com/foaf/0.1/lastName> "Wierzbicki" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Poland> .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "203" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://xmlns.com/foaf/0.1/firstName> "Adam" .
+<http://data.semanticweb.org/person/adam-wierzbicki> <http://www.example.org/test> "204" .

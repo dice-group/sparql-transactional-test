@@ -1,0 +1,15 @@
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "162" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "167" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "164" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.w3.org/2000/01/rdf-schema#label> "Adam Lee" .
+<http://data.semanticweb.org/person/adam-lee> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/reviewer-at-iswc2005-research-track> .
+<http://data.semanticweb.org/person/adam-lee> <http://xmlns.com/foaf/0.1/name> "Adam Lee" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "166" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "161" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "159" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "163" .
+<http://data.semanticweb.org/person/adam-lee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-illinois-at-urbanachampaign> .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "158" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "165" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.example.org/test> "160" .
+<http://data.semanticweb.org/person/adam-lee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

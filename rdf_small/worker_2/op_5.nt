@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/a-goy> <http://www.example.org/test> "344" .
+<http://data.semanticweb.org/person/a-goy> <http://www.example.org/test> "341" .
+<http://data.semanticweb.org/person/a-goy> <http://www.example.org/test> "339" .
+<http://data.semanticweb.org/person/a-goy> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-05> .
+<http://data.semanticweb.org/person/a-goy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/a-goy> <http://www.w3.org/2000/01/rdf-schema#label> "A. Goy" .
+<http://data.semanticweb.org/person/a-goy> <http://xmlns.com/foaf/0.1/name> "A. Goy" .
+<http://data.semanticweb.org/person/a-goy> <http://www.example.org/test> "342" .
+<http://data.semanticweb.org/person/a-goy> <http://www.example.org/test> "340" .
+<http://data.semanticweb.org/person/a-goy> <http://www.example.org/test> "343" .

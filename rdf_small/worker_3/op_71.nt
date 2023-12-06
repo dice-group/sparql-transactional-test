@@ -1,0 +1,6 @@
+<http://data.semanticweb.org/person/alexander-baranya> <http://xmlns.com/foaf/0.1/firstName> "Alexander" .
+<http://data.semanticweb.org/person/alexander-baranya> <http://xmlns.com/foaf/0.1/lastName> "Baranya" .
+<http://data.semanticweb.org/person/alexander-baranya> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universidad-simon-bolivar-dept-computer-science> .
+<http://data.semanticweb.org/person/alexander-baranya> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Venezuela,_Bolivarian_Republic_of> .
+<http://data.semanticweb.org/person/alexander-baranya> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-baranya> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Baranya" .

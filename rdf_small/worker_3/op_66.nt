@@ -1,0 +1,16 @@
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/research/168> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/poster-demo-proceedings/paper-20> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/proceedings-1/paper-31> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fondazione-bruno-kessler> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/firstName> "Alessio" .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/lastName> "Palmero Aprosio" .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universita-degli-studi-di-milano> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://www.w3.org/2000/01/rdf-schema#label> "Alessio Palmero Aprosio" .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "338e096fc7160da78bf4d428a6385e2c51d4e715" .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-milan> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/dbpedia-nlp/2013/proceedings/paper-09> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/depiction> <http://wit.istc.cnr.it/eswc-stc/images/authors/resized/2c3c615.jpg> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alessio-palmero-aprosio> <http://xmlns.com/foaf/0.1/homepage> <http://hlt.fbk.eu/people/aprosio> .

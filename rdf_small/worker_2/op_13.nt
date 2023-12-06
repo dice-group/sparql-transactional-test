@@ -1,0 +1,4 @@
+<http://data.semanticweb.org/person/ahmed-serhrouchni> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ecole-dingenieur-telecom-paristech> .
+<http://data.semanticweb.org/person/ahmed-serhrouchni> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2009/paper/poster_demo/121> .
+<http://data.semanticweb.org/person/ahmed-serhrouchni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/ahmed-serhrouchni> <http://www.w3.org/2000/01/rdf-schema#label> "Ahmed Serhrouchni" .

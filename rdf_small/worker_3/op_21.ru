@@ -1,0 +1,1 @@
+DELETE DATA { <http://data.semanticweb.org/person/alejandro-luna-tedesqui> <http://xmlns.com/foaf/0.1/name> "Alejandro Luna Tedesqui" . <http://data.semanticweb.org/person/alejandro-luna-tedesqui> <http://xmlns.com/foaf/0.1/family_name> "Alejandro" . <http://data.semanticweb.org/person/alejandro-luna-tedesqui> <http://www.w3.org/2000/01/rdf-schema#comment> "1048037" . }

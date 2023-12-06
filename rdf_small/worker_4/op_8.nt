@@ -1,0 +1,13 @@
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "859" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "853" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://xmlns.com/foaf/0.1/name> "Alexander Zelitchenko" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "854" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "857" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "858" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "856" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Zelitchenko" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/isemantics/2009/paper/main/37> .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "855" .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ICPW/2009/paper/main/8> .
+<http://data.semanticweb.org/person/alexander-zelitchenko> <http://www.example.org/test> "860" .

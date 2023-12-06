@@ -1,0 +1,11 @@
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/family_name> "Flammini" .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/network-track-committee-member> .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5487603c8afc99eba89a483fc9f490d43e172761" .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/indiana-university> .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/demo/truthy-mapping-the-spread-of-astroturf-in-microblo> .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5714dcc1c9ab822d1ea5b64f34c04123fc5194c0" .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://www.w3.org/2000/01/rdf-schema#label> "Alessandro Flammini" .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/lastName> "Flammini" .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/firstName> "Alessandro" .
+<http://data.semanticweb.org/person/alessandro-flammini> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .

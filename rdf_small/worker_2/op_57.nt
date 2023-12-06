@@ -1,0 +1,8 @@
+<http://data.semanticweb.org/person/akshay-dua> <http://xmlns.com/foaf/0.1/firstName> "Akshay" .
+<http://data.semanticweb.org/person/akshay-dua> <http://xmlns.com/foaf/0.1/lastName> "Dua" .
+<http://data.semanticweb.org/person/akshay-dua> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/portland-state-university> .
+<http://data.semanticweb.org/person/akshay-dua> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
+<http://data.semanticweb.org/person/akshay-dua> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/webquality/2012/paper/14> .
+<http://data.semanticweb.org/person/akshay-dua> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "e40c937ec4cbfe3fe99b1854f27a957f9b44ed1a" .
+<http://data.semanticweb.org/person/akshay-dua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/akshay-dua> <http://www.w3.org/2000/01/rdf-schema#label> "Akshay Dua" .

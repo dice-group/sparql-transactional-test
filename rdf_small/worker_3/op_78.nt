@@ -1,0 +1,16 @@
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/name> "Alexander Garcia" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/status> "Academia" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ocas/2011/paper/13> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "5f84327bfd387f1db9c26d39fe2962ab92e0b6cc" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Garcia Castro" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/homepage> <http://www.alexandergarcia.name> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Garcia" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ores/2010/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/ocas/2011/chair> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/name> "Alexander Garcia Castro" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander García Castro" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "442aae33d6728af9d94eb76f5e00f7f2cd0afaae" .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-bremen> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-garcia-castro> <http://xmlns.com/foaf/0.1/name> "Alexander García Castro" .

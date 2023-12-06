@@ -1,0 +1,19 @@
+<http://data.semanticweb.org/person/alexey-volkov> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/poster/190/talk/speaker> .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "951" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "955" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "948" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Russian_Federation> .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "952" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yandex-llc> .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "956" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "949" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "953" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://xmlns.com/foaf/0.1/lastName> "Volkov" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "954" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/190> .
+<http://data.semanticweb.org/person/alexey-volkov> <http://xmlns.com/foaf/0.1/firstName> "Alexey" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://xmlns.com/foaf/0.1/name> "Alexey Volkov" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "43f7eec589cc9dc41b15256bf3468250d0c74232" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.w3.org/2000/01/rdf-schema#label> "Alexey Volkov" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.example.org/test> "950" .
+<http://data.semanticweb.org/person/alexey-volkov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

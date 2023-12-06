@@ -1,0 +1,5 @@
+<http://data.semanticweb.org/person/abraham-flaxman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-washington> .
+<http://data.semanticweb.org/person/abraham-flaxman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft-research> .
+<http://data.semanticweb.org/person/abraham-flaxman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/968> .
+<http://data.semanticweb.org/person/abraham-flaxman> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "ec9a3c51b22d6f0876db03b2f6e07eabcfe981ec" .
+<http://data.semanticweb.org/person/abraham-flaxman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

@@ -1,0 +1,8 @@
+<http://data.semanticweb.org/person/alexander-seeliger> <http://www.example.org/test> "831" .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://www.example.org/test> "830" .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://www.example.org/test> "829" .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://www.example.org/test> "828" .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/technische-universitaet-darmstadt> .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://xmlns.com/foaf/0.1/name> "Alexander Seeliger" .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alexander-seeliger> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Seeliger" .

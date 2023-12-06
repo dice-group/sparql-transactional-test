@@ -1,0 +1,10 @@
+<http://data.semanticweb.org/person/aibo-tian> <http://www.w3.org/2000/01/rdf-schema#label> "Aibo Tian" .
+<http://data.semanticweb.org/person/aibo-tian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/aibo-tian> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-texas-at-austin> .
+<http://data.semanticweb.org/person/aibo-tian> <http://www.example.org/test> "389" .
+<http://data.semanticweb.org/person/aibo-tian> <http://www.example.org/test> "388" .
+<http://data.semanticweb.org/person/aibo-tian> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/poster-demo-proceedings/paper-21> .
+<http://data.semanticweb.org/person/aibo-tian> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/proceedings-1/paper-39> .
+<http://data.semanticweb.org/person/aibo-tian> <http://xmlns.com/foaf/0.1/name> "Aibo Tian" .
+<http://data.semanticweb.org/person/aibo-tian> <http://www.example.org/test> "390" .
+<http://data.semanticweb.org/person/aibo-tian> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8e6e08bd78f610033fcb23b4004d6022fe158a1b" .

@@ -1,0 +1,16 @@
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "08400e14ca3a777de2721425832cba38c43fbe7a" .
+<http://data.semanticweb.org/person/alistair-duke> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/obi/2008/main/chair/organisingcommitteemember> .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/poster-demo-proceedings/paper-51> .
+<http://data.semanticweb.org/person/alistair-duke> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/pc-member-at-iswc2005-industrial-track> .
+<http://data.semanticweb.org/person/alistair-duke> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2010/research/reviewer> .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/firstName> "Alistair" .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .
+<http://data.semanticweb.org/person/alistair-duke> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bt-innovate> .
+<http://data.semanticweb.org/person/alistair-duke> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/bt> .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/status> "Industry" .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "8400e14ca3a777de2721425832cba38c43fbe7a" .
+<http://data.semanticweb.org/person/alistair-duke> <http://data.semanticweb.org/ns/swc/ontology#affiliation> "BT" .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/homepage> <http://www.bt.com> .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/family_name> "Duke" .
+<http://data.semanticweb.org/person/alistair-duke> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/poster-demo-proceedings/paper-61> .
+<http://data.semanticweb.org/person/alistair-duke> <http://www.w3.org/2000/01/rdf-schema#label> "Alistair Duke" .

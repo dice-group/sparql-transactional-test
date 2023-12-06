@@ -1,0 +1,11 @@
+<http://data.semanticweb.org/person/alessandro-mosca> <http://xmlns.com/foaf/0.1/firstName> "Alessandro" .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://xmlns.com/foaf/0.1/name> "Alessandro Mosca" .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://www.w3.org/2000/01/rdf-schema#label> "Alessandro Mosca" .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/proceedings-1/paper-07> .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/demo-15> .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/free-university-of-bozen-bolzano> .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://www.example.org/test> "717" .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://www.example.org/test> "716" .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://xmlns.com/foaf/0.1/family_name> "Mosca" .
+<http://data.semanticweb.org/person/alessandro-mosca> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "56bffa11def8dee9df0b73fbae04023d3e85c5c3" .
