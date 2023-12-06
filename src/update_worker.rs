@@ -99,6 +99,7 @@ impl UpdateWorker {
         let state = self
             .client
             .get(self.query_endpoint.clone())
+            .header(header::ACCEPT, "application/n-triples")
             .query(&[("query", Self::make_verify_query(subject))])
             .send()
             .await?
