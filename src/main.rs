@@ -16,6 +16,7 @@ use update_worker::UpdateWorker;
 type DbState = Vec<String>;
 type Query = String;
 type Subject = String;
+type QPS = f64;
 
 #[derive(Parser)]
 struct ReaderOpts {
@@ -26,6 +27,13 @@ struct ReaderOpts {
     random_read_workers_query_file: Option<PathBuf>,
 }
 
+#[derive(serde::Serialize)]
+struct Datapoint {
+    reader: usize,
+    query_id: usize,
+    qps: f64,
+}
+
 #[derive(Parser)]
 enum Opts {
     Stress {
@@ -34,6 +42,9 @@ enum Opts {
 
         #[clap(short = 't', long)]
         duration_s: u64,
+
+        #[clap(long)]
+        output_csv: bool,
 
         query_endpoint: Url,
     },
@@ -105,21 +116,21 @@ fn make_update_workers(
 async fn main() -> anyhow::Result<()> {
     let opts: Opts = Opts::parse();
 
-    tracing_subscriber::fmt::init();
+    tracing_subscriber::fmt().with_writer(std::io::stderr).init();
 
-    let (update_workers, random_read_workers) = match opts {
-        Opts::Stress { ref reader_opts, duration_s: _, ref query_endpoint } => {
+    let (update_workers, random_read_workers) = match &opts {
+        Opts::Stress { reader_opts, duration_s: _, query_endpoint, output_csv: _ } => {
             (vec![], make_random_readers(query_endpoint, reader_opts)?)
         },
         Opts::Verify {
-            ref reader_opts,
+            reader_opts,
             num_update_workers,
             runtime_s: _,
-            ref update_query_dir,
-            ref query_endpoint,
-            ref update_endpoint,
+            update_query_dir,
+            query_endpoint,
+            update_endpoint,
         } => (
-            make_update_workers(query_endpoint, update_endpoint, num_update_workers, update_query_dir)?,
+            make_update_workers(query_endpoint, update_endpoint, *num_update_workers, update_query_dir)?,
             make_random_readers(query_endpoint, reader_opts)?,
         ),
     };
@@ -140,11 +151,7 @@ async fn main() -> anyhow::Result<()> {
 
             let res = update_worker.execute().await;
             finished_tx
-                .send((
-                    WorkerType::Update,
-                    worker_id,
-                    res.map(|_| (vec![], Duration::from_secs(0))),
-                ))
+                .send((WorkerType::Update, worker_id, res.map(|_| Default::default())))
                 .await
                 .unwrap();
         });
@@ -178,7 +185,6 @@ async fn main() -> anyhow::Result<()> {
     let mut n_readers_finished = 0;
     let mut n_errors = 0;
     let mut qps_sum = 0.0;
-    let mut iguana_qps_sum = 0.0;
 
     while let Some((wtype, wid, res)) = finished_rx.recv().await {
         if let Err(e) = res.as_ref() {
@@ -203,18 +209,23 @@ async fn main() -> anyhow::Result<()> {
             WorkerType::Reader => {
                 n_readers_finished += 1;
 
-                if let Ok((query_timings, total_time)) = res {
-                    let qps = query_timings.len() as f64 / total_time.as_secs_f64();
+                if let Ok(query_timings) = res {
+                    let reader_qps = query_timings.values().sum::<f64>() / query_timings.len() as f64;
+                    tracing::info!("Reader {} achieved {reader_qps:.2} QPS", wid + 1);
 
-                    let iguana_qps =
-                        query_timings.iter().map(|d| 1.0 / d.as_secs_f64()).sum::<f64>() / query_timings.len() as f64;
+                    if let Opts::Stress { output_csv: true, .. } = &opts {
+                        let mut w = csv::Writer::from_writer(std::io::stdout());
 
-                    let total_secs = total_time.as_secs_f64();
-                    let iguana_total_secs = query_timings.iter().sum::<Duration>().as_secs_f64();
+                        for (query_id, qps) in query_timings {
+                            w.serialize(Datapoint { reader: wid, query_id, qps })?;
+                        }
+                    } else {
+                        for (q, qps) in query_timings {
+                            tracing::info!("Reader {} achieved {qps:.2} QPS for query {}", wid + 1, q + 1);
+                        }
+                    }
 
-                    tracing::info!("Reader {} achieved {qps} QPS / {iguana_qps} IGUANA QPS and spent {total_secs:.2} seconds / {iguana_total_secs:.2} IGUANA seconds querying", wid + 1);
-                    qps_sum += qps;
-                    iguana_qps_sum += iguana_qps;
+                    qps_sum += reader_qps;
                 }
             },
         }
@@ -225,11 +236,9 @@ async fn main() -> anyhow::Result<()> {
     }
 
     tracing::info!(
-        "The readers achieved {} AvgQPS / {} IGUANA AvgQPS",
+        "The readers achieved {} AvgQPS",
         qps_sum / num_random_read_workers as f64,
-        iguana_qps_sum / num_random_read_workers as f64,
     );
-
 
     anyhow::ensure!(n_errors == 0, "Test failed");
     Ok(())
