@@ -6,6 +6,7 @@ use clap::Parser;
 use random_read_worker::{RandomLimitSelectStartQueryGenerator, RandomReadWorker};
 use reqwest::Url;
 use std::{
+    io::IsTerminal,
     path::{Path, PathBuf},
     sync::Arc,
     time::Duration,
@@ -18,15 +19,6 @@ type Query = String;
 type Subject = String;
 type QPS = f64;
 
-#[derive(Parser)]
-struct ReaderOpts {
-    #[clap(short = 'r', long)]
-    num_random_read_workers: usize,
-
-    #[clap(short = 'q', long)]
-    random_read_workers_query_file: Option<PathBuf>,
-}
-
 #[derive(serde::Serialize)]
 struct Datapoint {
     reader: usize,
@@ -34,41 +26,71 @@ struct Datapoint {
     qps: f64,
 }
 
-#[derive(Parser)]
-enum Opts {
-    Stress {
-        #[clap(flatten)]
-        reader_opts: ReaderOpts,
-
-        #[clap(short = 't', long)]
-        duration_s: u64,
-
-        #[clap(long)]
-        output_csv: bool,
-
-        query_endpoint: Url,
-    },
-    Verify {
-        #[clap(flatten)]
-        reader_opts: ReaderOpts,
-
-        #[clap(short = 'w', long)]
-        num_update_workers: usize,
-
-        #[clap(short = 'Q', long)]
-        update_query_dir: PathBuf,
-
-        #[clap(short = 't', long, default_value_t = 0)]
-        runtime_s: u64,
-
-        query_endpoint: Url,
-        update_endpoint: Url,
-    },
-}
 
 enum WorkerType {
     Update,
     Reader,
+}
+
+#[derive(Parser)]
+struct ReaderOpts {
+    /// Number of random readers to spawn
+    #[clap(short = 'r', long)]
+    num_random_read_workers: usize,
+
+    /// Optionally, a file with SPARQL queries that the readers should use (one query per line)
+    /// If not provided readers will simply run `SELECT *` with varying limits
+    #[clap(short = 'q', long)]
+    random_read_workers_query_file: Option<PathBuf>,
+}
+
+#[derive(Parser)]
+enum SubCommand {
+    /// A read-only stress test that measures QPS
+    Stress {
+        #[clap(flatten)]
+        reader_opts: ReaderOpts,
+
+        /// The number of seconds the stress test should last
+        #[clap(short = 't', long)]
+        duration_s: u64,
+
+        /// If set, will output a csv file to stdout with per query timings for each reader
+        #[clap(long)]
+        output_per_query_qps_csv: bool,
+
+        /// URL to SPARQL (read) endpoint to stress
+        query_endpoint: Url,
+    },
+    /// A read-write workload that checks for correctness of concurrent updates and reads
+    Verify {
+        #[clap(flatten)]
+        reader_opts: ReaderOpts,
+
+        /// Number of update workers to spawn
+        #[clap(short = 'w', long)]
+        num_update_workers: usize,
+
+        /// Path to the directory that contains the information for the updaters
+        #[clap(short = 'Q', long)]
+        update_query_dir: PathBuf,
+
+        /// URL to SPARQL endpoint for the random readers
+        query_endpoint: Url,
+
+        /// URL to SPARQL endpoint for the updaters
+        update_endpoint: Url,
+    },
+}
+
+#[derive(Parser)]
+struct Command {
+    /// Do not color log output
+    #[clap(long)]
+    no_color: bool,
+
+    #[clap(subcommand)]
+    sub: SubCommand,
 }
 
 fn make_random_readers(
@@ -114,18 +136,20 @@ fn make_update_workers(
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let opts: Opts = Opts::parse();
+    let opts: Command = Command::parse();
 
-    tracing_subscriber::fmt().with_writer(std::io::stderr).init();
+    tracing_subscriber::fmt()
+        .with_writer(std::io::stderr)
+        .with_ansi(std::io::stderr().is_terminal() && !opts.no_color)
+        .init();
 
-    let (update_workers, random_read_workers) = match &opts {
-        Opts::Stress { reader_opts, duration_s: _, query_endpoint, output_csv: _ } => {
+    let (update_workers, random_read_workers) = match &opts.sub {
+        SubCommand::Stress { reader_opts, query_endpoint, .. } => {
             (vec![], make_random_readers(query_endpoint, reader_opts)?)
         },
-        Opts::Verify {
+        SubCommand::Verify {
             reader_opts,
             num_update_workers,
-            runtime_s: _,
             update_query_dir,
             query_endpoint,
             update_endpoint,
@@ -176,7 +200,7 @@ async fn main() -> anyhow::Result<()> {
     start_barrier.wait().await;
     let start_time = tokio::time::Instant::now();
 
-    if let Opts::Stress { duration_s, .. } = opts {
+    if let SubCommand::Stress { duration_s, .. } = opts.sub {
         tokio::time::sleep(Duration::from_secs(duration_s)).await;
         stop_notify.notify_waiters();
     }
@@ -211,21 +235,16 @@ async fn main() -> anyhow::Result<()> {
 
                 if let Ok(query_timings) = res {
                     let reader_qps = query_timings.values().sum::<f64>() / query_timings.len() as f64;
-                    tracing::info!("Reader {} achieved {reader_qps:.2} QPS", wid + 1);
+                    tracing::info!("Reader {} achieved {reader_qps:.2} AvgQPS", wid + 1);
+                    qps_sum += reader_qps;
 
-                    if let Opts::Stress { output_csv: true, .. } = &opts {
+                    if let SubCommand::Stress { output_per_query_qps_csv: true, .. } = &opts.sub {
                         let mut w = csv::Writer::from_writer(std::io::stdout());
 
                         for (query_id, qps) in query_timings {
                             w.serialize(Datapoint { reader: wid, query_id, qps })?;
                         }
-                    } else {
-                        for (q, qps) in query_timings {
-                            tracing::info!("Reader {} achieved {qps:.2} QPS for query {}", wid + 1, q + 1);
-                        }
                     }
-
-                    qps_sum += reader_qps;
                 }
             },
         }
