@@ -1,4 +1,4 @@
-use crate::{AvgQPS, Query, QPS};
+use crate::{Query, QPS};
 use rand::{seq::SliceRandom, Rng};
 use reqwest::{Client, Url};
 use std::{borrow::Cow, collections::BTreeMap, io, path::Path, sync::Arc};
