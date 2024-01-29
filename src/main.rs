@@ -18,14 +18,14 @@ type DbState = Vec<String>;
 type Query = String;
 type Subject = String;
 type QPS = f64;
+type AvgQPS = f64;
 
 #[derive(serde::Serialize)]
 struct Datapoint {
     reader: usize,
     query_id: usize,
-    qps: f64,
+    avgqps: f64,
 }
-
 
 enum WorkerType {
     Update,
@@ -208,7 +208,7 @@ async fn main() -> anyhow::Result<()> {
     let mut n_writers_finished = 0;
     let mut n_readers_finished = 0;
     let mut n_errors = 0;
-    let mut qps_sum = 0.0;
+    let mut qps_sum: QPS = 0.0;
 
     while let Some((wtype, wid, res)) = finished_rx.recv().await {
         if let Err(e) = res.as_ref() {
@@ -234,15 +234,15 @@ async fn main() -> anyhow::Result<()> {
                 n_readers_finished += 1;
 
                 if let Ok(query_timings) = res {
-                    let reader_qps = query_timings.values().sum::<f64>() / query_timings.len() as f64;
-                    tracing::info!("Reader {} achieved {reader_qps:.2} AvgQPS", wid + 1);
-                    qps_sum += reader_qps;
+                    let reader_avgqps: AvgQPS = query_timings.values().sum::<QPS>() / query_timings.len() as f64;
+                    tracing::info!("Reader {} achieved {reader_avgqps:.2} AvgQPS", wid + 1);
+                    qps_sum += reader_avgqps;
 
                     if let SubCommand::Stress { output_per_query_qps_csv: true, .. } = &opts.sub {
                         let mut w = csv::Writer::from_writer(std::io::stdout());
 
-                        for (query_id, qps) in query_timings {
-                            w.serialize(Datapoint { reader: wid, query_id, qps })?;
+                        for (query_id, avgqps) in query_timings {
+                            w.serialize(Datapoint { reader: wid, query_id, avgqps })?;
                         }
                     }
                 }

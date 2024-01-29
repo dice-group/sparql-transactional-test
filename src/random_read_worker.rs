@@ -1,4 +1,4 @@
-use crate::{Query, QPS};
+use crate::{AvgQPS, Query, QPS};
 use rand::{seq::SliceRandom, Rng};
 use reqwest::{Client, Url};
 use std::{borrow::Cow, collections::BTreeMap, io, path::Path, sync::Arc};
@@ -68,7 +68,7 @@ impl RandomReadWorker {
         Self { endpoint, client, query_gen }
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<BTreeMap<usize, QPS>> {
+    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<BTreeMap<usize, AvgQPS>> {
         let mut query_qps: BTreeMap<_, Vec<QPS>> = Default::default();
 
         let worker = async {
@@ -98,6 +98,9 @@ impl RandomReadWorker {
 
         success?;
 
+        // for each query
+        // let qpss(query) be a list of the individual qps measurements for query
+        // then avgqps(query) = sum(qpss(query)) / len(qpss(query))
         Ok(query_qps
             .into_iter()
             .map(|(q, qpss)| (q, qpss.iter().sum::<QPS>() / qpss.len() as f64))
