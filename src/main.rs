@@ -24,7 +24,7 @@ type AvgQPS = f64;
 struct Datapoint {
     reader: usize,
     query_id: usize,
-    avgqps: f64,
+    qps: f64,
 }
 
 enum WorkerType {
@@ -241,8 +241,8 @@ async fn main() -> anyhow::Result<()> {
                     if let SubCommand::Stress { output_per_query_qps_csv: true, .. } = &opts.sub {
                         let mut w = csv::Writer::from_writer(std::io::stdout());
 
-                        for (query_id, avgqps) in query_timings {
-                            w.serialize(Datapoint { reader: wid, query_id, avgqps })?;
+                        for (query_id, qps) in query_timings {
+                            w.serialize(Datapoint { reader: wid, query_id, qps })?;
                         }
                     }
                 }

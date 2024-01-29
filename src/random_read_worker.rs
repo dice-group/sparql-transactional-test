@@ -68,7 +68,7 @@ impl RandomReadWorker {
         Self { endpoint, client, query_gen }
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<BTreeMap<usize, AvgQPS>> {
+    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<BTreeMap<usize, QPS>> {
         let mut query_qps: BTreeMap<_, Vec<QPS>> = Default::default();
 
         let worker = async {
@@ -100,7 +100,7 @@ impl RandomReadWorker {
 
         // for each query
         // let qpss(query) be a list of the individual qps measurements for query
-        // then avgqps(query) = sum(qpss(query)) / len(qpss(query))
+        // then qps(query) = sum(qpss(query)) / len(qpss(query))
         Ok(query_qps
             .into_iter()
             .map(|(q, qpss)| (q, qpss.iter().sum::<QPS>() / qpss.len() as f64))
