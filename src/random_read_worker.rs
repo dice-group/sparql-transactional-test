@@ -1,7 +1,7 @@
 use crate::{Query, QPS};
 use rand::{seq::SliceRandom, Rng};
 use reqwest::{Client, Url};
-use std::{borrow::Cow, collections::BTreeMap, io, path::Path, sync::Arc};
+use std::{borrow::Cow, collections::BTreeMap, io, path::Path, sync::Arc, time::Duration};
 use tokio::{sync::Notify, time::Instant};
 
 pub trait QueryGenerator {
@@ -69,7 +69,7 @@ impl RandomReadWorker {
     }
 
     pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<BTreeMap<usize, QPS>> {
-        let mut query_qps: BTreeMap<_, Vec<QPS>> = Default::default();
+        let mut query_timings: BTreeMap<_, Vec<Duration>> = Default::default();
 
         let worker = async {
             loop {
@@ -83,10 +83,7 @@ impl RandomReadWorker {
                 let end = Instant::now();
 
                 if let Some(id) = qid {
-                    query_qps
-                        .entry(id)
-                        .or_default()
-                        .push(1.0 / end.duration_since(start).as_secs_f64());
+                    query_timings.entry(id).or_default().push(end.duration_since(start));
                 }
             }
         };
@@ -98,12 +95,14 @@ impl RandomReadWorker {
 
         success?;
 
-        // for each query
-        // let qpss(query) be a list of the individual qps measurements for query
-        // then qps(query) = sum(qpss(query)) / len(qpss(query))
-        Ok(query_qps
+        Ok(query_timings
             .into_iter()
-            .map(|(q, qpss)| (q, qpss.iter().sum::<QPS>() / qpss.len() as f64))
+            .map(|(qid, durations)| {
+                let avg_duration_secs = durations.iter().sum::<Duration>().as_secs_f64() / durations.len() as f64;
+                let qps = 1.0 / avg_duration_secs;
+
+                (qid, qps)
+            })
             .collect())
     }
 }

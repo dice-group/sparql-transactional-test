@@ -233,15 +233,15 @@ async fn main() -> anyhow::Result<()> {
             WorkerType::Reader => {
                 n_readers_finished += 1;
 
-                if let Ok(query_timings) = res {
-                    let reader_avgqps: AvgQPS = query_timings.values().sum::<QPS>() / query_timings.len() as f64;
+                if let Ok(query_qps) = res {
+                    let reader_avgqps: AvgQPS = query_qps.values().sum::<QPS>() / query_qps.len() as f64;
                     tracing::info!("Reader {} achieved {reader_avgqps:.2} AvgQPS", wid + 1);
                     qps_sum += reader_avgqps;
 
                     if let SubCommand::Stress { output_per_query_qps_csv: true, .. } = &opts.sub {
                         let mut w = csv::Writer::from_writer(std::io::stdout());
 
-                        for (query_id, qps) in query_timings {
+                        for (query_id, qps) in query_qps {
                             w.serialize(Datapoint { reader: wid, query_id, qps })?;
                         }
                     }
