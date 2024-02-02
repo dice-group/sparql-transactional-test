@@ -1,61 +1,20 @@
-use crate::{DbState, Query, Subject};
-use anyhow::{ensure, Context};
-use reqwest::{header, Client, Url};
-use std::{
-    fmt::{Display, Formatter},
-    path::Path,
+use crate::{
+    error::{InvalidStateVerboseInfo, UpdateFailedVerboseInfo, WorkerError},
+    Query,
 };
+use anyhow::Context;
+use reqwest::{header, Client, Url};
+use std::path::Path;
 
-#[derive(Debug)]
-pub struct DiffError {
-    pub worker_id: usize,
-    pub update_id: usize,
-    pub update: String,
-    pub expected: String,
-    pub actual: String,
-}
-
-fn format_insert_or_delete_data(f: &mut Formatter<'_>, q: &str) -> std::fmt::Result {
-    let (head, body) = q.split_once("{ <").unwrap();
-    let (body, _) = body.rsplit_once(". }").unwrap();
-
-    writeln!(f, "{head}{{")?;
-
-    for triple in body.split(". <") {
-        writeln!(f, "    <{triple}.")?;
-    }
-
-    writeln!(f, "}}")?;
-    Ok(())
-}
-
-impl Display for DiffError {
-    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(
-            f,
-            "Unexpected result from worker {} at update {}\n\nquery:\n",
-            self.worker_id, self.update_id
-        )?;
-
-        if self.update.starts_with("INSERT DATA") || self.update.starts_with("DELETE DATA") {
-            format_insert_or_delete_data(f, &self.update)?;
-        } else {
-            writeln!(f, "{}", self.update)?;
-        }
-
-        writeln!(f, "\nexpected:\n{}", self.expected)?;
-        writeln!(f, "\nactual:\n{}", self.actual)?;
-
-        writeln!(f, "\ndiff:\n{}", prettydiff::diff_lines(&self.expected, &self.actual))
-    }
-}
+type DbState = Vec<String>;
+type Subject = String;
 
 pub struct UpdateWorker {
-    id: usize,
     query_endpoint: Url,
     update_endpoint: Url,
     client: Client,
     queries: Vec<(Subject, Query, DbState)>,
+    verbose: bool,
 }
 
 impl UpdateWorker {
@@ -63,7 +22,7 @@ impl UpdateWorker {
         format!("CONSTRUCT {{ {subject} ?p ?o }} WHERE {{ {subject} ?p ?o . FILTER(!isBlank(?o)) }}")
     }
 
-    pub fn new(id: usize, base_dir: &Path, query_endpoint: Url, update_endpoint: Url) -> anyhow::Result<Self> {
+    pub fn new(base_dir: &Path, query_endpoint: Url, update_endpoint: Url, verbose: bool) -> anyhow::Result<Self> {
         let mut queries = Vec::new();
 
         for op in 1.. {
@@ -76,18 +35,16 @@ impl UpdateWorker {
             }
 
             let subject = std::fs::read_to_string(&subject).context(format!(
-                "Worker {id} is unable to read subject of query {op} from {}",
+                "Unable to read subject of query {op} from {}",
                 subject.display()
             ))?;
 
-            let update = std::fs::read_to_string(&update).context(format!(
-                "Worker {id} is unable to read update of query {op} from {}",
-                update.display()
-            ))?;
+            let update = std::fs::read_to_string(&update)
+                .context(format!("Unable to read update of query {op} from {}", update.display()))?;
 
             let mut update_result: Vec<_> = std::fs::read_to_string(&update_result)
                 .context(format!(
-                    "Worker {id} is unable to read result of query {op} from {}",
+                    "Unable to read result of query {op} from {}",
                     update_result.display()
                 ))?
                 .lines()
@@ -99,10 +56,16 @@ impl UpdateWorker {
             queries.push((subject, update, update_result));
         }
 
-        Ok(Self { id, query_endpoint, update_endpoint, client: Client::new(), queries })
+        Ok(Self {
+            query_endpoint,
+            update_endpoint,
+            client: Client::new(),
+            queries,
+            verbose,
+        })
     }
 
-    async fn read_current_state(&self, subject: &str) -> anyhow::Result<DbState> {
+    async fn read_current_state(&self, subject: &str) -> reqwest::Result<DbState> {
         let state = self
             .client
             .get(self.query_endpoint.clone())
@@ -119,7 +82,7 @@ impl UpdateWorker {
         Ok(ret)
     }
 
-    async fn issue_update(&self, update: &str) -> anyhow::Result<()> {
+    async fn issue_update(&self, update: &str) -> reqwest::Result<()> {
         self.client
             .post(self.update_endpoint.clone())
             .header(header::CONTENT_TYPE, "application/sparql-update")
@@ -131,22 +94,39 @@ impl UpdateWorker {
         Ok(())
     }
 
-    pub async fn execute(&self) -> anyhow::Result<()> {
+    pub async fn execute(&self) -> Result<(), WorkerError> {
         for (id, (subject, update, expected_state)) in self.queries.iter().enumerate() {
-            self.issue_update(update).await?;
+            self.issue_update(update)
+                .await
+                .map_err(|err| WorkerError::UpdateFailed {
+                    update_id: id,
+                    err,
+                    verbose_info: if self.verbose {
+                        Some(UpdateFailedVerboseInfo { query: update.clone() })
+                    } else {
+                        None
+                    },
+                })?;
 
-            let actual_state = self.read_current_state(subject).await?;
+            let actual_state = self
+                .read_current_state(subject)
+                .await
+                .map_err(|err| WorkerError::UpdateVerifyFailed { update_id: id, subject: subject.to_owned(), err })?;
 
-            ensure!(
-                &actual_state == expected_state,
-                DiffError {
-                    worker_id: self.id,
+            if &actual_state != expected_state {
+                return Err(WorkerError::InvalidState {
                     update_id: id + 1,
-                    update: update.to_owned(),
-                    expected: expected_state.join("\n"),
-                    actual: actual_state.join("\n")
-                }
-            );
+                    verbose_info: if self.verbose {
+                        Some(InvalidStateVerboseInfo {
+                            update: update.to_owned(),
+                            expected: expected_state.join("\n"),
+                            actual: actual_state.join("\n"),
+                        })
+                    } else {
+                        None
+                    },
+                });
+            }
         }
 
         Ok(())

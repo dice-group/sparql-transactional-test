@@ -1,8 +1,16 @@
-use crate::{Query, QPS};
+use crate::{error::WorkerError, Query, QPS};
 use rand::{seq::SliceRandom, Rng};
-use reqwest::{Client, Url};
-use std::{borrow::Cow, collections::BTreeMap, io, path::Path, sync::Arc, time::Duration};
-use tokio::{sync::Notify, time::Instant};
+use reqwest::{Client, Response, Url};
+use std::{
+    borrow::Cow,
+    collections::BTreeMap,
+    future::Future,
+    io,
+    path::Path,
+    sync::Arc,
+    time::{Duration, Instant},
+};
+use tokio::sync::Notify;
 
 pub trait QueryGenerator {
     fn next_query(&mut self) -> (Option<usize>, Cow<str>);
@@ -68,27 +76,36 @@ impl RandomReadWorker {
         Self { endpoint, client, query_gen }
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> anyhow::Result<BTreeMap<usize, QPS>> {
+    async fn measure_query(query: impl Future<Output = reqwest::Result<Response>>) -> reqwest::Result<Duration> {
+        let start = Instant::now();
+
+        let resp = query.await?.error_for_status()?.text().await?;
+        std::hint::black_box(resp);
+
+        let end = Instant::now();
+
+        Ok(end.duration_since(start))
+    }
+
+    pub async fn execute(&mut self, stop: Arc<Notify>) -> Result<BTreeMap<usize, QPS>, WorkerError> {
         let mut query_timings: BTreeMap<_, Vec<Duration>> = Default::default();
 
         let worker = async {
             loop {
                 let (qid, q) = self.query_gen.next_query();
 
-                let query = self.client.get(self.endpoint.clone()).query(&[("query", &q)]).send();
-
-                let start = Instant::now();
-                let resp = query.await?.error_for_status()?.text().await?;
-                std::hint::black_box(resp);
-                let end = Instant::now();
+                let qfut = self.client.get(self.endpoint.clone()).query(&[("query", &q)]).send();
+                let dur = Self::measure_query(qfut)
+                    .await
+                    .map_err(|e| WorkerError::ReadFailed { query: q.into_owned(), err: e })?;
 
                 if let Some(id) = qid {
-                    query_timings.entry(id).or_default().push(end.duration_since(start));
+                    query_timings.entry(id).or_default().push(dur);
                 }
             }
         };
 
-        let success: anyhow::Result<()> = tokio::select! {
+        let success = tokio::select! {
             res = worker => res,
             _ = stop.notified() => Ok(())
         };
