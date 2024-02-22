@@ -1,4 +1,4 @@
-use crate::{error::WorkerError, Query, QPS};
+use crate::{error::WorkerError, Query, WorkerBehaviour, QPS};
 use rand::{seq::SliceRandom, Rng};
 use reqwest::{Client, Response, Url};
 use std::{
@@ -67,24 +67,33 @@ pub struct RandomReadWorker {
     endpoint: Url,
     client: Client,
     query_gen: Box<dyn QueryGenerator + Send>,
+    behav: WorkerBehaviour,
 }
 
 impl RandomReadWorker {
-    pub fn new(query_gen: Box<dyn QueryGenerator + Send>, endpoint: Url) -> Self {
+    pub fn new(query_gen: Box<dyn QueryGenerator + Send>, endpoint: Url, behav: WorkerBehaviour) -> Self {
         let client = Client::builder().tcp_nodelay(true).build().unwrap();
 
-        Self { endpoint, client, query_gen }
+        Self { endpoint, client, query_gen, behav }
     }
 
-    async fn measure_query(query: impl Future<Output = reqwest::Result<Response>>) -> reqwest::Result<Duration> {
+    async fn measure_query(
+        behav: WorkerBehaviour,
+        query: impl Future<Output = reqwest::Result<Response>>,
+    ) -> reqwest::Result<Option<Duration>> {
         let start = Instant::now();
 
-        let resp = query.await?.error_for_status()?.text().await?;
-        std::hint::black_box(resp);
+        match query.await {
+            Ok(resp) => {
+                let resp = resp.error_for_status()?.text().await?;
+                std::hint::black_box(resp);
 
-        let end = Instant::now();
-
-        Ok(end.duration_since(start))
+                let end = Instant::now();
+                Ok(Some(end.duration_since(start)))
+            },
+            Err(_) if behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+            Err(e) => Err(e),
+        }
     }
 
     pub async fn execute(&mut self, stop: Arc<Notify>) -> Result<BTreeMap<usize, QPS>, WorkerError> {
@@ -95,11 +104,11 @@ impl RandomReadWorker {
                 let (qid, q) = self.query_gen.next_query();
 
                 let qfut = self.client.get(self.endpoint.clone()).query(&[("query", &q)]).send();
-                let dur = Self::measure_query(qfut)
+                let dur = Self::measure_query(self.behav, qfut)
                     .await
                     .map_err(|e| WorkerError::ReadFailed { query: q.into_owned(), err: e })?;
 
-                if let Some(id) = qid {
+                if let (Some(id), Some(dur)) = (qid, dur) {
                     query_timings.entry(id).or_default().push(dur);
                 }
             }

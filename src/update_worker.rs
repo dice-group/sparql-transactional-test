@@ -1,6 +1,6 @@
 use crate::{
     error::{InvalidStateVerboseInfo, UpdateFailedVerboseInfo, WorkerError},
-    Query,
+    Query, WorkerBehaviour,
 };
 use anyhow::Context;
 use reqwest::{header, Client, Url};
@@ -15,6 +15,7 @@ pub struct UpdateWorker {
     client: Client,
     queries: Vec<(Subject, Query, DbState)>,
     verbose: bool,
+    behav: WorkerBehaviour,
 }
 
 impl UpdateWorker {
@@ -22,7 +23,13 @@ impl UpdateWorker {
         format!("CONSTRUCT {{ {subject} ?p ?o }} WHERE {{ {subject} ?p ?o . FILTER(!isBlank(?o)) }}")
     }
 
-    pub fn new(base_dir: &Path, query_endpoint: Url, update_endpoint: Url, verbose: bool) -> anyhow::Result<Self> {
+    pub fn new(
+        base_dir: &Path,
+        query_endpoint: Url,
+        update_endpoint: Url,
+        verbose: bool,
+        behav: WorkerBehaviour,
+    ) -> anyhow::Result<Self> {
         let mut queries = Vec::new();
 
         for op in 1.. {
@@ -62,70 +69,100 @@ impl UpdateWorker {
             client: Client::new(),
             queries,
             verbose,
+            behav,
         })
     }
 
-    async fn read_current_state(&self, subject: &str) -> reqwest::Result<DbState> {
-        let state = self
+    async fn read_current_state(&self, subject: &str) -> reqwest::Result<Option<DbState>> {
+        let resp = self
             .client
             .get(self.query_endpoint.clone())
             .header(header::ACCEPT, "application/n-triples")
             .query(&[("query", Self::make_verify_query(subject))])
             .send()
-            .await?
-            .text()
-            .await?;
+            .await;
 
-        let mut ret: DbState = state.lines().map(ToOwned::to_owned).collect();
-        ret.sort();
+        match resp {
+            Ok(resp) => {
+                let state = resp.text().await?;
+                let mut ret: DbState = state.lines().map(ToOwned::to_owned).collect();
+                ret.sort();
 
-        Ok(ret)
+                Ok(Some(ret))
+            },
+            Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+            Err(e) => Err(e),
+        }
     }
 
-    async fn issue_update(&self, update: &str) -> reqwest::Result<()> {
-        self.client
+    async fn issue_update(&self, update: &str) -> reqwest::Result<Option<()>> {
+        let resp = self
+            .client
             .post(self.update_endpoint.clone())
             .header(header::CONTENT_TYPE, "application/sparql-update")
             .body(update.to_owned())
             .send()
-            .await?
-            .error_for_status()?;
+            .await;
 
-        Ok(())
+        match resp {
+            Ok(resp) => {
+                resp.error_for_status()?;
+                Ok(Some(()))
+            },
+            Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+            Err(e) => Err(e),
+        }
     }
 
     pub async fn execute(&self) -> Result<(), WorkerError> {
         for (id, (subject, update, expected_state)) in self.queries.iter().enumerate() {
-            self.issue_update(update)
-                .await
-                .map_err(|err| WorkerError::UpdateFailed {
-                    update_id: id,
-                    err,
-                    verbose_info: if self.verbose {
-                        Some(UpdateFailedVerboseInfo { query: update.clone() })
-                    } else {
-                        None
-                    },
-                })?;
+            loop {
+                let resp = self
+                    .issue_update(update)
+                    .await
+                    .map_err(|err| WorkerError::UpdateFailed {
+                        update_id: id,
+                        err,
+                        verbose_info: if self.verbose {
+                            Some(UpdateFailedVerboseInfo { query: update.clone() })
+                        } else {
+                            None
+                        },
+                    })?;
 
-            let actual_state = self
-                .read_current_state(subject)
-                .await
-                .map_err(|err| WorkerError::UpdateVerifyFailed { update_id: id, subject: subject.to_owned(), err })?;
+                if resp.is_some() {
+                    break;
+                }
+            }
 
-            if &actual_state != expected_state {
-                return Err(WorkerError::InvalidState {
-                    update_id: id + 1,
-                    verbose_info: if self.verbose {
-                        Some(InvalidStateVerboseInfo {
-                            update: update.to_owned(),
-                            expected: expected_state.join("\n"),
-                            actual: actual_state.join("\n"),
-                        })
-                    } else {
-                        None
-                    },
-                });
+            loop {
+                let actual_state =
+                    self.read_current_state(subject)
+                        .await
+                        .map_err(|err| WorkerError::UpdateVerifyFailed {
+                            update_id: id,
+                            subject: subject.to_owned(),
+                            err,
+                        })?;
+
+                if let Some(actual_state) = actual_state {
+                    if &actual_state != expected_state {
+                        return Err(WorkerError::InvalidState {
+                            update_id: id + 1,
+                            verbose_info: if self.verbose {
+                                Some(InvalidStateVerboseInfo {
+                                    update: update.to_owned(),
+                                    expected: expected_state.join("\n"),
+                                    actual: actual_state.join("\n"),
+                                })
+                            } else {
+                                None
+                            },
+                        });
+                    }
+
+                    break;
+                }
             }
         }
 
