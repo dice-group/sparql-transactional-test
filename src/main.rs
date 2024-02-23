@@ -327,8 +327,8 @@ async fn run(opts: Command) -> anyhow::Result<()> {
 
     let end_time = tokio::time::Instant::now();
     tracing::info!(
-        "All updates completed in {}ms, {n_update_errors} update workers encountered errors",
-        end_time.duration_since(start_time).as_millis()
+        "All updates completed in {:.3}s, {n_update_errors} update workers encountered errors",
+        end_time.duration_since(start_time).as_secs_f64()
     );
 
     stop_notify.notify_waiters();
