@@ -70,19 +70,23 @@ struct ReaderOpts {
 
 #[derive(Parser)]
 struct KillOpts {
-    /// TODO COMMENT
+    /// If present, the stress test will use this script to start the server on test begin.
+    ///
+    /// This option must be used in conjunction with --kill-script and --restart-script.
     #[clap(long)]
     start_script: OsString,
 
     /// If present, the stress test will periodically
     /// kill (i.e. uncleanly shutdown) the server using this script.
     ///
-    /// restart_script will be used to bring it back up again to continue the test
-    /// TODO COMMENT
+    /// This option must be used in conjunction with --start-script and --restart-script.
     #[clap(long)]
     kill_script: OsString,
 
-    /// The restart script corresponding to kill_script TODO COMMENT
+    /// If present, the stress test will restart the server
+    /// after a kill using this script.
+    ///
+    /// This option must be used in conjunction with --start-script and --kill-script.
     #[clap(long)]
     restart_script: OsString,
 

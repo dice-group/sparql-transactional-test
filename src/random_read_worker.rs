@@ -85,11 +85,17 @@ impl RandomReadWorker {
 
         match query.await {
             Ok(resp) => {
-                let resp = resp.error_for_status()?.text().await?;
-                std::hint::black_box(resp);
+                let resp = resp.error_for_status()?;
 
-                let end = Instant::now();
-                Ok(Some(end.duration_since(start)))
+                match resp.text().await {
+                    Ok(text) => {
+                        std::hint::black_box(text);
+                        let end = Instant::now();
+                        Ok(Some(end.duration_since(start)))
+                    },
+                    Err(_) if behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+                    Err(e) => Err(e),
+                }
             },
             Err(_) if behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
             Err(e) => Err(e),

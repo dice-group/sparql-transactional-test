@@ -84,11 +84,17 @@ impl UpdateWorker {
 
         match resp {
             Ok(resp) => {
-                let state = resp.text().await?;
-                let mut ret: DbState = state.lines().map(ToOwned::to_owned).collect();
-                ret.sort();
+                let resp = resp.error_for_status()?;
+                match resp.text().await {
+                    Ok(state) => {
+                        let mut ret: DbState = state.lines().map(ToOwned::to_owned).collect();
+                        ret.sort();
 
-                Ok(Some(ret))
+                        Ok(Some(ret))
+                    },
+                    Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+                    Err(e) => Err(e),
+                }
             },
             Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
             Err(e) => Err(e),
@@ -117,37 +123,29 @@ impl UpdateWorker {
     pub async fn execute(&self) -> Result<(), WorkerError> {
         for (id, (subject, update, expected_state)) in self.queries.iter().enumerate() {
             loop {
-                let resp = self
-                    .issue_update(update)
-                    .await
-                    .map_err(|err| WorkerError::UpdateFailed {
-                        update_id: id,
-                        err,
-                        verbose_info: if self.verbose {
-                            Some(UpdateFailedVerboseInfo { query: update.clone() })
-                        } else {
-                            None
-                        },
-                    })?;
-
-                if resp.is_some() {
-                    break;
+                match self.issue_update(update).await {
+                    Ok(None) => continue,
+                    Ok(Some(_)) => break Ok(()),
+                    Err(err) => {
+                        break Err(WorkerError::UpdateFailed {
+                            update_id: id,
+                            err,
+                            verbose_info: if self.verbose {
+                                Some(UpdateFailedVerboseInfo { query: update.clone() })
+                            } else {
+                                None
+                            },
+                        })
+                    },
                 }
-            }
+            }?;
 
             loop {
-                let actual_state =
-                    self.read_current_state(subject)
-                        .await
-                        .map_err(|err| WorkerError::UpdateVerifyFailed {
-                            update_id: id,
-                            subject: subject.to_owned(),
-                            err,
-                        })?;
-
-                if let Some(actual_state) = actual_state {
-                    if &actual_state != expected_state {
-                        return Err(WorkerError::InvalidState {
+                match self.read_current_state(subject).await {
+                    Ok(None) => continue,
+                    Ok(Some(actual_state)) if &actual_state == expected_state => break Ok(()),
+                    Ok(Some(actual_state)) => {
+                        break Err(WorkerError::InvalidState {
                             update_id: id + 1,
                             verbose_info: if self.verbose {
                                 Some(InvalidStateVerboseInfo {
@@ -158,12 +156,13 @@ impl UpdateWorker {
                             } else {
                                 None
                             },
-                        });
-                    }
-
-                    break;
+                        })
+                    },
+                    Err(err) => {
+                        break Err(WorkerError::UpdateVerifyFailed { update_id: id, subject: subject.to_owned(), err })
+                    },
                 }
-            }
+            }?;
         }
 
         Ok(())
