@@ -318,13 +318,6 @@ async fn run(opts: Command) -> anyhow::Result<()> {
         }
     }
 
-    while let Some(UpdateJobResult { worker_id, result }) = updates_finished_rx.recv().await {
-        if let Err(e) = result {
-            tracing::error!("Update worker {worker_id} encountered an error: {e}");
-            n_update_errors += 1;
-        }
-    }
-
     let end_time = tokio::time::Instant::now();
     tracing::info!(
         "All updates completed in {:.2}s, {n_update_errors} update workers encountered errors",
