@@ -1,4 +1,7 @@
-use std::fmt::{Display, Formatter};
+use std::{
+    fmt::{Display, Formatter},
+    io,
+};
 use thiserror::Error;
 
 #[derive(Debug)]
@@ -33,6 +36,8 @@ pub enum WorkerError {
         err: reqwest::Error,
         verbose_info: Option<UpdateFailedVerboseInfo>,
     },
+    KillFailed(io::Error),
+    RestartFailed(io::Error),
 }
 
 fn format_insert_or_delete_data(f: &mut Formatter<'_>, q: &str) -> std::fmt::Result {
@@ -93,6 +98,8 @@ impl Display for WorkerError {
                     "A reader was unable to execute a query. Error: {err}\nQuery: {query}"
                 )
             },
+            WorkerError::KillFailed(err) => write!(f, "Unable to kill server. Error: {err}"),
+            WorkerError::RestartFailed(err) => write!(f, "Unable to restart server. Error: {err}"),
         }
     }
 }

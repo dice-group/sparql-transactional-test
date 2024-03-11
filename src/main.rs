@@ -1,9 +1,11 @@
 mod error;
+mod kill_worker;
 mod random_read_worker;
 mod update_worker;
 
 use crate::{
     error::WorkerError,
+    kill_worker::KillWorker,
     random_read_worker::{FileSourceQueryGenerator, QueryGenerator},
 };
 use clap::Parser;
@@ -11,12 +13,16 @@ use random_read_worker::{RandomLimitSelectStartQueryGenerator, RandomReadWorker}
 use reqwest::Url;
 use std::{
     collections::BTreeMap,
+    ffi::OsString,
     io::IsTerminal,
     path::{Path, PathBuf},
     sync::Arc,
     time::Duration,
 };
-use tokio::sync::{Barrier, Notify};
+use tokio::{
+    select,
+    sync::{Barrier, Notify},
+};
 use update_worker::UpdateWorker;
 
 type Query = String;
@@ -40,6 +46,16 @@ struct ReadJobResult {
     qps_measurements: Result<BTreeMap<usize, QPS>, WorkerError>,
 }
 
+struct KillJobResult {
+    result: Result<(), WorkerError>,
+}
+
+#[derive(Copy, Clone, PartialEq, Eq)]
+enum WorkerBehaviour {
+    IgnoreConnectionError,
+    ReportConnectionError,
+}
+
 #[derive(Parser)]
 struct ReaderOpts {
     /// Number of random readers to spawn
@@ -50,6 +66,33 @@ struct ReaderOpts {
     /// If not provided readers will simply run `SELECT *` with varying limits
     #[clap(short = 'q', long)]
     random_read_workers_query_file: Option<PathBuf>,
+}
+
+#[derive(Parser)]
+struct KillOpts {
+    /// If present, the stress test will use this script to start the server on test begin.
+    ///
+    /// This option must be used in conjunction with --kill-script and --restart-script.
+    #[clap(long)]
+    start_script: OsString,
+
+    /// If present, the stress test will periodically
+    /// kill (i.e. uncleanly shutdown) the server using this script.
+    ///
+    /// This option must be used in conjunction with --start-script and --restart-script.
+    #[clap(long)]
+    kill_script: OsString,
+
+    /// If present, the stress test will restart the server
+    /// after a kill using this script.
+    ///
+    /// This option must be used in conjunction with --start-script and --kill-script.
+    #[clap(long)]
+    restart_script: OsString,
+
+    /// The number of seconds between server kills
+    #[clap(long, default_value_t = 10)]
+    kill_delay_s: u64,
 }
 
 #[derive(Parser)]
@@ -93,6 +136,9 @@ enum SubCommand {
         /// Warning the string can potentially be very long.
         #[clap(short = 'v', long)]
         verbose: bool,
+
+        #[clap(flatten)]
+        kill_opts: Option<KillOpts>,
     },
 }
 
@@ -122,10 +168,12 @@ async fn main() {
 }
 
 async fn run(opts: Command) -> anyhow::Result<()> {
-    let (update_workers, random_read_workers) = match &opts.sub {
-        SubCommand::Stress { reader_opts, query_endpoint, .. } => {
-            (vec![], make_random_readers(query_endpoint, reader_opts)?)
-        },
+    let (update_workers, random_read_workers, kill_worker) = match &opts.sub {
+        SubCommand::Stress { reader_opts, query_endpoint, .. } => (
+            vec![],
+            make_random_readers(query_endpoint, reader_opts, WorkerBehaviour::ReportConnectionError)?,
+            None,
+        ),
         SubCommand::Verify {
             reader_opts,
             num_update_workers,
@@ -133,22 +181,36 @@ async fn run(opts: Command) -> anyhow::Result<()> {
             query_endpoint,
             update_endpoint,
             verbose,
-        } => (
-            make_update_workers(
-                query_endpoint,
-                update_endpoint,
-                *num_update_workers,
-                update_query_dir,
-                *verbose,
-            )?,
-            make_random_readers(query_endpoint, reader_opts)?,
-        ),
+            kill_opts,
+        } => {
+            let behav = if kill_opts.is_none() {
+                WorkerBehaviour::ReportConnectionError
+            } else {
+                WorkerBehaviour::IgnoreConnectionError
+            };
+
+            (
+                make_update_workers(
+                    query_endpoint,
+                    update_endpoint,
+                    *num_update_workers,
+                    update_query_dir,
+                    *verbose,
+                    behav,
+                )?,
+                make_random_readers(query_endpoint, reader_opts, behav)?,
+                make_kill_worker(kill_opts.as_ref()),
+            )
+        },
     };
 
     let num_update_workers = update_workers.len();
     let num_random_read_workers = random_read_workers.len();
+    let num_kill_workers = kill_worker.is_some() as usize;
 
-    let start_barrier = Arc::new(Barrier::new(num_update_workers + num_random_read_workers + 1));
+    let start_barrier = Arc::new(Barrier::new(
+        num_update_workers + num_random_read_workers + num_kill_workers + 1,
+    ));
     let (updates_finished_tx, mut updates_finished_rx) = tokio::sync::mpsc::channel(num_update_workers);
 
     for (update_worker, worker_id) in update_workers.into_iter().zip(1..) {
@@ -184,8 +246,44 @@ async fn run(opts: Command) -> anyhow::Result<()> {
         });
     }
 
+    let (kill_worker_finished_tx, mut kill_worker_finished_rx) = tokio::sync::mpsc::channel(1);
+
+    if let Some(mut kill_worker) = kill_worker {
+        let start_barrier = start_barrier.clone();
+        let finished_tx = kill_worker_finished_tx.clone();
+        let stop_notify = stop_notify.clone();
+
+        tokio::spawn(async move {
+            start_barrier.wait().await;
+            tracing::info!("Starting kill worker");
+
+            let result = kill_worker.execute(stop_notify).await;
+            finished_tx.send(KillJobResult { result }).await.unwrap();
+        });
+    }
+
     drop(updates_finished_tx);
     drop(readers_finished_tx);
+    drop(kill_worker_finished_tx);
+
+    if let SubCommand::Verify { kill_opts: Some(KillOpts { start_script, .. }), .. } = &opts.sub {
+        match tokio::process::Command::new("sh")
+            .arg("-c")
+            .arg(start_script)
+            .status()
+            .await
+        {
+            Ok(status) if !status.success() => {
+                tracing::error!("Starting server failed. Error: Script returned exit status != 0");
+                return Err(anyhow::anyhow!("Test failed, unable to perform lifecycle management"));
+            },
+            Err(e) => {
+                tracing::error!("Starting server failed. Error: {e}");
+                return Err(anyhow::anyhow!("Test failed, unable to perform lifecycle management"));
+            },
+            _ => (),
+        }
+    }
 
     start_barrier.wait().await;
     let start_time = tokio::time::Instant::now();
@@ -197,17 +295,33 @@ async fn run(opts: Command) -> anyhow::Result<()> {
 
     let mut n_update_errors = 0;
 
-    while let Some(UpdateJobResult { worker_id, result }) = updates_finished_rx.recv().await {
-        if let Err(e) = result {
-            tracing::error!("Update worker {worker_id} encountered an error: {e}");
-            n_update_errors += 1;
+    loop {
+        select! {
+            ujobres = updates_finished_rx.recv() => {
+                if let Some(UpdateJobResult { worker_id, result }) = ujobres {
+                    if let Err(e) = result {
+                        tracing::error!("Update worker {worker_id} encountered an error: {e}");
+                        n_update_errors += 1;
+                    }
+                } else {
+                    break;
+                }
+            },
+            kjobres = kill_worker_finished_rx.recv() => {
+                if let Some(KillJobResult { result }) = kjobres {
+                    if let Err(e) = result {
+                        tracing::error!("Kill worker encountered an error: {e}");
+                        return Err(anyhow::anyhow!("Test failed, unable to perform lifecycle management"));
+                    }
+                }
+            },
         }
     }
 
     let end_time = tokio::time::Instant::now();
     tracing::info!(
-        "All updates completed in {}ms, {n_update_errors} update workers encountered errors",
-        end_time.duration_since(start_time).as_millis()
+        "All updates completed in {:.2}s, {n_update_errors} update workers encountered errors",
+        end_time.duration_since(start_time).as_secs_f64()
     );
 
     stop_notify.notify_waiters();
@@ -240,6 +354,10 @@ async fn run(opts: Command) -> anyhow::Result<()> {
         qps_sum / num_random_read_workers as f64,
     );
 
+    if let SubCommand::Verify { kill_opts: Some(KillOpts { kill_script, .. }), .. } = &opts.sub {
+        let _ = tokio::process::Command::new("sh").arg("-c").arg(kill_script).spawn();
+    }
+
     if n_update_errors > 0 {
         Err(anyhow::anyhow!("Test failed, errors were encountered"))
     } else {
@@ -247,9 +365,16 @@ async fn run(opts: Command) -> anyhow::Result<()> {
     }
 }
 
+fn make_kill_worker(kill_opts: Option<&KillOpts>) -> Option<KillWorker> {
+    kill_opts.map(|KillOpts { kill_script, restart_script, kill_delay_s, .. }| {
+        KillWorker::new(kill_script, restart_script, Duration::from_secs(*kill_delay_s))
+    })
+}
+
 fn make_random_readers(
     query_endpoint: &Url,
     ReaderOpts { num_random_read_workers, random_read_workers_query_file }: &ReaderOpts,
+    behav: WorkerBehaviour,
 ) -> anyhow::Result<Vec<RandomReadWorker>> {
     let mut random_read_workers = Vec::with_capacity(*num_random_read_workers);
     for _ in 0..*num_random_read_workers {
@@ -259,7 +384,7 @@ fn make_random_readers(
             Box::new(RandomLimitSelectStartQueryGenerator)
         };
 
-        let w = RandomReadWorker::new(query_gen, query_endpoint.clone());
+        let w = RandomReadWorker::new(query_gen, query_endpoint.clone(), behav);
         random_read_workers.push(w);
     }
 
@@ -272,6 +397,7 @@ fn make_update_workers(
     num_update_workers: usize,
     query_dir: &Path,
     verbose: bool,
+    behav: WorkerBehaviour,
 ) -> anyhow::Result<Vec<UpdateWorker>> {
     let mut update_workers = Vec::with_capacity(num_update_workers);
     for worker in 1..=num_update_workers {
@@ -280,6 +406,7 @@ fn make_update_workers(
             query_endpoint.clone(),
             update_endpoint.clone(),
             verbose,
+            behav,
         )?;
 
         update_workers.push(w);
