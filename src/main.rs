@@ -69,30 +69,32 @@ struct ReaderOpts {
 }
 
 #[derive(Parser)]
-struct KillOpts {
-    /// If present, the stress test will use this script to start the server on test begin.
-    ///
-    /// This option must be used in conjunction with --kill-script and --restart-script.
-    #[clap(long)]
-    start_script: OsString,
+enum VerifySubcommand {
+    Durability {
+        /// If present, the stress test will use this script to start the server on test begin.
+        ///
+        /// This option must be used in conjunction with --kill-script and --restart-script.
+        #[clap(long)]
+        start_script: OsString,
 
-    /// If present, the stress test will periodically
-    /// kill (i.e. uncleanly shutdown) the server using this script.
-    ///
-    /// This option must be used in conjunction with --start-script and --restart-script.
-    #[clap(long)]
-    kill_script: OsString,
+        /// If present, the stress test will periodically
+        /// kill (i.e. uncleanly shutdown) the server using this script.
+        ///
+        /// This option must be used in conjunction with --start-script and --restart-script.
+        #[clap(long)]
+        kill_script: OsString,
 
-    /// If present, the stress test will restart the server
-    /// after a kill using this script.
-    ///
-    /// This option must be used in conjunction with --start-script and --kill-script.
-    #[clap(long)]
-    restart_script: OsString,
+        /// If present, the stress test will restart the server
+        /// after a kill using this script.
+        ///
+        /// This option must be used in conjunction with --start-script and --kill-script.
+        #[clap(long)]
+        restart_script: OsString,
 
-    /// The number of seconds between server kills
-    #[clap(long, default_value_t = 10)]
-    kill_delay_s: u64,
+        /// The number of seconds between server kills
+        #[clap(long, default_value_t = 10)]
+        kill_delay_s: u64,
+    },
 }
 
 #[derive(Parser)]
@@ -137,8 +139,8 @@ enum SubCommand {
         #[clap(short = 'v', long)]
         verbose: bool,
 
-        #[clap(flatten)]
-        kill_opts: Option<KillOpts>,
+        #[clap(subcommand)]
+        sub: Option<VerifySubcommand>,
     },
 }
 
@@ -181,9 +183,9 @@ async fn run(opts: Command) -> anyhow::Result<()> {
             query_endpoint,
             update_endpoint,
             verbose,
-            kill_opts,
+            sub,
         } => {
-            let behav = if kill_opts.is_none() {
+            let behav = if sub.is_none() {
                 WorkerBehaviour::ReportConnectionError
             } else {
                 WorkerBehaviour::IgnoreConnectionError
@@ -199,7 +201,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
                     behav,
                 )?,
                 make_random_readers(query_endpoint, reader_opts, behav)?,
-                make_kill_worker(kill_opts.as_ref()),
+                make_kill_worker(sub.as_ref()),
             )
         },
     };
@@ -266,7 +268,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
     drop(readers_finished_tx);
     drop(kill_worker_finished_tx);
 
-    if let SubCommand::Verify { kill_opts: Some(KillOpts { start_script, .. }), .. } = &opts.sub {
+    if let SubCommand::Verify { sub: Some(VerifySubcommand::Durability { start_script, .. }), .. } = &opts.sub {
         match tokio::process::Command::new("sh")
             .arg("-c")
             .arg(start_script)
@@ -354,7 +356,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
         qps_sum / num_random_read_workers as f64,
     );
 
-    if let SubCommand::Verify { kill_opts: Some(KillOpts { kill_script, .. }), .. } = &opts.sub {
+    if let SubCommand::Verify { sub: Some(VerifySubcommand::Durability { kill_script, .. }), .. } = &opts.sub {
         let _ = tokio::process::Command::new("sh").arg("-c").arg(kill_script).spawn();
     }
 
@@ -365,10 +367,12 @@ async fn run(opts: Command) -> anyhow::Result<()> {
     }
 }
 
-fn make_kill_worker(kill_opts: Option<&KillOpts>) -> Option<KillWorker> {
-    kill_opts.map(|KillOpts { kill_script, restart_script, kill_delay_s, .. }| {
-        KillWorker::new(kill_script, restart_script, Duration::from_secs(*kill_delay_s))
-    })
+fn make_kill_worker(kill_opts: Option<&VerifySubcommand>) -> Option<KillWorker> {
+    kill_opts.map(
+        |VerifySubcommand::Durability { kill_script, restart_script, kill_delay_s, .. }| {
+            KillWorker::new(kill_script, restart_script, Duration::from_secs(*kill_delay_s))
+        },
+    )
 }
 
 fn make_random_readers(
