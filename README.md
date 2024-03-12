@@ -22,7 +22,7 @@ transaction implementation of the triplestore. It does this by stressing the tri
 a number of readers while simultaneously performing concurrent updates. After each update the tool verifies that
 the update was applied correctly.
 
-To explicitly test durability use `verify` with `--kill-script`, `--start-script` and `--restart-script`.
+To explicitly test durability use `verify [..] durability` with `--kill-script`, `--start-script` and `--restart-script`.
 In this mode the test will periodically kill and restart the server to ensure transactional durability.
 
 For best test coverage it is advisable to run both `verify` twice, once with and once without the
@@ -44,6 +44,6 @@ cargo run --release -- verify -w 4 -Q rdf_large -r 24 -q queries.txt \
 # 24 read workers using the queries from queries.txt to stress the triplestore
 # using given scripts to perform server lifecycle management
 cargo run --release -- verify -w 4 -Q rdf_large -r 24 -q queries.txt \
-    --start-script examples/start.sh --kill-script examples/kill.sh --restart-script examples/restart.sh \
     http://localhost:9080/sparql http://localhost:9080/update
+    durability --start-script examples/start.sh --kill-script examples/kill.sh --restart-script examples/restart.sh
 ```
