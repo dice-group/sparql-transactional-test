@@ -40,6 +40,9 @@ Or use one of the pre-generated, swdf-based sets provided in `rdf_small/` and `r
 cargo run --release -- verify -w 4 -Q rdf_large -r 24 -q queries.txt \
     http://localhost:9080/sparql http://localhost:9080/update
 
+
+# verify durability will start the triplestore itself, it does not need to be running before issuing the following command
+
 # 4  write workers using pre-generated data from rdf_large/
 # 24 read workers using the queries from queries.txt to stress the triplestore
 # using given scripts to perform server lifecycle management
