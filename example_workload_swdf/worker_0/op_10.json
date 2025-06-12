@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/mehdi-elahi>",
+    "operation": "GSP_POST",
+    "new_triples": "<http://data.semanticweb.org/person/mehdi-elahi> <http://www.example.org/test> <http://www.example.org/test/22> .",
+    "validation_default": "<http://data.semanticweb.org/person/mehdi-elahi> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-committee-member> . <http://data.semanticweb.org/person/mehdi-elahi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/unknown> . <http://data.semanticweb.org/person/mehdi-elahi> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/> . <http://data.semanticweb.org/person/mehdi-elahi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"d85242663ac8041762319c008508714dc355a630\" . <http://data.semanticweb.org/person/mehdi-elahi> <http://www.example.org/test> <http://www.example.org/test/22> . <http://data.semanticweb.org/person/mehdi-elahi> <http://www.w3.org/2000/01/rdf-schema#label> \"Mehdi Elahi\" . <http://data.semanticweb.org/person/mehdi-elahi> <http://xmlns.com/foaf/0.1/name> \"Mehdi Elahi\" . <http://data.semanticweb.org/person/mehdi-elahi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
+    "validation_named": "<http://data.semanticweb.org/person/mehdi-elahi> <http://www.example.org/test> <http://www.example.org/test/22> . "
+}

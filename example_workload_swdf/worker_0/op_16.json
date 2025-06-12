@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/martin-haro>",
+    "operation": "DELETE_DATA",
+    "new_triples": "",
+    "validation_default": "",
+    "validation_named": ""
+}

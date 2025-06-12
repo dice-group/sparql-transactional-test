@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/noam-koenigstein>",
+    "operation": "GSP_PUT",
+    "new_triples": "<http://data.semanticweb.org/person/noam-koenigstein> <http://www.example.org/test> <http://www.example.org/test/137> .<http://data.semanticweb.org/person/noam-koenigstein> <http://www.example.org/test> <http://www.example.org/test/138> .",
+    "validation_default": "<http://data.semanticweb.org/person/noam-koenigstein> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-committee-member> . ",
+    "validation_named": "<http://data.semanticweb.org/person/noam-koenigstein> <http://www.example.org/test> <http://www.example.org/test/138> . <http://data.semanticweb.org/person/noam-koenigstein> <http://www.example.org/test> <http://www.example.org/test/137> . "
+}

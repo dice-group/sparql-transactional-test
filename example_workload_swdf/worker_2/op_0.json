@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/noam-koenigstein>",
+    "operation": "GSP_DELETE",
+    "new_triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/noam-koenigstein> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-committee-member> . ",
+    "validation_named": ""
+}

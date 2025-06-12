@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/joao-vinagre>",
+    "operation": "GSP_DELETE",
+    "new_triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/joao-vinagre> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/faculty-of-science-university-of-porto> . <http://data.semanticweb.org/person/joao-vinagre> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Portugal> . <http://data.semanticweb.org/person/joao-vinagre> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/2> . <http://data.semanticweb.org/person/joao-vinagre> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"0d25b1ad6b4c418cb394bc4b041b598ad0ef8f73\" . <http://data.semanticweb.org/person/joao-vinagre> <http://www.w3.org/2000/01/rdf-schema#label> \"Jo\u00c3\u00a3o Vinagre\" . <http://data.semanticweb.org/person/joao-vinagre> <http://xmlns.com/foaf/0.1/name> \"Jo\u00c3\u00a3o Vinagre\" . <http://data.semanticweb.org/person/joao-vinagre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
+    "validation_named": ""
+}

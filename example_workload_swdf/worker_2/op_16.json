@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/hak-lae-kim>",
+    "operation": "GSP_POST",
+    "new_triples": "<http://data.semanticweb.org/person/hak-lae-kim> <http://www.example.org/test> <http://www.example.org/test/136> .",
+    "validation_default": "<http://data.semanticweb.org/person/hak-lae-kim> <http://www.w3.org/2002/07/owl#sameAs> <http://www.blogweb.co.kr/haklae.rdf#me> . <http://data.semanticweb.org/person/hak-lae-kim> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/samsung-rd> . <http://data.semanticweb.org/person/hak-lae-kim> <http://www.example.org/test> <http://www.example.org/test/136> . <http://data.semanticweb.org/person/hak-lae-kim> <http://www.w3.org/2000/01/rdf-schema#label> \"Hak-Lae Kim\" . <http://data.semanticweb.org/person/hak-lae-kim> <http://xmlns.com/foaf/0.1/name> \"Hak-Lae Kim\" . <http://data.semanticweb.org/person/hak-lae-kim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
+    "validation_named": "<http://data.semanticweb.org/person/hak-lae-kim> <http://www.example.org/test> <http://www.example.org/test/136> . "
+}

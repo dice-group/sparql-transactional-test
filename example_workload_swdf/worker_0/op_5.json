@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/andrew-hankinson>",
+    "operation": "GSP_DELETE",
+    "new_triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/andrew-hankinson> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/mcgill-university> . <http://data.semanticweb.org/person/andrew-hankinson> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Canada> . <http://data.semanticweb.org/person/andrew-hankinson> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/12> . <http://data.semanticweb.org/person/andrew-hankinson> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"d535932efa589d6267af80dd73ad3ec8aaf9b3df\" . <http://data.semanticweb.org/person/andrew-hankinson> <http://www.w3.org/2000/01/rdf-schema#label> \"Andrew Hankinson\" . <http://data.semanticweb.org/person/andrew-hankinson> <http://xmlns.com/foaf/0.1/name> \"Andrew Hankinson\" . <http://data.semanticweb.org/person/andrew-hankinson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
+    "validation_named": ""
+}

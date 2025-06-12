@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/peter-knees>",
+    "operation": "GSP_DELETE",
+    "new_triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/peter-knees> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-chair> . <http://data.semanticweb.org/person/peter-knees> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/johannes-kepler-university> . <http://data.semanticweb.org/person/peter-knees> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> . <http://data.semanticweb.org/person/peter-knees> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012> . <http://data.semanticweb.org/person/peter-knees> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e3c1d126328680d1179349e21c438e25147d3239\" . <http://data.semanticweb.org/person/peter-knees> <http://www.w3.org/2000/01/rdf-schema#label> \"Peter Knees\" . <http://data.semanticweb.org/person/peter-knees> <http://xmlns.com/foaf/0.1/name> \"Peter Knees\" . <http://data.semanticweb.org/person/peter-knees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
+    "validation_named": ""
+}

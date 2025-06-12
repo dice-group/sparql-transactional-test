@@ -1,0 +1,7 @@
+{
+    "subject": "<http://data.semanticweb.org/person/john-ashley-burgoyne>",
+    "operation": "GSP_DELETE",
+    "new_triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/john-ashley-burgoyne> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/mcgill-university> . <http://data.semanticweb.org/person/john-ashley-burgoyne> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Canada> . <http://data.semanticweb.org/person/john-ashley-burgoyne> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/12> . <http://data.semanticweb.org/person/john-ashley-burgoyne> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ac6e8517e8482a1321943ab67c7f5397b5c8865e\" . <http://data.semanticweb.org/person/john-ashley-burgoyne> <http://www.w3.org/2000/01/rdf-schema#label> \"John Ashley Burgoyne\" . <http://data.semanticweb.org/person/john-ashley-burgoyne> <http://xmlns.com/foaf/0.1/name> \"John Ashley Burgoyne\" . <http://data.semanticweb.org/person/john-ashley-burgoyne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
+    "validation_named": ""
+}
