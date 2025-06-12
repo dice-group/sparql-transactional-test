@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/abdeltif-elbyed",
+    "subject": "<http://data.semanticweb.org/person/patrick-kenis>",
     "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.example.org/test> <http://www.example.org/test/12> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/posters/FP05-Bouzeghoub> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#abdeltif-elbyed> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://xmlns.com/foaf/0.1/name> \"Abdeltif Elbyed\" .\n",
-    "validation_named": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.example.org/test> <http://www.example.org/test/12> .\n"
+    "triples": "<http://data.semanticweb.org/person/patrick-kenis> <http://www.example.org/test> <http://www.example.org/test/1> .\n",
+    "validation_default": "",
+    "validation_named": "<http://data.semanticweb.org/person/patrick-kenis> <http://www.example.org/test> <http://www.example.org/test/1> .\n"
 }

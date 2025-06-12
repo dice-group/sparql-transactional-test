@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/yi-hong-chang",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/yi-hong-chang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/semantic-web-in-use/10> .\n<http://data.semanticweb.org/person/yi-hong-chang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/yi-hong-chang> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/academia-sinica> .\n<http://data.semanticweb.org/person/yi-hong-chang> <http://xmlns.com/foaf/0.1/name> \"Yi-Hong Chang\" .\n",
-    "validation_default": "<http://data.semanticweb.org/person/yi-hong-chang> <http://www.w3.org/2000/01/rdf-schema#label> \"Yi-Hong Chang\" .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/spiros-nikolopoulos>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://www.example.org/test> <http://www.example.org/test/222> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://xmlns.com/foaf/0.1/name> \"Spiros Nikolopoulos\" .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://www.w3.org/2000/01/rdf-schema#label> \"Spiros Nikolopoulos\" .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/eu/14> .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://xmlns.com/foaf/0.1/firstName> \"Spiros\" .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/certh-iti> .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"8aef768dcc90e45201de311b1b2d156d28c8a59e\" .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Greece> .\n<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://xmlns.com/foaf/0.1/lastName> \"Nikolopoulos\" .\n",
+    "validation_named": "<http://data.semanticweb.org/person/spiros-nikolopoulos> <http://www.example.org/test> <http://www.example.org/test/222> .\n"
 }

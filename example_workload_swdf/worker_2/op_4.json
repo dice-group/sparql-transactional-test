@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/antoni-oliver",
-    "operation": "GSP_DELETE",
-    "triples": null,
-    "validation_default": "<http://data.semanticweb.org/person/antoni-oliver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/antoni-oliver> <http://xmlns.com/foaf/0.1/name> \"Antoni Oliver\" .\n<http://data.semanticweb.org/person/antoni-oliver> <http://www.w3.org/2000/01/rdf-schema#label> \"Antoni Oliver\" .\n<http://data.semanticweb.org/person/antoni-oliver> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/390> .\n<http://data.semanticweb.org/person/antoni-oliver> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/uoc> .\n",
+    "subject": "<http://data.semanticweb.org/person/mats-jontell>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/name> \"Mats Jontell\" .\n<http://data.semanticweb.org/person/mats-jontell> <http://www.w3.org/2000/01/rdf-schema#label> \"Mats Jontell\" .\n<http://data.semanticweb.org/person/mats-jontell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .\n<http://data.semanticweb.org/person/mats-jontell> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-of-ontology-sahlgrenska-academy-goeteborg-university> .\n<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/5> .\n<http://data.semanticweb.org/person/mats-jontell> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"c75375de31222829610b2a87de7b944ee88c4d6b\" .\n",
+    "validation_default": "",
     "validation_named": ""
 }

@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/rob-h-bracewell",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/rob-h-bracewell> <http://www.example.org/test> <http://www.example.org/test/155> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/rob-h-bracewell> <http://www.example.org/test> <http://www.example.org/test/155> .\n<http://data.semanticweb.org/person/rob-h-bracewell> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"045a62de29ca81efe8ba0b863c8225b110953fe1\" .\n<http://data.semanticweb.org/person/rob-h-bracewell> <http://xmlns.com/foaf/0.1/name> \"Rob H. Bracewell\" .\n<http://data.semanticweb.org/person/rob-h-bracewell> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/semwebdesign/2007/chair_0> .\n<http://data.semanticweb.org/person/rob-h-bracewell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/rob-h-bracewell> <http://www.example.org/test> <http://www.example.org/test/155> .\n"
+    "subject": "<http://data.semanticweb.org/person/georges-linares>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/georges-linares> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-avignon> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/georges-linares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/georges-linares> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/193> .\n<http://data.semanticweb.org/person/georges-linares> <http://xmlns.com/foaf/0.1/name> \"Georges Linares\" .\n<http://data.semanticweb.org/person/georges-linares> <http://www.w3.org/2000/01/rdf-schema#label> \"Georges Linares\" .\n",
+    "validation_named": ""
 }

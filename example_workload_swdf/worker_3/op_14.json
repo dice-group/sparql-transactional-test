@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/david-warren",
+    "subject": "<http://data.semanticweb.org/person/makoto-imamura>",
     "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/david-warren> <http://xmlns.com/foaf/0.1/familyName> \"Warren\" .\n<http://data.semanticweb.org/person/david-warren> <http://xmlns.com/foaf/0.1/lastName> \"Warren\" .\n<http://data.semanticweb.org/person/david-warren> <http://xmlns.com/foaf/0.1/firstName> \"David\" .\n<http://data.semanticweb.org/person/david-warren> <http://xmlns.com/foaf/0.1/givenName> \"David\" .\n<http://data.semanticweb.org/person/david-warren> <http://xmlns.com/foaf/0.1/name> \"David Warren\" .\n<http://data.semanticweb.org/person/david-warren> <http://www.w3.org/2000/01/rdf-schema#label> \"David Warren\" .\n",
-    "validation_default": "<http://data.semanticweb.org/person/david-warren> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/suny-at-stony-brook> .\n<http://data.semanticweb.org/person/david-warren> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/david-warren> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/rr/2008/pc> .\n",
+    "triples": "<http://data.semanticweb.org/person/makoto-imamura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/makoto-imamura> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n<http://data.semanticweb.org/person/makoto-imamura> <http://xmlns.com/foaf/0.1/name> \"Makoto Imamura\" .\n<http://data.semanticweb.org/person/makoto-imamura> <http://www.w3.org/2000/01/rdf-schema#label> \"Makoto Imamura\" .\n",
+    "validation_default": "",
     "validation_named": ""
 }

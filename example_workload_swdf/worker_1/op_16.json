@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/peter-beck",
-    "operation": "GSP_DELETE",
-    "triples": null,
-    "validation_default": "<http://data.semanticweb.org/person/peter-beck> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/washington-state-university-vancouver> .\n<http://data.semanticweb.org/person/peter-beck> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e261e228874ac3b415e8927a538832e765ae871e\" .\n<http://data.semanticweb.org/person/peter-beck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/peter-beck> <http://xmlns.com/foaf/0.1/name> \"Peter Beck\" .\n<http://data.semanticweb.org/person/peter-beck> <http://www.w3.org/2000/01/rdf-schema#label> \"Peter Beck\" .\n<http://data.semanticweb.org/person/peter-beck> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/poster_demo/1> .\n<http://data.semanticweb.org/person/peter-beck> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/malte-lampmann>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/malte-lampmann> <http://www.example.org/test> <http://www.example.org/test/125> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/malte-lampmann> <http://xmlns.com/foaf/0.1/name> \"Malte Lampmann\" .\n<http://data.semanticweb.org/person/malte-lampmann> <http://www.w3.org/2000/01/rdf-schema#label> \"Malte Lampmann\" .\n<http://data.semanticweb.org/person/malte-lampmann> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/malte-lampmann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/336> .\n<http://data.semanticweb.org/person/malte-lampmann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-of-information-technology> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/malte-lampmann> <http://www.example.org/test> <http://www.example.org/test/125> .\n"
 }

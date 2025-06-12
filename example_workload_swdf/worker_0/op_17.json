@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/wouter-p-c-van-gent",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/wouter-p-c-van-gent> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/proceedings/paper-03> .\n<http://data.semanticweb.org/person/wouter-p-c-van-gent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/wouter-p-c-van-gent> <http://xmlns.com/foaf/0.1/name> \"Wouter P. C. van Gent\" .\n<http://data.semanticweb.org/person/wouter-p-c-van-gent> <http://www.w3.org/2000/01/rdf-schema#label> \"Wouter P. C. van Gent\" .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/hiroko-kou>",
+    "operation": "INSERT_DATA",
+    "triples": "<http://data.semanticweb.org/person/hiroko-kou> <http://www.example.org/test> <http://www.example.org/test/47> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/hiroko-kou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/osaka-university> .\n<http://data.semanticweb.org/person/hiroko-kou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/hiroko-kou> <http://www.example.org/test> <http://www.example.org/test/47> .\n<http://data.semanticweb.org/person/hiroko-kou> <http://xmlns.com/foaf/0.1/name> \"Hiroko Kou\" .\n<http://data.semanticweb.org/person/hiroko-kou> <http://www.w3.org/2000/01/rdf-schema#label> \"Hiroko Kou\" .\n<http://data.semanticweb.org/person/hiroko-kou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2009/paper/poster_demo/190> .\n<http://data.semanticweb.org/person/hiroko-kou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/poster-demo-proceedings/paper-04> .\n<http://data.semanticweb.org/person/hiroko-kou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/osaka-university-japan> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/hiroko-kou> <http://www.example.org/test> <http://www.example.org/test/47> .\n"
 }

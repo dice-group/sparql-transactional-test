@@ -20,8 +20,8 @@ pub trait QueryGenerator {
 pub struct RandomLimitSelectStartQueryGenerator;
 
 impl QueryGenerator for RandomLimitSelectStartQueryGenerator {
-    fn next_query(&mut self) -> (Option<usize>, Cow<str>) {
-        let limit = rand::thread_rng().gen_range(200..500);
+    fn next_query(&mut self) -> (Option<usize>, Cow<'_, str>) {
+        let limit = rand::rng().random_range(200..500);
         (None, Cow::Owned(format!("SELECT * WHERE {{ ?s ?p ?o }} LIMIT {limit}")))
     }
 }
@@ -48,10 +48,10 @@ impl FileSourceQueryGenerator {
 }
 
 impl QueryGenerator for FileSourceQueryGenerator {
-    fn next_query(&mut self) -> (Option<usize>, Cow<str>) {
+    fn next_query(&mut self) -> (Option<usize>, Cow<'_, str>) {
         let cur_ix = self.ix;
         if cur_ix == 0 {
-            self.queries.shuffle(&mut rand::thread_rng());
+            self.queries.shuffle(&mut rand::rng());
         }
 
         self.ix = (self.ix + 1) % self.queries.len();

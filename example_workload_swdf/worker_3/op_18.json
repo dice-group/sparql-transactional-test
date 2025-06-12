@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/andre-le-meur",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/andre-le-meur> <http://www.example.org/test> <http://www.example.org/test/219> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/andre-le-meur> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/190> .\n<http://data.semanticweb.org/person/andre-le-meur> <http://www.example.org/test> <http://www.example.org/test/219> .\n<http://data.semanticweb.org/person/andre-le-meur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/andre-le-meur> <http://xmlns.com/foaf/0.1/name> \"Andr\u00e9 Le Meur\" .\n<http://data.semanticweb.org/person/andre-le-meur> <http://www.w3.org/2000/01/rdf-schema#label> \"Andr\u00e9 Le Meur\" .\n<http://data.semanticweb.org/person/andre-le-meur> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-du-quebec-en-outaouais> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/andre-le-meur> <http://www.example.org/test> <http://www.example.org/test/219> .\n"
+    "subject": "<http://data.semanticweb.org/person/paolo-atzeni>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/paolo-atzeni> <http://www.example.org/test> <http://www.example.org/test/223> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/paolo-atzeni> <http://xmlns.com/foaf/0.1/name> \"Paolo Atzeni\" .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://www.w3.org/2000/01/rdf-schema#label> \"Paolo Atzeni\" .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/roma-tre-university> .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2003/senior-pc-member> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/paolo-atzeni> <http://www.example.org/test> <http://www.example.org/test/223> .\n"
 }

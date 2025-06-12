@@ -19,6 +19,7 @@ use std::{
     sync::Arc,
     time::Duration,
 };
+use anyhow::Context;
 use tokio::{
     select,
     sync::{Barrier, Notify},
@@ -134,6 +135,9 @@ enum SubCommand {
         /// URL to SPARQL endpoint for the updaters
         update_endpoint: Url,
 
+        /// URL to SPARQL Graph Store Protocol endpoint
+        graph_store_endpoint: Url,
+
         /// If an error occurs, log the query string of the query that caused it.
         /// Warning the string can potentially be very long.
         #[clap(short = 'v', long)]
@@ -182,6 +186,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
             update_query_dir,
             query_endpoint,
             update_endpoint,
+            graph_store_endpoint,
             verbose,
             sub,
         } => {
@@ -195,6 +200,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
                 make_update_workers(
                     query_endpoint,
                     update_endpoint,
+                    graph_store_endpoint,
                     *num_update_workers,
                     update_query_dir,
                     *verbose,
@@ -383,7 +389,7 @@ fn make_random_readers(
     let mut random_read_workers = Vec::with_capacity(*num_random_read_workers);
     for _ in 0..*num_random_read_workers {
         let query_gen: Box<dyn QueryGenerator + Send> = if let Some(query_file) = &random_read_workers_query_file {
-            Box::new(FileSourceQueryGenerator::new(query_file)?)
+            Box::new(FileSourceQueryGenerator::new(query_file).context("Unable to open queries file")?)
         } else {
             Box::new(RandomLimitSelectStartQueryGenerator)
         };
@@ -398,17 +404,19 @@ fn make_random_readers(
 fn make_update_workers(
     query_endpoint: &Url,
     update_endpoint: &Url,
+    graph_store_endpoint: &Url,
     num_update_workers: usize,
     query_dir: &Path,
     verbose: bool,
     behav: WorkerBehaviour,
 ) -> anyhow::Result<Vec<UpdateWorker>> {
     let mut update_workers = Vec::with_capacity(num_update_workers);
-    for worker in 1..=num_update_workers {
+    for worker in 0..num_update_workers {
         let w = UpdateWorker::new(
             Path::new(&query_dir.join(format!("worker_{worker}"))),
             query_endpoint.clone(),
             update_endpoint.clone(),
+            graph_store_endpoint.clone(),
             verbose,
             behav,
         )?;

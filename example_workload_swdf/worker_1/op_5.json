@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/michael-stonebraker",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/michael-stonebraker> <http://www.example.org/test> <http://www.example.org/test/78> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/michael-stonebraker> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2001/proceedings/paper-32> .\n<http://data.semanticweb.org/person/michael-stonebraker> <http://www.example.org/test> <http://www.example.org/test/78> .\n<http://data.semanticweb.org/person/michael-stonebraker> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/massachusetts-institute-of-technology> .\n<http://data.semanticweb.org/person/michael-stonebraker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/michael-stonebraker> <http://xmlns.com/foaf/0.1/name> \"Michael Stonebraker\" .\n<http://data.semanticweb.org/person/michael-stonebraker> <http://www.w3.org/2000/01/rdf-schema#label> \"Michael Stonebraker\" .\n",
-    "validation_named": "<http://data.semanticweb.org/person/michael-stonebraker> <http://www.example.org/test> <http://www.example.org/test/78> .\n"
+    "subject": "<http://data.semanticweb.org/person/yuhang-yang>",
+    "operation": "GSP_DELETE",
+    "triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/yuhang-yang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/72> .\n<http://data.semanticweb.org/person/yuhang-yang> <http://xmlns.com/foaf/0.1/name> \"Yuhang Yang\" .\n<http://data.semanticweb.org/person/yuhang-yang> <http://www.w3.org/2000/01/rdf-schema#label> \"Yuhang Yang\" .\n",
+    "validation_named": ""
 }

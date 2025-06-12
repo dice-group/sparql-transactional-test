@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/krzysztof-marasek",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/krzysztof-marasek> <http://www.example.org/test> <http://www.example.org/test/131> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/krzysztof-marasek> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/57> .\n<http://data.semanticweb.org/person/krzysztof-marasek> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/polish-japaneese-institute-of-information-technolo> .\n<http://data.semanticweb.org/person/krzysztof-marasek> <http://www.example.org/test> <http://www.example.org/test/131> .\n<http://data.semanticweb.org/person/krzysztof-marasek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/krzysztof-marasek> <http://xmlns.com/foaf/0.1/name> \"Krzysztof Marasek\" .\n<http://data.semanticweb.org/person/krzysztof-marasek> <http://www.w3.org/2000/01/rdf-schema#label> \"Krzysztof Marasek\" .\n",
-    "validation_named": "<http://data.semanticweb.org/person/krzysztof-marasek> <http://www.example.org/test> <http://www.example.org/test/131> .\n"
+    "subject": "<http://data.semanticweb.org/person/scott-spangler>",
+    "operation": "GSP_DELETE",
+    "triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/scott-spangler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/440> .\n<http://data.semanticweb.org/person/scott-spangler> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"aaa6d94de17729d230a99a51da602f0da9214442\" .\n<http://data.semanticweb.org/person/scott-spangler> <http://xmlns.com/foaf/0.1/name> \"Scott Spangler\" .\n<http://data.semanticweb.org/person/scott-spangler> <http://www.w3.org/2000/01/rdf-schema#label> \"Scott Spangler\" .\n<http://data.semanticweb.org/person/scott-spangler> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-research-usa> .\n<http://data.semanticweb.org/person/scott-spangler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": ""
 }

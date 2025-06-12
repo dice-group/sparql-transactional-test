@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/neil-m-goldman",
-    "operation": "GSP_DELETE",
-    "triples": null,
-    "validation_default": "<http://data.semanticweb.org/person/neil-m-goldman> <http://xmlns.com/foaf/0.1/name> \"Neil M. Goldman\" .\n<http://data.semanticweb.org/person/neil-m-goldman> <http://www.w3.org/2000/01/rdf-schema#label> \"Neil M. Goldman\" .\n<http://data.semanticweb.org/person/neil-m-goldman> <http://www.example.org/test> <http://www.example.org/test/82> .\n<http://data.semanticweb.org/person/neil-m-goldman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/tecknowledge> .\n<http://data.semanticweb.org/person/neil-m-goldman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2003/proceedings/paper-32> .\n<http://data.semanticweb.org/person/neil-m-goldman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/neil-m-goldman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2001/proceedings/paper-30> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/mohammed-almashraee>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/mohammed-almashraee> <http://www.example.org/test> <http://www.example.org/test/216> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/mohammed-almashraee> <http://xmlns.com/foaf/0.1/lastName> \"Almashraee\" .\n<http://data.semanticweb.org/person/mohammed-almashraee> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .\n<http://data.semanticweb.org/person/mohammed-almashraee> <http://xmlns.com/foaf/0.1/name> \"Mohammed Almashraee\" .\n<http://data.semanticweb.org/person/mohammed-almashraee> <http://www.w3.org/2000/01/rdf-schema#label> \"Mohammed Almashraee\" .\n<http://data.semanticweb.org/person/mohammed-almashraee> <http://xmlns.com/foaf/0.1/firstName> \"Mohammed\" .\n<http://data.semanticweb.org/person/mohammed-almashraee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/mohammed-almashraee> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/ws/SSA/3> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/mohammed-almashraee> <http://www.example.org/test> <http://www.example.org/test/216> .\n"
 }

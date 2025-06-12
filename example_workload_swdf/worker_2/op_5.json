@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/mauro-san-martin",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/mauro-san-martin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"4b188b72bae93fc4c650cba209686687fa263c31\" .\n<http://data.semanticweb.org/person/mauro-san-martin> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Chile> .\n<http://data.semanticweb.org/person/mauro-san-martin> <http://xmlns.com/foaf/0.1/name> \"Mauro San Mart\u00edn\" .\n<http://data.semanticweb.org/person/mauro-san-martin> <http://www.w3.org/2000/01/rdf-schema#label> \"Mauro San Mart\u00edn\" .\n",
-    "validation_default": "<http://data.semanticweb.org/person/mauro-san-martin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universidad-de-chile> .\n<http://data.semanticweb.org/person/mauro-san-martin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/mauro-san-martin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2009/paper/232> .\n",
+    "subject": "<http://data.semanticweb.org/person/chomicha-bendahman>",
+    "operation": "GSP_DELETE",
+    "triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/chomicha-bendahman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/elda> .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://xmlns.com/foaf/0.1/name> \"Chomicha Bendahman\" .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://www.w3.org/2000/01/rdf-schema#label> \"Chomicha Bendahman\" .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/915> .\n",
     "validation_named": ""
 }

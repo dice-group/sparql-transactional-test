@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/maxine-kruijt",
-    "operation": "GSP_DELETE",
-    "triples": null,
-    "validation_default": "<http://data.semanticweb.org/person/maxine-kruijt> <http://www.example.org/test> <http://www.example.org/test/31> .\n<http://data.semanticweb.org/person/maxine-kruijt> <http://xmlns.com/foaf/0.1/name> \"Maxine Kruijt\" .\n<http://data.semanticweb.org/person/maxine-kruijt> <http://www.w3.org/2000/01/rdf-schema#label> \"Maxine Kruijt\" .\n<http://data.semanticweb.org/person/maxine-kruijt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/maxine-kruijt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/derive/2013/proceedings/paper-04> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/judie-attard>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/judie-attard> <http://www.example.org/test> <http://www.example.org/test/67> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/lastName> \"Attard\" .\n<http://data.semanticweb.org/person/judie-attard> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .\n<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/depiction> <http://wit.istc.cnr.it/eswc-stc/images/authors/resized/judie-attard.jpg> .\n<http://data.semanticweb.org/person/judie-attard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"eb06cd929b021d501118cf11e15a29bd3142471a\" .\n<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/demo/49> .\n<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/firstName> \"Judie\" .\n<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/name> \"Judie Attard\" .\n<http://data.semanticweb.org/person/judie-attard> <http://www.w3.org/2000/01/rdf-schema#label> \"Judie Attard\" .\n<http://data.semanticweb.org/person/judie-attard> <http://xmlns.com/foaf/0.1/mbox> <mailto:judieattard@gmail.com> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/judie-attard> <http://www.example.org/test> <http://www.example.org/test/67> .\n"
 }

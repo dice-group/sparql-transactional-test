@@ -6,9 +6,8 @@ use thiserror::Error;
 
 #[derive(Debug)]
 pub struct InvalidStateVerboseInfo {
-    pub update: String,
-    pub expected: String,
-    pub actual: String,
+    pub expected: (String, String),
+    pub actual: (String, String),
 }
 
 #[derive(Debug)]
@@ -60,19 +59,25 @@ impl Display for WorkerError {
             WorkerError::InvalidState { update_id, verbose_info } => {
                 write!(f, "Unexpected result at update {update_id}")?;
 
-                if let Some(InvalidStateVerboseInfo { update, expected, actual }) = verbose_info {
-                    write!(f, "\nQuery: ")?;
-
+                if let Some(InvalidStateVerboseInfo { expected, actual }) = verbose_info {
+                    /*write!(f, "\nQuery: ")?;
                     if update.starts_with("INSERT DATA") || update.starts_with("DELETE DATA") {
                         format_insert_or_delete_data(f, update)?;
                     } else {
                         writeln!(f, "{}", update)?;
-                    }
+                    }*/
 
-                    writeln!(f, "\nExpected:\n{expected}")?;
-                    writeln!(f, "\nActual:\n{actual}")?;
+                    writeln!(f, "\nExpected Default :\n{}", actual.0)?;
+                    writeln!(f, "\nActual Default:\n{}", expected.0)?;
 
-                    write!(f, "\nDiff:\n{}", prettydiff::diff_lines(expected, actual))
+                    write!(f, "\nDiff:\n{}", prettydiff::diff_lines(&expected.0, &actual.0))?;
+
+                    writeln!(f, "\nExpected Default :\n{}", actual.1)?;
+                    writeln!(f, "\nActual Default:\n{}", expected.1)?;
+
+                    write!(f, "\nDiff:\n{}", prettydiff::diff_lines(&expected.1, &actual.1))?;
+
+                    Ok(())
                 } else {
                     Ok(())
                 }

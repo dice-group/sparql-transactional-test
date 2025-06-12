@@ -29,15 +29,15 @@ class OperationKind(enum.Enum):
 
 @dataclasses.dataclass
 class UpdateOperation:
-    subject: str
+    subject: rdflib.URIRef
     operation: OperationKind
-    triples: typing.Optional[Graph]
-    validation_default: str
-    validation_named: str
+    triples: Graph
+    validation_default: Graph
+    validation_named: Graph
 
     def to_json(self):
         return json.dumps({
-            "subject": self.subject,
+            "subject": self.subject.n3(),
             "operation": self.operation.name,
             "triples": self.triples,
             "validation_default": self.validation_default,
@@ -104,8 +104,6 @@ class RDFStore:
         return graph
 
     def gsp_post(self, ident: rdflib.URIRef, triples: Graph):
-        self.post(url=self.graph_store_endpoint_url, params="default", data=triples,
-                  headers={"Content-type": "application/n-triples"})
         self.post(url=self.graph_store_endpoint_url, params={"graph": ident}, data=triples,
                   headers={"Content-type": "application/n-triples"})
 
@@ -206,7 +204,7 @@ if __name__ == '__main__':
             elif op_kind == OperationKind.GSP_DELETE:
                 # select and already used subject
                 subject = subjects[random.randrange(0, subject_index + o_idx)]
-                ntriples_for_operation = None
+                ntriples_for_operation = ""
                 rdfstore.gsp_delete(subject)
 
             else:

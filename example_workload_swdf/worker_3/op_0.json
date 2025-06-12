@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/ulrich-callmeier",
+    "subject": "<http://data.semanticweb.org/person/mohamed-gaber>",
     "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/ulrich-callmeier> <http://www.example.org/test> <http://www.example.org/test/171> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/ulrich-callmeier> <http://www.example.org/test> <http://www.example.org/test/171> .\n<http://data.semanticweb.org/person/ulrich-callmeier> <http://xmlns.com/foaf/0.1/name> \"Ulrich Callmeier\" .\n<http://data.semanticweb.org/person/ulrich-callmeier> <http://www.w3.org/2000/01/rdf-schema#label> \"Ulrich Callmeier\" .\n<http://data.semanticweb.org/person/ulrich-callmeier> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/acrolinx-gmbh> .\n<http://data.semanticweb.org/person/ulrich-callmeier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/ulrich-callmeier> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/349> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/ulrich-callmeier> <http://www.example.org/test> <http://www.example.org/test/171> .\n"
+    "triples": "<http://data.semanticweb.org/person/mohamed-gaber> <http://www.example.org/test> <http://www.example.org/test/182> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/mohamed-gaber> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/monash-university> .\n<http://data.semanticweb.org/person/mohamed-gaber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/mohamed-gaber> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2009/paper/research/370> .\n<http://data.semanticweb.org/person/mohamed-gaber> <http://xmlns.com/foaf/0.1/name> \"Mohamed Gaber\" .\n<http://data.semanticweb.org/person/mohamed-gaber> <http://www.w3.org/2000/01/rdf-schema#label> \"Mohamed Gaber\" .\n",
+    "validation_named": "<http://data.semanticweb.org/person/mohamed-gaber> <http://www.example.org/test> <http://www.example.org/test/182> .\n"
 }

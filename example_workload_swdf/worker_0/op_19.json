@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/thuong-doan",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/thuong-doan> <http://www.example.org/test> <http://www.example.org/test/68> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/thuong-doan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-connecticut> .\n<http://data.semanticweb.org/person/thuong-doan> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2003/pc-member> .\n<http://data.semanticweb.org/person/thuong-doan> <http://xmlns.com/foaf/0.1/name> \"Thuong Doan\" .\n<http://data.semanticweb.org/person/thuong-doan> <http://www.w3.org/2000/01/rdf-schema#label> \"Thuong Doan\" .\n<http://data.semanticweb.org/person/thuong-doan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/thuong-doan> <http://www.example.org/test> <http://www.example.org/test/59> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/thuong-doan> <http://www.example.org/test> <http://www.example.org/test/68> .\n"
+    "subject": "<http://data.semanticweb.org/person/patrick-kenis>",
+    "operation": "GSP_DELETE",
+    "triples": "",
+    "validation_default": "",
+    "validation_named": ""
 }

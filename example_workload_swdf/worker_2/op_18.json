@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/mark-steyvers",
+    "subject": "<http://data.semanticweb.org/person/jianhua-feng>",
     "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/mark-steyvers> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"dfb5bc31a5824bcf127263f4f65dd6a18ba5f6bf\" .\n<http://data.semanticweb.org/person/mark-steyvers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/mark-steyvers> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-irvine> .\n<http://data.semanticweb.org/person/mark-steyvers> <http://xmlns.com/foaf/0.1/name> \"Mark Steyvers\" .\n<http://data.semanticweb.org/person/mark-steyvers> <http://www.w3.org/2000/01/rdf-schema#label> \"Mark Steyvers\" .\n<http://data.semanticweb.org/person/mark-steyvers> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/research/334> .\n<http://data.semanticweb.org/person/mark-steyvers> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n",
+    "triples": "<http://data.semanticweb.org/person/jianhua-feng> <http://xmlns.com/foaf/0.1/family_name> \"Feng\" .\n<http://data.semanticweb.org/person/jianhua-feng> <http://xmlns.com/foaf/0.1/firstName> \"Jianhua\" .\n<http://data.semanticweb.org/person/jianhua-feng> <http://xmlns.com/foaf/0.1/name> \"Jianhua Feng\" .\n<http://data.semanticweb.org/person/jianhua-feng> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/tsinghua-university> .\n<http://data.semanticweb.org/person/jianhua-feng> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/112> .\n<http://data.semanticweb.org/person/jianhua-feng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/jianhua-feng> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/38> .\n",
+    "validation_default": "",
     "validation_named": ""
 }

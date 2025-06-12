@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/raja-afandi",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/raja-afandi> <http://xmlns.com/foaf/0.1/name> \"Raja Afandi\" .\n<http://data.semanticweb.org/person/raja-afandi> <http://www.w3.org/2000/01/rdf-schema#label> \"Raja Afandi\" .\n<http://data.semanticweb.org/person/raja-afandi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-illinois-at-urbanachampaign> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/raja-afandi> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/reviewer-at-iswc2005-research-track> .\n<http://data.semanticweb.org/person/raja-afandi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/muthukkaruppan-annamalai>",
+    "operation": "INSERT_DATA",
+    "triples": "<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://www.example.org/test> <http://www.example.org/test/142> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://xmlns.com/foaf/0.1/name> \"Muthukkaruppan Annamalai\" .\n<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://www.w3.org/2000/01/rdf-schema#label> \"Muthukkaruppan Annamalai\" .\n<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://www.example.org/test> <http://www.example.org/test/142> .\n<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-04> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/muthukkaruppan-annamalai> <http://www.example.org/test> <http://www.example.org/test/142> .\n"
 }

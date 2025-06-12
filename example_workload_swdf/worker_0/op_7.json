@@ -1,7 +1,7 @@
 {
-    "subject": "http://data.semanticweb.org/person/rene-quiniou",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/rene-quiniou> <http://www.example.org/test> <http://www.example.org/test/26> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/rene-quiniou> <http://xmlns.com/foaf/0.1/firstName> \"Rene\" .\n<http://data.semanticweb.org/person/rene-quiniou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/irisa> .\n<http://data.semanticweb.org/person/rene-quiniou> <http://xmlns.com/foaf/0.1/family_name> \"Quiniou\" .\n<http://data.semanticweb.org/person/rene-quiniou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/rene-quiniou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/151> .\n<http://data.semanticweb.org/person/rene-quiniou> <http://xmlns.com/foaf/0.1/name> \"Rene Quiniou\" .\n<http://data.semanticweb.org/person/rene-quiniou> <http://www.example.org/test> <http://www.example.org/test/26> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/rene-quiniou> <http://www.example.org/test> <http://www.example.org/test/26> .\n"
+    "subject": "<http://data.semanticweb.org/person/david-l-hoover>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/david-l-hoover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/david-l-hoover> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/poster/ab-659> .\n<http://data.semanticweb.org/person/david-l-hoover> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"86be8a9bc3dec1ea113f3c3bc8b3b2f41f914293\" .\n<http://data.semanticweb.org/person/david-l-hoover> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-658> .\n<http://data.semanticweb.org/person/david-l-hoover> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/new-york-university> .\n<http://data.semanticweb.org/person/david-l-hoover> <http://xmlns.com/foaf/0.1/name> \"David L. Hoover\" .\n<http://data.semanticweb.org/person/david-l-hoover> <http://www.w3.org/2000/01/rdf-schema#label> \"David L. Hoover\" .\n",
+    "validation_default": "",
+    "validation_named": ""
 }
