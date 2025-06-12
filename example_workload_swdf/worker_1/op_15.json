@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/daniel-p-w-ellis>",
-    "operation": "INSERT_DATA",
-    "new_triples": "<http://data.semanticweb.org/person/daniel-p-w-ellis> <http://www.example.org/test> <http://www.example.org/test/84> .",
-    "validation_default": "<http://data.semanticweb.org/person/daniel-p-w-ellis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/columbia-university> . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/10> . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ccaa54b3ca083aec0a811b32af390f54194ac69d\" . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://www.example.org/test> <http://www.example.org/test/84> . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://www.w3.org/2000/01/rdf-schema#label> \"Daniel P.W. Ellis\" . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://xmlns.com/foaf/0.1/name> \"Daniel P.W. Ellis\" . <http://data.semanticweb.org/person/daniel-p-w-ellis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . ",
-    "validation_named": "<http://data.semanticweb.org/person/daniel-p-w-ellis> <http://www.example.org/test> <http://www.example.org/test/84> . "
+    "subject": "http://data.semanticweb.org/person/abdeltif-elbyed",
+    "operation": "GSP_DELETE",
+    "triples": null,
+    "validation_default": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/posters/FP05-Bouzeghoub> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#abdeltif-elbyed> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://xmlns.com/foaf/0.1/name> \"Abdeltif Elbyed\" .\n",
+    "validation_named": ""
 }

@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/jose-paulo-leal>",
+    "subject": "http://data.semanticweb.org/person/michael-spahn",
     "operation": "DELETE_DATA",
-    "new_triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/jose-paulo-leal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/faculty-of-science-university-of-porto> . <http://data.semanticweb.org/person/jose-paulo-leal> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Portugal> . <http://data.semanticweb.org/person/jose-paulo-leal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/2> . <http://data.semanticweb.org/person/jose-paulo-leal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"da1485a2c6d9b88b106b87aaee8f4216bee1594d\" . <http://data.semanticweb.org/person/jose-paulo-leal> <http://www.w3.org/2000/01/rdf-schema#label> \"Jos\u00c3\u00a9 Paulo Leal\" . <http://data.semanticweb.org/person/jose-paulo-leal> <http://xmlns.com/foaf/0.1/name> \"Jos\u00c3\u00a9 Paulo Leal\" . ",
+    "triples": "<http://data.semanticweb.org/person/michael-spahn> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/obi/2008/paper/main/9> .\n<http://data.semanticweb.org/person/michael-spahn> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sap-research> .\n<http://data.semanticweb.org/person/michael-spahn> <http://xmlns.com/foaf/0.1/name> \"Michael Spahn\" .\n",
+    "validation_default": "<http://data.semanticweb.org/person/michael-spahn> <http://www.w3.org/2000/01/rdf-schema#label> \"Michael Spahn\" .\n<http://data.semanticweb.org/person/michael-spahn> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e51b767a05a07efb4c30bcc1dd5ddc3794b97b78\" .\n<http://data.semanticweb.org/person/michael-spahn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/michael-spahn> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .\n",
     "validation_named": ""
 }

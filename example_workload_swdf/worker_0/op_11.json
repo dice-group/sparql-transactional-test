@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/david-hauger>",
-    "operation": "GSP_DELETE",
-    "new_triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/david-hauger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/johannes-kepler-university> . <http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> . <http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/15> . <http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"a3b0ecf604aba7bb6c026903244047398191eb49\" . ",
-    "validation_named": ""
+    "subject": "http://data.semanticweb.org/person/abdeltif-elbyed",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.example.org/test> <http://www.example.org/test/33> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/posters/FP05-Bouzeghoub> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#abdeltif-elbyed> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/abdeltif-elbyed> <http://xmlns.com/foaf/0.1/name> \"Abdeltif Elbyed\" .\n",
+    "validation_named": "<http://data.semanticweb.org/person/abdeltif-elbyed> <http://www.example.org/test> <http://www.example.org/test/33> .\n"
 }

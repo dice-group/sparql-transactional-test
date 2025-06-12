@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/brian-mcfee>",
-    "operation": "DELETE_DATA",
-    "new_triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/brian-mcfee> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-committee-member> . <http://data.semanticweb.org/person/brian-mcfee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ucsd> . <http://data.semanticweb.org/person/brian-mcfee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-san-diego> . <http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> . <http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/10> . <http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e34a87b98bc853eb016135e3b36e97bf639c06c0\" . <http://data.semanticweb.org/person/brian-mcfee> <http://www.w3.org/2000/01/rdf-schema#label> \"Brian Mcfee\" . <http://data.semanticweb.org/person/brian-mcfee> <http://www.w3.org/2000/01/rdf-schema#label> \"Brian McFee\" . ",
+    "subject": "http://data.semanticweb.org/person/thomas-gilg",
+    "operation": "GSP_DELETE",
+    "triples": null,
+    "validation_default": "<http://data.semanticweb.org/person/thomas-gilg> <http://xmlns.com/foaf/0.1/name> \"Thomas Gilg\" .\n<http://data.semanticweb.org/person/thomas-gilg> <http://www.w3.org/2000/01/rdf-schema#label> \"Thomas Gilg\" .\n<http://data.semanticweb.org/person/thomas-gilg> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/419> .\n<http://data.semanticweb.org/person/thomas-gilg> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-for-legal-medicine> .\n<http://data.semanticweb.org/person/thomas-gilg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
     "validation_named": ""
 }
