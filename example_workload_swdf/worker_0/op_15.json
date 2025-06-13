@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/gerik-scheuermann>",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/gerik-scheuermann> <http://www.example.org/test> <http://www.example.org/test/50> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/gerik-scheuermann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universitaet-leipzig> .\n<http://data.semanticweb.org/person/gerik-scheuermann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/117> .\n<http://data.semanticweb.org/person/gerik-scheuermann> <http://www.w3.org/2000/01/rdf-schema#label> \"Gerik Scheuermann\" .\n<http://data.semanticweb.org/person/gerik-scheuermann> <http://xmlns.com/foaf/0.1/name> \"Gerik Scheuermann\" .\n<http://data.semanticweb.org/person/gerik-scheuermann> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/gerik-scheuermann> <http://www.example.org/test> <http://www.example.org/test/50> .\n"
+    "subject": "<http://data.semanticweb.org/person/lieven-trappeniers>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

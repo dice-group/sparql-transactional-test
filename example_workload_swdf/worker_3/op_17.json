@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/martin-znamirowski>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/martin-znamirowski> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/humboldt-universitaet-zu-berlin> .\n<http://data.semanticweb.org/person/martin-znamirowski> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ssws/2011/paper/13> .\n<http://data.semanticweb.org/person/martin-znamirowski> <http://www.w3.org/2000/01/rdf-schema#label> \"Martin Znamirowski\" .\n<http://data.semanticweb.org/person/martin-znamirowski> <http://xmlns.com/foaf/0.1/name> \"Martin Znamirowski\" .\n<http://data.semanticweb.org/person/martin-znamirowski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/iv-ramakrishnan>",
+    "endpoint": "gsp",
+    "operation": "GSP_POST",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/iv-ramakrishnan> <http://www.example.org/test> <http://www.example.org/test/213> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/iv-ramakrishnan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2003/poster-demo-proceedings/paper-48> .\n<http://data.semanticweb.org/person/iv-ramakrishnan> <http://www.w3.org/2000/01/rdf-schema#label> \"I.V. Ramakrishnan\" .\n<http://data.semanticweb.org/person/iv-ramakrishnan> <http://xmlns.com/foaf/0.1/name> \"I.V. Ramakrishnan\" .\n<http://data.semanticweb.org/person/iv-ramakrishnan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/jerome-thomere>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/jerome-thomere> <http://www.example.org/test> <http://www.example.org/test/220> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/jerome-thomere> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sri-international> .\n<http://data.semanticweb.org/person/jerome-thomere> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/jerome-thomere> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/in_use/17> .\n<http://data.semanticweb.org/person/jerome-thomere> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"fccefa5e1847727fe16b95cccd4c0e402a3ca3b9\" .\n",
-    "validation_named": "<http://data.semanticweb.org/person/jerome-thomere> <http://www.example.org/test> <http://www.example.org/test/220> .\n"
+    "subject": "<http://data.semanticweb.org/person/jana-viskova>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

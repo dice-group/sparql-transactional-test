@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/paul-el-khoury>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/paul-el-khoury> <http://www.example.org/test> <http://www.example.org/test/29> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/paul-el-khoury> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/msnd/2012/programme-committee-member> .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sap-research-and-liris-university-of-lyon1> .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ae1813666f0741257f94c32bdf1648f6e6c049ce\" .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://www.example.org/test> <http://www.example.org/test/29> .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://www.w3.org/2000/01/rdf-schema#label> \"Paul El-Khoury\" .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://xmlns.com/foaf/0.1/name> \"Paul El-Khoury\" .\n<http://data.semanticweb.org/person/paul-el-khoury> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/paul-el-khoury> <http://www.example.org/test> <http://www.example.org/test/29> .\n"
+    "subject": "<http://data.semanticweb.org/person/robert-harkreader>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/elmar-donar>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/elmar-donar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sap-ag> .\n<http://data.semanticweb.org/person/elmar-donar> <http://www.w3.org/2000/01/rdf-schema#label> \"Elmar Donar\" .\n<http://data.semanticweb.org/person/elmar-donar> <http://xmlns.com/foaf/0.1/name> \"Elmar Donar\" .\n<http://data.semanticweb.org/person/elmar-donar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/elmar-donar> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/pc-member-at-iswc2005-industrial-track> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/jay-myers>",
+    "endpoint": "update",
+    "operation": "INSERT_DATA",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/jay-myers> <http://www.example.org/test> <http://www.example.org/test/132> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/jay-myers> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/best-buy> .\n<http://data.semanticweb.org/person/jay-myers> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/industry-proceedings/paper-11> .\n<http://data.semanticweb.org/person/jay-myers> <http://www.example.org/test> <http://www.example.org/test/132> .\n<http://data.semanticweb.org/person/jay-myers> <http://www.w3.org/2000/01/rdf-schema#label> \"Jay Myers\" .\n<http://data.semanticweb.org/person/jay-myers> <http://xmlns.com/foaf/0.1/name> \"Jay Myers\" .\n<http://data.semanticweb.org/person/jay-myers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

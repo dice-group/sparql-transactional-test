@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/bo-june>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/bo-june> <http://www.example.org/test> <http://www.example.org/test/73> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/bo-june> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/paul-hsu> .\n<http://data.semanticweb.org/person/bo-june> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/online-spelling-correction-for-query-completion> .\n<http://data.semanticweb.org/person/bo-june> <http://www.w3.org/2000/01/rdf-schema#label> \"Bo-June\" .\n<http://data.semanticweb.org/person/bo-june> <http://xmlns.com/foaf/0.1/name> \"Bo-June\" .\n<http://data.semanticweb.org/person/bo-june> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/bo-june> <http://www.example.org/test> <http://www.example.org/test/73> .\n"
+    "subject": "<http://data.semanticweb.org/person/nicholas-griffith>",
+    "endpoint": "update",
+    "operation": "DELETE_DATA",
+    "query": "default",
+    "query_triples": "<http://data.semanticweb.org/person/nicholas-griffith> <http://www.w3.org/2000/01/rdf-schema#label> \"Nicholas Griffith\" .\n<http://data.semanticweb.org/person/nicholas-griffith> <http://xmlns.com/foaf/0.1/name> \"Nicholas Griffith\" .\n<http://data.semanticweb.org/person/nicholas-griffith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/nicholas-griffith> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .\n<http://data.semanticweb.org/person/nicholas-griffith> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/nicholas-griffith> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/research/100> .\n<http://data.semanticweb.org/person/nicholas-griffith> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/poster_demo/25> .\n<http://data.semanticweb.org/person/nicholas-griffith> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"2a4a3a69b678147ea26603824d5f756122e02710\" .\n"
 }

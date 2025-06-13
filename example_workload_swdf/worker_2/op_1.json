@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/ron-artstein>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/ron-artstein> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-for-creative-technologies-usc> .\n<http://data.semanticweb.org/person/ron-artstein> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/297> .\n<http://data.semanticweb.org/person/ron-artstein> <http://www.w3.org/2000/01/rdf-schema#label> \"Ron Artstein\" .\n<http://data.semanticweb.org/person/ron-artstein> <http://xmlns.com/foaf/0.1/name> \"Ron Artstein\" .\n<http://data.semanticweb.org/person/ron-artstein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/christopher-coufal>",
+    "endpoint": "update",
+    "operation": "INSERT_DATA",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/christopher-coufal> <http://www.example.org/test> <http://www.example.org/test/117> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/christopher-coufal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/duquesne-university> .\n<http://data.semanticweb.org/person/christopher-coufal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-755> .\n<http://data.semanticweb.org/person/christopher-coufal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"dadb0c7033f035689a4d4a19a1bbde43790a6e91\" .\n<http://data.semanticweb.org/person/christopher-coufal> <http://www.example.org/test> <http://www.example.org/test/117> .\n<http://data.semanticweb.org/person/christopher-coufal> <http://www.w3.org/2000/01/rdf-schema#label> \"Christopher Coufal\" .\n<http://data.semanticweb.org/person/christopher-coufal> <http://xmlns.com/foaf/0.1/name> \"Christopher Coufal\" .\n<http://data.semanticweb.org/person/christopher-coufal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/michael-galla>",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/michael-galla> <http://www.example.org/test> <http://www.example.org/test/114> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/michael-galla> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2003/poster-demo-proceedings/paper-26> .\n<http://data.semanticweb.org/person/michael-galla> <http://www.w3.org/2000/01/rdf-schema#label> \"Michael Galla\" .\n<http://data.semanticweb.org/person/michael-galla> <http://xmlns.com/foaf/0.1/name> \"Michael Galla\" .\n<http://data.semanticweb.org/person/michael-galla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/michael-galla> <http://www.example.org/test> <http://www.example.org/test/114> .\n"
+    "subject": "<http://data.semanticweb.org/person/jeroen-wester>",
+    "endpoint": "update",
+    "operation": "DELETE_DATA",
+    "query": "default",
+    "query_triples": "<http://data.semanticweb.org/person/jeroen-wester> <http://xmlns.com/foaf/0.1/name> \"Jeroen Wester\" .\n<http://data.semanticweb.org/person/jeroen-wester> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/jeroen-wester> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#jeroen-wester> .\n<http://data.semanticweb.org/person/jeroen-wester> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/posters/FP41-Broekstra> .\n"
 }

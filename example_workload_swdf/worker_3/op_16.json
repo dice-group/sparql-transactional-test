@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/david-ratcliffe>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/david-ratcliffe> <http://xmlns.com/foaf/0.1/homepage> <http://www.ict.csiro.au/staff/david.ratcliffe/> .\n<http://data.semanticweb.org/person/david-ratcliffe> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2013/student-coordinator> .\n<http://data.semanticweb.org/person/david-ratcliffe> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/csiro-australia> .\n<http://data.semanticweb.org/person/david-ratcliffe> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2009/paper/poster_demo/135> .\n<http://data.semanticweb.org/person/david-ratcliffe> <http://www.w3.org/2000/01/rdf-schema#label> \"David Ratcliffe\" .\n<http://data.semanticweb.org/person/david-ratcliffe> <http://xmlns.com/foaf/0.1/name> \"David Ratcliffe\" .\n<http://data.semanticweb.org/person/david-ratcliffe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/eva-hajicova>",
+    "endpoint": "gsp",
+    "operation": "GSP_PUT",
+    "query": "named",
+    "query_triples": "<http://data.semanticweb.org/person/eva-hajicova> <http://www.example.org/test> <http://www.example.org/test/205> .\n",
+    "validate": "named",
+    "validate_triples": "<http://data.semanticweb.org/person/eva-hajicova> <http://www.example.org/test> <http://www.example.org/test/205> .\n"
 }

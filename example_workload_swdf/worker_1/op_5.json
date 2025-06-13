@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/alexander-gelbukh>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/alexander-gelbukh> <http://www.example.org/test> <http://www.example.org/test/86> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/firstName> \"Alexander\" .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/lastName> \"Gelbukh\" .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/semeval/31> .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"91db957cf4e43ddb2bdfc89ed85aed730d3269c8\" .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://www.w3.org/2000/01/rdf-schema#label> \"Alexander Gelbukh\" .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/mbox> <mailto:gelbukh@gelbukh.com> .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/name> \"Alexander Gelbukh\" .\n<http://data.semanticweb.org/person/alexander-gelbukh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/alexander-gelbukh> <http://www.example.org/test> <http://www.example.org/test/86> .\n"
+    "subject": "<http://data.semanticweb.org/person/e-cusenza>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

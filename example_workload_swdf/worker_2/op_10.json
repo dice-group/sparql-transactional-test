@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/roxane-bertrand>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/roxane-bertrand> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnrs-aix-marseille-universites> .\n<http://data.semanticweb.org/person/roxane-bertrand> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/449> .\n<http://data.semanticweb.org/person/roxane-bertrand> <http://www.w3.org/2000/01/rdf-schema#label> \"Roxane Bertrand\" .\n<http://data.semanticweb.org/person/roxane-bertrand> <http://xmlns.com/foaf/0.1/name> \"Roxane Bertrand\" .\n<http://data.semanticweb.org/person/roxane-bertrand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/nick-kanellos>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

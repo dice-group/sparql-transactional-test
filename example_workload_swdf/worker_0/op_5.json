@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/robert-miller>",
+    "subject": "<http://data.semanticweb.org/person/yukie-nakao>",
+    "endpoint": "update",
     "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/robert-miller> <http://www.example.org/test> <http://www.example.org/test/21> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/robert-miller> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Robert_Miller> .\n<http://data.semanticweb.org/person/robert-miller> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Robert_Miller> .\n<http://data.semanticweb.org/person/robert-miller> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/mit-csail> .\n<http://data.semanticweb.org/person/robert-miller> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/research/papers/239> .\n<http://data.semanticweb.org/person/robert-miller> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"aa7adfa0a568b57a903e13d79551315ea1a21b6a\" .\n<http://data.semanticweb.org/person/robert-miller> <http://www.example.org/test> <http://www.example.org/test/21> .\n<http://data.semanticweb.org/person/robert-miller> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Robert_Miller> .\n<http://data.semanticweb.org/person/robert-miller> <http://xmlns.com/foaf/0.1/name> \"Robert Miller\" .\n<http://data.semanticweb.org/person/robert-miller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/robert-miller> <http://www.example.org/test> <http://www.example.org/test/21> .\n"
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/yukie-nakao> <http://www.example.org/test> <http://www.example.org/test/14> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/yukie-nakao> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/nantes-university> .\n<http://data.semanticweb.org/person/yukie-nakao> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/443> .\n<http://data.semanticweb.org/person/yukie-nakao> <http://www.example.org/test> <http://www.example.org/test/14> .\n<http://data.semanticweb.org/person/yukie-nakao> <http://www.w3.org/2000/01/rdf-schema#label> \"Yukie Nakao\" .\n<http://data.semanticweb.org/person/yukie-nakao> <http://xmlns.com/foaf/0.1/name> \"Yukie Nakao\" .\n<http://data.semanticweb.org/person/yukie-nakao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

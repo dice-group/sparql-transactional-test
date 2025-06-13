@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/subbarao-kambhampati>",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/subbarao-kambhampati> <http://www.example.org/test> <http://www.example.org/test/112> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/subbarao-kambhampati> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"Arizona State University, USA\" .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/family_name> \"Kambhampati\" .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/firstName> \"Subbarao\" .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/homepage> <http://rakaposhi.eas.asu.edu/rao.html> .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2004/pc-member> .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/arizona-state-university> .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/sourcerank-relevance-and-trust-assessment-for-deep> .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/poster/smartint-using-mined-attribute-dependencies-to-int> .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/demo/factal-integrating-deep-web-based-on-trust-and-rel> .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"3b55dcc2d0545d049fc4bb750e38f3b9320989d0\" .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://www.w3.org/2000/01/rdf-schema#label> \"Subbarao Kambhampati\" .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://xmlns.com/foaf/0.1/name> \"Subbarao Kambhampati\" .\n<http://data.semanticweb.org/person/subbarao-kambhampati> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/subbarao-kambhampati> <http://www.example.org/test> <http://www.example.org/test/112> .\n"
+    "subject": "<http://data.semanticweb.org/person/sarah-magidson>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

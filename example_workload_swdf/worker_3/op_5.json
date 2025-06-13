@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/richard-drew>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/richard-drew> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-leeds> .\n<http://data.semanticweb.org/person/richard-drew> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2001/position-proceedings/paper-26> .\n<http://data.semanticweb.org/person/richard-drew> <http://www.w3.org/2000/01/rdf-schema#label> \"Richard Drew\" .\n<http://data.semanticweb.org/person/richard-drew> <http://xmlns.com/foaf/0.1/name> \"Richard Drew\" .\n<http://data.semanticweb.org/person/richard-drew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/sahely-bhadra>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

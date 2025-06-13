@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/anne-aula>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/anne-aula> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/google-inc> .\n<http://data.semanticweb.org/person/anne-aula> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/897> .\n<http://data.semanticweb.org/person/anne-aula> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"cf4a1fff00a5ca551357f028571926d54e4164ed\" .\n<http://data.semanticweb.org/person/anne-aula> <http://www.w3.org/2000/01/rdf-schema#label> \"Anne Aula\" .\n<http://data.semanticweb.org/person/anne-aula> <http://xmlns.com/foaf/0.1/name> \"Anne Aula\" .\n<http://data.semanticweb.org/person/anne-aula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/michael-nelson>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

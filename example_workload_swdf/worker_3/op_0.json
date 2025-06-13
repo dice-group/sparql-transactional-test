@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/hinrich-schuetze>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/hinrich-schuetze> <http://www.example.org/test> <http://www.example.org/test/198> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/firstName> \"Hinrich\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/lastName> \"Sch\u00fctze\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/content-analysis-track-chair> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universitaet-stuttgart> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ims-university-of-stuttgart> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/23> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/24> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"9d8a3920fe565a1081751adae38010066d8e7108\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://www.example.org/test> <http://www.example.org/test/198> .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://www.w3.org/2000/01/rdf-schema#label> \"Hinrich Schuetze\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://www.w3.org/2000/01/rdf-schema#label> \"Hinrich Sch\u00fctze\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/name> \"Hinrich Schuetze\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://xmlns.com/foaf/0.1/name> \"Hinrich Sch\u00fctze\" .\n<http://data.semanticweb.org/person/hinrich-schuetze> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/hinrich-schuetze> <http://www.example.org/test> <http://www.example.org/test/198> .\n"
+    "subject": "<http://data.semanticweb.org/person/jan-pedersen>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

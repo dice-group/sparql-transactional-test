@@ -27,21 +27,35 @@ class OperationKind(enum.Enum):
     GSP_PUT = 3
     GSP_DELETE = 4
 
+class EndpointKind(enum.Enum):
+    update = 0
+    gsp = 1
+
+class GraphKind(enum.Enum):
+    default = 0
+    named = 1
+    both = 2
+
+
 @dataclasses.dataclass
 class UpdateOperation:
     subject: rdflib.URIRef
+    endpoint: EndpointKind
     operation: OperationKind
-    triples: Graph
-    validation_default: Graph
-    validation_named: Graph
+    query: GraphKind
+    query_triples: Graph
+    validate: GraphKind
+    validate_triples: Graph
 
     def to_json(self):
         return json.dumps({
             "subject": self.subject.n3(),
+            "endpoint": self.endpoint.name,
             "operation": self.operation.name,
-            "triples": self.triples,
-            "validation_default": self.validation_default,
-            "validation_named": self.validation_named,
+            "query": self.query.name,
+            "query_triples": self.query_triples,
+            "validate": self.validate.name,
+            "validate_triples": self.validate_triples
         }, indent=4)
 
 class RDFStore:
@@ -66,7 +80,9 @@ class RDFStore:
 
     @staticmethod
     def delete(**kwargs):
-        requests.delete(**kwargs).raise_for_status()
+        # do not check for error codes (some systems return 404 if the graph is not found)
+        # todo: check for internal server errors
+        requests.delete(**kwargs)
 
     def validation_default_graph(self, ident: rdflib.URIRef) -> str:
         query = f"CONSTRUCT {{ {ident.n3()} ?p ?o }} WHERE {{ {ident.n3()} ?p ?o . FILTER(!isBlank(?o)) }}"
@@ -172,53 +188,72 @@ if __name__ == '__main__':
             # INSERT DATA
             if op_kind == OperationKind.INSERT_DATA:
                 subject = subjects[subject_index + o_idx]
+                endpoint_kind = EndpointKind.update
                 number_of_triples = random.randrange(INSERT_DATA_TEMPLATE_SIZE_MIN, INSERT_DATA_TEMPLATE_SIZE_MAX)
                 ntriples_for_operation = generate_triples(number_of_triples, subject, insert_integer)
+                query_graph_kind = GraphKind.both
+                validate_graph_kind = GraphKind.default
                 insert_integer += number_of_triples
                 rdfstore.insert_data(subject, ntriples_for_operation)
             
             # DELETE DATA
             elif op_kind == OperationKind.DELETE_DATA:
                 subject = subjects[subject_index + o_idx]
+                endpoint_kind = EndpointKind.update
                 number_of_triples = random.randrange(DELETE_DATA_TEMPLATE_SIZE_MIN, DELETE_DATA_TEMPLATE_SIZE_MAX)
                 ntriples_for_operation = rdfstore.delete_data(subject, number_of_triples)
+                query_graph_kind = GraphKind.default
+                validate_graph_kind = GraphKind.default
             
             # Graph Store Protocol: POST
             elif op_kind == OperationKind.GSP_POST:
                 subject = subjects[subject_index + o_idx]
+                endpoint_kind = EndpointKind.gsp
                 number_of_triples = random.randrange(INSERT_DATA_TEMPLATE_SIZE_MIN, INSERT_DATA_TEMPLATE_SIZE_MAX)
                 ntriples_for_operation = generate_triples(number_of_triples, subject, insert_integer)
                 insert_integer += number_of_triples
                 rdfstore.gsp_post(subject, ntriples_for_operation)
+                query_graph_kind = GraphKind.both
+                validate_graph_kind = GraphKind.default
 
             # Graph Store Protocol: PUT
             elif op_kind == OperationKind.GSP_PUT:
-                # select and already used subject
+                # select an already used subject
                 subject = subjects[random.randrange(0, subject_index + o_idx)]
+                endpoint_kind = EndpointKind.gsp
                 number_of_triples = random.randrange(INSERT_DATA_TEMPLATE_SIZE_MIN, INSERT_DATA_TEMPLATE_SIZE_MAX)
                 ntriples_for_operation = generate_triples(number_of_triples, subject, insert_integer)
                 insert_integer += number_of_triples
                 rdfstore.gsp_put(subject, ntriples_for_operation)
+                query_graph_kind = GraphKind.named
+                validate_graph_kind = GraphKind.named
 
             # Graph Store Protocol: DELETE
             elif op_kind == OperationKind.GSP_DELETE:
                 # select and already used subject
                 subject = subjects[random.randrange(0, subject_index + o_idx)]
+                endpoint_kind = EndpointKind.gsp
                 ntriples_for_operation = ""
                 rdfstore.gsp_delete(subject)
+                query_graph_kind = GraphKind.named
+                validate_graph_kind = GraphKind.named
 
             else:
                 raise "Error: Operation number out of expected range"
             
-            validation_triples_in_default_graph = rdfstore.validation_default_graph(subject)
-            validation_triples_in_named_graph = rdfstore.validation_named_graph(subject)
+            if op_kind in [OperationKind.INSERT_DATA, OperationKind.DELETE_DATA, OperationKind.GSP_POST]:   
+                ntriples_for_validation = rdfstore.validation_default_graph(subject)
+            else:
+                ntriples_for_validation = rdfstore.validation_named_graph(subject)
 
             operation = UpdateOperation(
                 subject=subject,
+                endpoint=endpoint_kind,
                 operation=op_kind,
-                triples=ntriples_for_operation,
-                validation_default=validation_triples_in_default_graph,
-                validation_named=validation_triples_in_named_graph,
+                query=query_graph_kind,
+                query_triples=ntriples_for_operation,
+                validate=validate_graph_kind,
+                validate_triples=ntriples_for_validation
             )
 
             with open(f"{worker_dir}/op_{o_idx}.json", "w") as output_file:

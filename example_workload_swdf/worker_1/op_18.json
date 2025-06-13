@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/stefan-schulz>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/stefan-schulz> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .\n<http://data.semanticweb.org/person/stefan-schulz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/poster_demo/36> .\n<http://data.semanticweb.org/person/stefan-schulz> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"58079263f4a9be48f2a76355d9110680bd688922\" .\n<http://data.semanticweb.org/person/stefan-schulz> <http://www.w3.org/2000/01/rdf-schema#label> \"Stefan Schulz\" .\n<http://data.semanticweb.org/person/stefan-schulz> <http://xmlns.com/foaf/0.1/name> \"Stefan Schulz\" .\n<http://data.semanticweb.org/person/stefan-schulz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/stefan-schulz> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/freiburg-university-hospital> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/tasneem-brutch>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

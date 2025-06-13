@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/gerd-zechmeister>",
+    "subject": "<http://data.semanticweb.org/person/jana-viskova>",
+    "endpoint": "gsp",
     "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/gerd-zechmeister> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/semantic-web-company-gmbh> .\n<http://data.semanticweb.org/person/gerd-zechmeister> <http://www.w3.org/2000/01/rdf-schema#label> \"Gerd Zechmeister\" .\n<http://data.semanticweb.org/person/gerd-zechmeister> <http://xmlns.com/foaf/0.1/name> \"Gerd Zechmeister\" .\n<http://data.semanticweb.org/person/gerd-zechmeister> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

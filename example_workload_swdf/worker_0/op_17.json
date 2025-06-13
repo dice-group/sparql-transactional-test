@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/andrey-rzhetsky>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/andrey-rzhetsky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/andrey-rzhetsky> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/evodyn/2011/pcmember> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-of-genomics-and-systems-biology-university-of-chicago> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/computation-institute-university-of-chicago> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/dept-of-medicine-and-human-genetics-university-of-chicago> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://www.w3.org/2000/01/rdf-schema#label> \"Andrey Rzhetsky\" .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://xmlns.com/foaf/0.1/name> \"Andrey Rzhetsky\" .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/jana-viskova>",
+    "endpoint": "update",
+    "operation": "INSERT_DATA",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/jana-viskova> <http://www.example.org/test> <http://www.example.org/test/55> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/jana-viskova> <http://www.w3.org/2002/07/owl#sameAs> <http://semanticweb.org/id/Jana_Viskova> .\n<http://data.semanticweb.org/person/jana-viskova> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-slovakia-zilina> .\n<http://data.semanticweb.org/person/jana-viskova> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Slovakia> .\n<http://data.semanticweb.org/person/jana-viskova> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2008/paper/281> .\n<http://data.semanticweb.org/person/jana-viskova> <http://www.example.org/test> <http://www.example.org/test/55> .\n<http://data.semanticweb.org/person/jana-viskova> <http://www.w3.org/2000/01/rdf-schema#label> \"Jana Viskova\" .\n<http://data.semanticweb.org/person/jana-viskova> <http://xmlns.com/foaf/0.1/name> \"Jana Viskova\" .\n<http://data.semanticweb.org/person/jana-viskova> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

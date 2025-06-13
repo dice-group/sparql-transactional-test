@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/gary-marchionini>",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/gary-marchionini> <http://www.example.org/test> <http://www.example.org/test/136> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/gary-marchionini> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/unc-chapel-hill> .\n<http://data.semanticweb.org/person/gary-marchionini> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/100> .\n<http://data.semanticweb.org/person/gary-marchionini> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"acccf0284a5d2535d1ce5b301d14440760e434f1\" .\n<http://data.semanticweb.org/person/gary-marchionini> <http://www.w3.org/2000/01/rdf-schema#label> \"Gary Marchionini\" .\n<http://data.semanticweb.org/person/gary-marchionini> <http://xmlns.com/foaf/0.1/name> \"Gary Marchionini\" .\n<http://data.semanticweb.org/person/gary-marchionini> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/gary-marchionini> <http://www.example.org/test> <http://www.example.org/test/136> .\n"
+    "subject": "<http://data.semanticweb.org/person/lieven-trappeniers>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

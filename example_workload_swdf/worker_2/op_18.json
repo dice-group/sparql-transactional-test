@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/haiqiang-zuo>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/haiqiang-zuo> <http://www.example.org/test> <http://www.example.org/test/191> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/haiqiang-zuo> <http://xmlns.com/foaf/0.1/family_name> \"Zuo\" .\n<http://data.semanticweb.org/person/haiqiang-zuo> <http://xmlns.com/foaf/0.1/firstName> \"Haiqiang\" .\n<http://data.semanticweb.org/person/haiqiang-zuo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/chinese-academy-of-sciences> .\n<http://data.semanticweb.org/person/haiqiang-zuo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/174> .\n<http://data.semanticweb.org/person/haiqiang-zuo> <http://xmlns.com/foaf/0.1/name> \"Haiqiang Zuo\" .\n<http://data.semanticweb.org/person/haiqiang-zuo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/haiqiang-zuo> <http://www.example.org/test> <http://www.example.org/test/191> .\n"
+    "subject": "<http://data.semanticweb.org/person/ben-fei>",
+    "endpoint": "update",
+    "operation": "INSERT_DATA",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/ben-fei> <http://www.example.org/test> <http://www.example.org/test/176> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/ben-fei> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-china-research-laboratory> .\n<http://data.semanticweb.org/person/ben-fei> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2007/paper/main/733> .\n<http://data.semanticweb.org/person/ben-fei> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2007/paper/main/397> .\n<http://data.semanticweb.org/person/ben-fei> <http://www.example.org/test> <http://www.example.org/test/176> .\n<http://data.semanticweb.org/person/ben-fei> <http://www.w3.org/2000/01/rdf-schema#label> \"Ben Fei\" .\n<http://data.semanticweb.org/person/ben-fei> <http://xmlns.com/foaf/0.1/name> \"Ben Fei\" .\n<http://data.semanticweb.org/person/ben-fei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

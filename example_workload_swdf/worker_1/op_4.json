@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/marco-seirioe>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/marco-seirioe> <http://www.example.org/test> <http://www.example.org/test/85> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/marco-seirioe> <http://xmlns.com/foaf/0.1/family_name> \"Marco\" .\n<http://data.semanticweb.org/person/marco-seirioe> <http://xmlns.com/foaf/0.1/firstName> \"Seiri\u00f6\" .\n<http://data.semanticweb.org/person/marco-seirioe> <http://xmlns.com/foaf/0.1/homepage> <http://www.rulecore.com> .\n<http://data.semanticweb.org/person/marco-seirioe> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/ruleml-eu/2011/research/pcmember> .\n<http://data.semanticweb.org/person/marco-seirioe> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rulecore> .\n<http://data.semanticweb.org/person/marco-seirioe> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Sweden> .\n<http://data.semanticweb.org/person/marco-seirioe> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"0e419a58f6a2427f8b158de88c56ff1d49b4cd45\" .\n<http://data.semanticweb.org/person/marco-seirioe> <http://www.example.org/test> <http://www.example.org/test/85> .\n<http://data.semanticweb.org/person/marco-seirioe> <http://www.w3.org/2000/01/rdf-schema#comment> \"92537\" .\n<http://data.semanticweb.org/person/marco-seirioe> <http://www.w3.org/2000/01/rdf-schema#label> \"Marco Seiri\u00f6\" .\n<http://data.semanticweb.org/person/marco-seirioe> <http://xmlns.com/foaf/0.1/name> \"Marco Seiri\u00f6\" .\n<http://data.semanticweb.org/person/marco-seirioe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/marco-seirioe> <http://www.example.org/test> <http://www.example.org/test/85> .\n"
+    "subject": "<http://data.semanticweb.org/person/yukie-nakao>",
+    "endpoint": "gsp",
+    "operation": "GSP_PUT",
+    "query": "named",
+    "query_triples": "<http://data.semanticweb.org/person/yukie-nakao> <http://www.example.org/test> <http://www.example.org/test/85> .\n",
+    "validate": "named",
+    "validate_triples": "<http://data.semanticweb.org/person/yukie-nakao> <http://www.example.org/test> <http://www.example.org/test/85> .\n"
 }

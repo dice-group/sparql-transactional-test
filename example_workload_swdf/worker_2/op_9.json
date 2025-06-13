@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/diman-todorov>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/family_name> \"Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/firstName> \"Diman\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/demo-5> .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.w3.org/2000/01/rdf-schema#label> \"Diman Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/name> \"Diman Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n"
+    "subject": "<http://data.semanticweb.org/person/david-carral>",
+    "endpoint": "gsp",
+    "operation": "GSP_POST",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/david-carral> <http://www.example.org/test> <http://www.example.org/test/141> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/david-carral> <http://xmlns.com/foaf/0.1/firstName> \"David\" .\n<http://data.semanticweb.org/person/david-carral> <http://xmlns.com/foaf/0.1/lastName> \"Carral\" .\n<http://data.semanticweb.org/person/david-carral> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .\n<http://data.semanticweb.org/person/david-carral> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/wright-state-university> .\n<http://data.semanticweb.org/person/david-carral> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/david-carral> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"d2efb52c6d8a90c7503b795bd12a0292d8f2873c\" .\n<http://data.semanticweb.org/person/david-carral> <http://www.w3.org/2000/01/rdf-schema#label> \"David Carral\" .\n<http://data.semanticweb.org/person/david-carral> <http://xmlns.com/foaf/0.1/name> \"David Carral\" .\n<http://data.semanticweb.org/person/david-carral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

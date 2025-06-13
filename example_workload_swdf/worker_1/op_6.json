@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/rim-al-hulou>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/rim-al-hulou> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/loria-university-of-nancy> .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://www.w3.org/2000/01/rdf-schema#label> \"Rim Al Hulou\" .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://xmlns.com/foaf/0.1/name> \"Rim Al Hulou\" .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/tasneem-brutch>",
+    "endpoint": "update",
+    "operation": "DELETE_DATA",
+    "query": "default",
+    "query_triples": "<http://data.semanticweb.org/person/tasneem-brutch> <http://www.w3.org/2000/01/rdf-schema#label> \"Tasneem Brutch\" .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://xmlns.com/foaf/0.1/name> \"Tasneem Brutch\" .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/tasneem-brutch> <http://xmlns.com/foaf/0.1/firstName> \"Tasneem\" .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://xmlns.com/foaf/0.1/lastName> \"Brutch\" .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/samsung-information-systems-america> .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/dev/8> .\n<http://data.semanticweb.org/person/tasneem-brutch> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"d9f62c8f128e0bdca68eb910add5b101cfebb02f\" .\n"
 }

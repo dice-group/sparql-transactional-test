@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/noriyuki-matsuda>",
+    "subject": "<http://data.semanticweb.org/person/jan-pedersen>",
+    "endpoint": "gsp",
     "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/noriyuki-matsuda> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/poster-proceedings/paper-12> .\n<http://data.semanticweb.org/person/noriyuki-matsuda> <http://www.w3.org/2000/01/rdf-schema#label> \"Noriyuki Matsuda\" .\n<http://data.semanticweb.org/person/noriyuki-matsuda> <http://xmlns.com/foaf/0.1/name> \"Noriyuki Matsuda\" .\n<http://data.semanticweb.org/person/noriyuki-matsuda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

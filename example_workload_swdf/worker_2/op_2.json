@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/ganesh-agarwal>",
+    "subject": "<http://data.semanticweb.org/person/jan-pedersen>",
+    "endpoint": "gsp",
     "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/ganesh-agarwal> <http://www.example.org/test> <http://www.example.org/test/144> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/ganesh-agarwal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/uiuc> .\n<http://data.semanticweb.org/person/ganesh-agarwal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/801> .\n<http://data.semanticweb.org/person/ganesh-agarwal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ab543d58dc83aaedb240f3542596984ba0dd1996\" .\n<http://data.semanticweb.org/person/ganesh-agarwal> <http://www.w3.org/2000/01/rdf-schema#label> \"Ganesh Agarwal\" .\n<http://data.semanticweb.org/person/ganesh-agarwal> <http://xmlns.com/foaf/0.1/name> \"Ganesh Agarwal\" .\n<http://data.semanticweb.org/person/ganesh-agarwal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/ganesh-agarwal> <http://www.example.org/test> <http://www.example.org/test/144> .\n"
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/jan-pedersen> <http://www.example.org/test> <http://www.example.org/test/121> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/jan-pedersen> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-inc> .\n<http://data.semanticweb.org/person/jan-pedersen> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/jan-pedersen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2008/paper/846> .\n<http://data.semanticweb.org/person/jan-pedersen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"aad0733bc3400dbb7066dc2b58f44144b801df7a\" .\n<http://data.semanticweb.org/person/jan-pedersen> <http://www.w3.org/2000/01/rdf-schema#label> \"Jan Pedersen\" .\n<http://data.semanticweb.org/person/jan-pedersen> <http://xmlns.com/foaf/0.1/name> \"Jan Pedersen\" .\n<http://data.semanticweb.org/person/jan-pedersen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

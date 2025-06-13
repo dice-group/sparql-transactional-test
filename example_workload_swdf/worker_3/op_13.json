@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/julien-lafaye>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/julien-lafaye> <http://www.w3.org/2000/01/rdf-schema#label> \"Julien Lafaye\" .\n<http://data.semanticweb.org/person/julien-lafaye> <http://xmlns.com/foaf/0.1/name> \"Julien Lafaye\" .\n<http://data.semanticweb.org/person/julien-lafaye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/julien-lafaye> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/reviewer-at-iswc2005-research-track> .\n<http://data.semanticweb.org/person/julien-lafaye> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnam> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/bill-mcdaniel>",
+    "endpoint": "gsp",
+    "operation": "GSP_POST",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/bill-mcdaniel> <http://www.example.org/test> <http://www.example.org/test/191> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/bill-mcdaniel> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"Digital Enterprise Research Institute, National University of Ireland, Galway\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/family_name> \"McDaniel\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/firstName> \"Bill\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"1513f6881fc4705fe0de433a57879f66d4ca2e81\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://www.w3.org/2000/01/rdf-schema#label> \"Bill McDaniel\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/name> \"Bill McDaniel\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

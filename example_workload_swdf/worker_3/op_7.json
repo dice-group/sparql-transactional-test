@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/rajesh-balakrishnan>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/rajesh-balakrishnan> <http://xmlns.com/foaf/0.1/firstName> \"Rajesh\" .\n<http://data.semanticweb.org/person/rajesh-balakrishnan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/infosys-technologies-limited> .\n<http://data.semanticweb.org/person/rajesh-balakrishnan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/148> .\n<http://data.semanticweb.org/person/rajesh-balakrishnan> <http://xmlns.com/foaf/0.1/name> \"Rajesh Balakrishnan\" .\n<http://data.semanticweb.org/person/rajesh-balakrishnan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/rajesh-balakrishnan> <http://xmlns.com/foaf/0.1/family_name> \"Balakrishnan\" .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/tok-wang-ling>",
+    "endpoint": "gsp",
+    "operation": "GSP_DELETE",
+    "query": "named",
+    "query_triples": "",
+    "validate": "named",
+    "validate_triples": ""
 }

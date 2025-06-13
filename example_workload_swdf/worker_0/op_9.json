@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/tilman-kuechler>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/tilman-kuechler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-29> .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://www.example.org/test> <http://www.example.org/test/11> .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://www.w3.org/2000/01/rdf-schema#label> \"Tilman Kuechler\" .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://xmlns.com/foaf/0.1/name> \"Tilman Kuechler\" .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/nick-kanellos>",
+    "endpoint": "update",
+    "operation": "DELETE_DATA",
+    "query": "default",
+    "query_triples": "<http://data.semanticweb.org/person/nick-kanellos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2009/paper/inuse/157> .\n<http://data.semanticweb.org/person/nick-kanellos> <http://www.w3.org/2000/01/rdf-schema#label> \"Nick Kanellos\" .\n<http://data.semanticweb.org/person/nick-kanellos> <http://xmlns.com/foaf/0.1/name> \"Nick Kanellos\" .\n<http://data.semanticweb.org/person/nick-kanellos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/nick-kanellos> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-software-group> .\n"
 }

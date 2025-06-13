@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/christoph-wieser>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/christoph-wieser> <http://www.example.org/test> <http://www.example.org/test/217> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/christoph-wieser> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.ifi.lmu.de/> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#christoph-wieser> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://xmlns.com/foaf/0.1/homepage> <http://www.wieser.info/> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/isemantics/2009/main/pcmember> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/ICPW/2009/main/pcmember> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2006/roles/delegate> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/salzburg-research> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/demo-proceedings/paper-15> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"109627e78890b00f5099f3b9c1685963085faa29\" .\n<http://data.semanticweb.org/person/christoph-wieser> <http://www.example.org/test> <http://www.example.org/test/217> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://www.w3.org/2000/01/rdf-schema#label> \"Christoph Wieser\" .\n<http://data.semanticweb.org/person/christoph-wieser> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wieser.info/christoph-foaf.rdf> .\n<http://data.semanticweb.org/person/christoph-wieser> <http://xmlns.com/foaf/0.1/name> \"Christoph Wieser\" .\n<http://data.semanticweb.org/person/christoph-wieser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/christoph-wieser> <http://www.example.org/test> <http://www.example.org/test/217> .\n"
+    "subject": "<http://data.semanticweb.org/person/emmanuel-desmontils>",
+    "endpoint": "gsp",
+    "operation": "GSP_PUT",
+    "query": "named",
+    "query_triples": "<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.example.org/test> <http://www.example.org/test/187> .\n",
+    "validate": "named",
+    "validate_triples": "<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.example.org/test> <http://www.example.org/test/187> .\n"
 }

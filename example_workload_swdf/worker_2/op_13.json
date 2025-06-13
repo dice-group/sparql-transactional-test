@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/branimir-boguraev>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/branimir-boguraev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/branimir-boguraev> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-research> .\n<http://data.semanticweb.org/person/branimir-boguraev> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/769> .\n<http://data.semanticweb.org/person/branimir-boguraev> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/820> .\n<http://data.semanticweb.org/person/branimir-boguraev> <http://www.w3.org/2000/01/rdf-schema#label> \"Branimir Boguraev\" .\n<http://data.semanticweb.org/person/branimir-boguraev> <http://xmlns.com/foaf/0.1/name> \"Branimir Boguraev\" .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/matthias-hartung>",
+    "endpoint": "update",
+    "operation": "INSERT_DATA",
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/matthias-hartung> <http://www.example.org/test> <http://www.example.org/test/152> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/matthias-hartung> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/department-of-computational-linguistics-heidelberg> .\n<http://data.semanticweb.org/person/matthias-hartung> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/816> .\n<http://data.semanticweb.org/person/matthias-hartung> <http://www.example.org/test> <http://www.example.org/test/152> .\n<http://data.semanticweb.org/person/matthias-hartung> <http://www.w3.org/2000/01/rdf-schema#label> \"Matthias Hartung\" .\n<http://data.semanticweb.org/person/matthias-hartung> <http://xmlns.com/foaf/0.1/name> \"Matthias Hartung\" .\n<http://data.semanticweb.org/person/matthias-hartung> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }

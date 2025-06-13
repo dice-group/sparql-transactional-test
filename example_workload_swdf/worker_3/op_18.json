@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/juan-quemada>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/juan-quemada> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-46> .\n<http://data.semanticweb.org/person/juan-quemada> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-29> .\n<http://data.semanticweb.org/person/juan-quemada> <http://www.w3.org/2000/01/rdf-schema#label> \"Juan Quemada\" .\n<http://data.semanticweb.org/person/juan-quemada> <http://xmlns.com/foaf/0.1/name> \"Juan Quemada\" .\n<http://data.semanticweb.org/person/juan-quemada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/jon-phipps>",
+    "endpoint": "gsp",
+    "operation": "GSP_PUT",
+    "query": "named",
+    "query_triples": "<http://data.semanticweb.org/person/jon-phipps> <http://www.example.org/test> <http://www.example.org/test/216> .\n",
+    "validate": "named",
+    "validate_triples": "<http://data.semanticweb.org/person/jon-phipps> <http://www.example.org/test> <http://www.example.org/test/216> .\n"
 }

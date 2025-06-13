@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/florian-schmedding>",
+    "subject": "<http://data.semanticweb.org/person/e-cusenza>",
+    "endpoint": "gsp",
     "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/florian-schmedding> <http://www.example.org/test> <http://www.example.org/test/149> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/status> \"Academia\" .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/family_name> \"Schmedding\" .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/firstName> \"Florian\" .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/homepage> <http://dbis.informatik.uni-freiburg.de/index.php?person=schmeddi> .\n<http://data.semanticweb.org/person/florian-schmedding> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2010/research/reviewer> .\n<http://data.semanticweb.org/person/florian-schmedding> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/freiburg-university> .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/cold/2011/paper/17> .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"3a85094513a206afb0518393f42520c7ecc8eb99\" .\n<http://data.semanticweb.org/person/florian-schmedding> <http://www.w3.org/2000/01/rdf-schema#label> \"Florian Schmedding\" .\n<http://data.semanticweb.org/person/florian-schmedding> <http://xmlns.com/foaf/0.1/name> \"Florian Schmedding\" .\n<http://data.semanticweb.org/person/florian-schmedding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/florian-schmedding> <http://www.example.org/test> <http://www.example.org/test/149> .\n"
+    "query": "named",
+    "query_triples": "<http://data.semanticweb.org/person/e-cusenza> <http://www.example.org/test> <http://www.example.org/test/127> .\n",
+    "validate": "named",
+    "validate_triples": "<http://data.semanticweb.org/person/e-cusenza> <http://www.example.org/test> <http://www.example.org/test/127> .\n"
 }

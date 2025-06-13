@@ -1,7 +1,9 @@
 {
-    "subject": "<http://data.semanticweb.org/person/donald-kossman>",
+    "subject": "<http://data.semanticweb.org/person/melissa-kronenthal>",
+    "endpoint": "update",
     "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/donald-kossman> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/donald-kossman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2004/tutorial-1/tutorial-organizer> .\n<http://data.semanticweb.org/person/donald-kossman> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/donald-kossman> <http://www.w3.org/2000/01/rdf-schema#label> \"Donald Kossman\" .\n<http://data.semanticweb.org/person/donald-kossman> <http://xmlns.com/foaf/0.1/name> \"Donald Kossman\" .\n<http://data.semanticweb.org/person/donald-kossman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/donald-kossman> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    "query": "both",
+    "query_triples": "<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": "default",
+    "validate_triples": "<http://data.semanticweb.org/person/melissa-kronenthal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-edinburgh> .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/237> .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.w3.org/2000/01/rdf-schema#label> \"Melissa Kronenthal\" .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://xmlns.com/foaf/0.1/name> \"Melissa Kronenthal\" .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
 }
