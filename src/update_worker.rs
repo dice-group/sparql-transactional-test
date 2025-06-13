@@ -147,17 +147,6 @@ impl UpdateWorker {
         })
     }
 
-    fn map_response(&self, resp: reqwest::Result<Response>) -> reqwest::Result<ControlFlow<()>> {
-        match resp {
-            Ok(resp) => {
-                resp.error_for_status()?;
-                Ok(ControlFlow::Break(()))
-            },
-            Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(ControlFlow::Continue(())),
-            Err(e) => Err(dbg!(e)),
-        }
-    }
-
     async fn issue_update(
         &self,
         UpdateOperation { subject, operation, triples, .. }: &UpdateOperation,
@@ -213,7 +202,14 @@ impl UpdateWorker {
             },
         };
 
-        self.map_response(resp)
+        match resp {
+            Ok(resp) => {
+                resp.error_for_status()?;
+                Ok(ControlFlow::Break(()))
+            },
+            Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(ControlFlow::Continue(())),
+            Err(e) => Err(e),
+        }
     }
 
     pub async fn execute(&self) -> Result<(), WorkerError> {
