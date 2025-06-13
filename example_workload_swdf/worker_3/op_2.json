@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/pablo-de-la-fuente>",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://www.example.org/test> <http://www.example.org/test/186> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"b23f6a3f89623fd5012169e749370b4f0df1a348\" .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://xmlns.com/foaf/0.1/lastName> \"De La Fuente\" .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/grinbd-universidad-de-valladolid> .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/search-track-committee-member> .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://xmlns.com/foaf/0.1/name> \"Pablo De La Fuente\" .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://www.w3.org/2000/01/rdf-schema#label> \"Pablo De La Fuente\" .\n<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://xmlns.com/foaf/0.1/firstName> \"Pablo\" .\n",
-    "validation_named": "<http://data.semanticweb.org/person/pablo-de-la-fuente> <http://www.example.org/test> <http://www.example.org/test/186> .\n"
+    "subject": "<http://data.semanticweb.org/person/roxane-bertrand>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/roxane-bertrand> <http://www.example.org/test> <http://www.example.org/test/211> .\n",
+    "validation_default": "",
+    "validation_named": "<http://data.semanticweb.org/person/roxane-bertrand> <http://www.example.org/test> <http://www.example.org/test/211> .\n"
 }

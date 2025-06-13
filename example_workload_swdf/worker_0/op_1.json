@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/simon-krek>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/simon-krek> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/89> .\n<http://data.semanticweb.org/person/simon-krek> <http://xmlns.com/foaf/0.1/name> \"Simon Krek\" .\n<http://data.semanticweb.org/person/simon-krek> <http://www.w3.org/2000/01/rdf-schema#label> \"Simon Krek\" .\n<http://data.semanticweb.org/person/simon-krek> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/jozef-stefan-institute> .\n<http://data.semanticweb.org/person/simon-krek> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/553> .\n<http://data.semanticweb.org/person/simon-krek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/simon-krek> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/donald-kossman>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/donald-kossman> <http://www.example.org/test> <http://www.example.org/test/3> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/donald-kossman> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2004/tutorial-1/tutorial-organizer> .\n<http://data.semanticweb.org/person/donald-kossman> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/donald-kossman> <http://www.w3.org/2000/01/rdf-schema#label> \"Donald Kossman\" .\n<http://data.semanticweb.org/person/donald-kossman> <http://xmlns.com/foaf/0.1/name> \"Donald Kossman\" .\n<http://data.semanticweb.org/person/donald-kossman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/donald-kossman> <http://www.example.org/test> <http://www.example.org/test/3> .\n"
 }

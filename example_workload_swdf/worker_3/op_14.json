@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/makoto-imamura>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/makoto-imamura> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/makoto-imamura> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n<http://data.semanticweb.org/person/makoto-imamura> <http://xmlns.com/foaf/0.1/name> \"Makoto Imamura\" .\n<http://data.semanticweb.org/person/makoto-imamura> <http://www.w3.org/2000/01/rdf-schema#label> \"Makoto Imamura\" .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/diman-todorov>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/235> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/family_name> \"Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/firstName> \"Diman\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/demo-5> .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.w3.org/2000/01/rdf-schema#label> \"Diman Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/name> \"Diman Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/235> .\n"
 }

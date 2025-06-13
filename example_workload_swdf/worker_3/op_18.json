@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/paolo-atzeni>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/paolo-atzeni> <http://www.example.org/test> <http://www.example.org/test/223> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/paolo-atzeni> <http://xmlns.com/foaf/0.1/name> \"Paolo Atzeni\" .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://www.w3.org/2000/01/rdf-schema#label> \"Paolo Atzeni\" .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/roma-tre-university> .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/paolo-atzeni> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2003/senior-pc-member> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/paolo-atzeni> <http://www.example.org/test> <http://www.example.org/test/223> .\n"
+    "subject": "<http://data.semanticweb.org/person/juan-quemada>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/juan-quemada> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-46> .\n<http://data.semanticweb.org/person/juan-quemada> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-29> .\n<http://data.semanticweb.org/person/juan-quemada> <http://www.w3.org/2000/01/rdf-schema#label> \"Juan Quemada\" .\n<http://data.semanticweb.org/person/juan-quemada> <http://xmlns.com/foaf/0.1/name> \"Juan Quemada\" .\n<http://data.semanticweb.org/person/juan-quemada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_default": "",
+    "validation_named": ""
 }

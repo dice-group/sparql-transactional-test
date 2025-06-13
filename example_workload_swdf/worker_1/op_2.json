@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/thomas-b-passin>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/thomas-b-passin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/thomas-b-passin> <http://xmlns.com/foaf/0.1/name> \"Thomas B. Passin\" .\n<http://data.semanticweb.org/person/thomas-b-passin> <http://www.w3.org/2000/01/rdf-schema#label> \"Thomas B. Passin\" .\n<http://data.semanticweb.org/person/thomas-b-passin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n",
-    "validation_default": "",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/bo-june>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/bo-june> <http://www.example.org/test> <http://www.example.org/test/73> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/bo-june> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/paul-hsu> .\n<http://data.semanticweb.org/person/bo-june> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/online-spelling-correction-for-query-completion> .\n<http://data.semanticweb.org/person/bo-june> <http://www.w3.org/2000/01/rdf-schema#label> \"Bo-June\" .\n<http://data.semanticweb.org/person/bo-june> <http://xmlns.com/foaf/0.1/name> \"Bo-June\" .\n<http://data.semanticweb.org/person/bo-june> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/bo-june> <http://www.example.org/test> <http://www.example.org/test/73> .\n"
 }

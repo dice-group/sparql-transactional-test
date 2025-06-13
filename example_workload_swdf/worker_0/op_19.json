@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/patrick-kenis>",
+    "subject": "<http://data.semanticweb.org/person/rim-al-hulou>",
     "operation": "GSP_DELETE",
     "triples": "",
-    "validation_default": "",
+    "validation_default": "<http://data.semanticweb.org/person/rim-al-hulou> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/loria-university-of-nancy> .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://www.w3.org/2000/01/rdf-schema#label> \"Rim Al Hulou\" .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://xmlns.com/foaf/0.1/name> \"Rim Al Hulou\" .\n<http://data.semanticweb.org/person/rim-al-hulou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
     "validation_named": ""
 }

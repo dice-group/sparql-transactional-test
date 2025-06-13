@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/dan-pelleg>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/dan-pelleg> <http://www.example.org/test> <http://www.example.org/test/164> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/dan-pelleg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/dan-pelleg> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-inc> .\n<http://data.semanticweb.org/person/dan-pelleg> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Israel> .\n<http://data.semanticweb.org/person/dan-pelleg> <http://xmlns.com/foaf/0.1/firstName> \"Dan\" .\n<http://data.semanticweb.org/person/dan-pelleg> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/cqa/2012/paper/11> .\n<http://data.semanticweb.org/person/dan-pelleg> <http://xmlns.com/foaf/0.1/lastName> \"Pelleg\" .\n<http://data.semanticweb.org/person/dan-pelleg> <http://xmlns.com/foaf/0.1/name> \"Dan Pelleg\" .\n<http://data.semanticweb.org/person/dan-pelleg> <http://www.w3.org/2000/01/rdf-schema#label> \"Dan Pelleg\" .\n<http://data.semanticweb.org/person/dan-pelleg> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/cqa/2012/programme-committee-member> .\n<http://data.semanticweb.org/person/dan-pelleg> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"4f379ec36ac567dd54208fdc014ec5dbab8c2d3b\" .\n",
-    "validation_named": "<http://data.semanticweb.org/person/dan-pelleg> <http://www.example.org/test> <http://www.example.org/test/164> .\n"
+    "subject": "<http://data.semanticweb.org/person/noriyuki-matsuda>",
+    "operation": "GSP_DELETE",
+    "triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/noriyuki-matsuda> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/poster-proceedings/paper-12> .\n<http://data.semanticweb.org/person/noriyuki-matsuda> <http://www.w3.org/2000/01/rdf-schema#label> \"Noriyuki Matsuda\" .\n<http://data.semanticweb.org/person/noriyuki-matsuda> <http://xmlns.com/foaf/0.1/name> \"Noriyuki Matsuda\" .\n<http://data.semanticweb.org/person/noriyuki-matsuda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": ""
 }

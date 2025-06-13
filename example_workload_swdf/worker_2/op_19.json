@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/jean-francois-chartier>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/jean-francois-chartier> <http://xmlns.com/foaf/0.1/name> \"Jean-Fran\u00e7ois Chartier\" .\n",
-    "validation_default": "<http://data.semanticweb.org/person/jean-francois-chartier> <http://www.w3.org/2000/01/rdf-schema#label> \"Jean-Fran\u00e7ois Chartier\" .\n<http://data.semanticweb.org/person/jean-francois-chartier> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-770> .\n<http://data.semanticweb.org/person/jean-francois-chartier> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-du-quebec-a-montreal> .\n<http://data.semanticweb.org/person/jean-francois-chartier> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"00b156ed0534752de60dbf14c26996623bdfd82a\" .\n<http://data.semanticweb.org/person/jean-francois-chartier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/andre-valente>",
+    "operation": "GSP_POST",
+    "triples": "<http://data.semanticweb.org/person/andre-valente> <http://www.example.org/test> <http://www.example.org/test/197> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/andre-valente> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/pc-member-at-iswc2005-industrial-track> .\n<http://data.semanticweb.org/person/andre-valente> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/knowledge-ventures> .\n<http://data.semanticweb.org/person/andre-valente> <http://www.w3.org/2000/01/rdf-schema#label> \"Andre Valente\" .\n<http://data.semanticweb.org/person/andre-valente> <http://xmlns.com/foaf/0.1/name> \"Andre Valente\" .\n<http://data.semanticweb.org/person/andre-valente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/andre-valente> <http://www.example.org/test> <http://www.example.org/test/197> .\n"
 }

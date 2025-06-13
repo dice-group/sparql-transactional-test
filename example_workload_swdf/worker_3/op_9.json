@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/hakimeh-fadaee>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/hakimeh-fadaee> <http://www.example.org/test> <http://www.example.org/test/13> .\n<http://data.semanticweb.org/person/hakimeh-fadaee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/nlp-research-lab-shahid-beheshti-university> .\n<http://data.semanticweb.org/person/hakimeh-fadaee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/hakimeh-fadaee> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/875> .\n<http://data.semanticweb.org/person/hakimeh-fadaee> <http://xmlns.com/foaf/0.1/name> \"Hakimeh Fadaee\" .\n<http://data.semanticweb.org/person/hakimeh-fadaee> <http://www.w3.org/2000/01/rdf-schema#label> \"Hakimeh Fadaee\" .\n",
+    "subject": "<http://data.semanticweb.org/person/anne-aula>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/anne-aula> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/google-inc> .\n<http://data.semanticweb.org/person/anne-aula> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/897> .\n<http://data.semanticweb.org/person/anne-aula> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"cf4a1fff00a5ca551357f028571926d54e4164ed\" .\n<http://data.semanticweb.org/person/anne-aula> <http://www.w3.org/2000/01/rdf-schema#label> \"Anne Aula\" .\n<http://data.semanticweb.org/person/anne-aula> <http://xmlns.com/foaf/0.1/name> \"Anne Aula\" .\n<http://data.semanticweb.org/person/anne-aula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_default": "",
     "validation_named": ""
 }

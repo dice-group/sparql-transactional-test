@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/chun-lin-fan>",
+    "subject": "<http://data.semanticweb.org/person/richard-drew>",
     "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/chun-lin-fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/chun-lin-fan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/poster-proceedings/paper-02> .\n<http://data.semanticweb.org/person/chun-lin-fan> <http://xmlns.com/foaf/0.1/name> \"Chun-Lin Fan\" .\n<http://data.semanticweb.org/person/chun-lin-fan> <http://www.w3.org/2000/01/rdf-schema#label> \"Chun-Lin Fan\" .\n",
+    "triples": "<http://data.semanticweb.org/person/richard-drew> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-leeds> .\n<http://data.semanticweb.org/person/richard-drew> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2001/position-proceedings/paper-26> .\n<http://data.semanticweb.org/person/richard-drew> <http://www.w3.org/2000/01/rdf-schema#label> \"Richard Drew\" .\n<http://data.semanticweb.org/person/richard-drew> <http://xmlns.com/foaf/0.1/name> \"Richard Drew\" .\n<http://data.semanticweb.org/person/richard-drew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_default": "",
     "validation_named": ""
 }

@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/zlatan-dragisic>",
-    "operation": "GSP_PUT",
-    "triples": "<http://data.semanticweb.org/person/zlatan-dragisic> <http://www.example.org/test> <http://www.example.org/test/95> .\n",
-    "validation_default": "",
-    "validation_named": "<http://data.semanticweb.org/person/zlatan-dragisic> <http://www.example.org/test> <http://www.example.org/test/95> .\n"
+    "subject": "<http://data.semanticweb.org/person/senlin-liang>",
+    "operation": "GSP_POST",
+    "triples": "<http://data.semanticweb.org/person/senlin-liang> <http://www.example.org/test> <http://www.example.org/test/105> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/senlin-liang> <http://xmlns.com/foaf/0.1/family_name> \"Liang\" .\n<http://data.semanticweb.org/person/senlin-liang> <http://xmlns.com/foaf/0.1/firstName> \"Senlin\" .\n<http://data.semanticweb.org/person/senlin-liang> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/state-university-of-new-york-at-stony-brook> .\n<http://data.semanticweb.org/person/senlin-liang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/61> .\n<http://data.semanticweb.org/person/senlin-liang> <http://xmlns.com/foaf/0.1/name> \"Senlin Liang\" .\n<http://data.semanticweb.org/person/senlin-liang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/senlin-liang> <http://www.example.org/test> <http://www.example.org/test/105> .\n"
 }

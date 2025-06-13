@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/acalia-pozo-marrero>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://www.example.org/test> <http://www.example.org/test/211> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://xmlns.com/foaf/0.1/name> \"Acalia Pozo-Marrero\" .\n<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://www.w3.org/2000/01/rdf-schema#label> \"Acalia Pozo-Marrero\" .\n<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dc/2010/paper/posters/A-1016> .\n<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://www.example.org/test> <http://www.example.org/test/211> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/acalia-pozo-marrero> <http://www.example.org/test> <http://www.example.org/test/211> .\n"
+    "subject": "<http://data.semanticweb.org/person/julien-lafaye>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/julien-lafaye> <http://www.w3.org/2000/01/rdf-schema#label> \"Julien Lafaye\" .\n<http://data.semanticweb.org/person/julien-lafaye> <http://xmlns.com/foaf/0.1/name> \"Julien Lafaye\" .\n<http://data.semanticweb.org/person/julien-lafaye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/julien-lafaye> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/reviewer-at-iswc2005-research-track> .\n<http://data.semanticweb.org/person/julien-lafaye> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cnam> .\n",
+    "validation_named": ""
 }

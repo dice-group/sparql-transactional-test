@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/geraint-wiggins>",
-    "operation": "INSERT_DATA",
-    "triples": "<http://data.semanticweb.org/person/geraint-wiggins> <http://www.example.org/test> <http://www.example.org/test/15> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/geraint-wiggins> <http://xmlns.com/foaf/0.1/name> \"Geraint Wiggins\" .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://www.w3.org/2000/01/rdf-schema#label> \"Geraint Wiggins\" .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"c34c5e249f1ae6a7c36a8285447d7e70cb458191\" .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://www.example.org/test> <http://www.example.org/test/15> .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/goldsmiths-college-university-of-london> .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .\n<http://data.semanticweb.org/person/geraint-wiggins> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-committee-member> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/geraint-wiggins> <http://www.example.org/test> <http://www.example.org/test/15> .\n"
+    "subject": "<http://data.semanticweb.org/person/tilman-kuechler>",
+    "operation": "GSP_DELETE",
+    "triples": "",
+    "validation_default": "<http://data.semanticweb.org/person/tilman-kuechler> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-29> .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://www.example.org/test> <http://www.example.org/test/11> .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://www.w3.org/2000/01/rdf-schema#label> \"Tilman Kuechler\" .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://xmlns.com/foaf/0.1/name> \"Tilman Kuechler\" .\n<http://data.semanticweb.org/person/tilman-kuechler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": ""
 }

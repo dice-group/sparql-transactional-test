@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/akiyoshi-nakamizo>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/shibaura-institute-of-technology> .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/name> \"Akiyoshi Nakamizo\" .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/family_name> \"Nakamizo\" .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/139> .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/firstName> \"Akiyoshi\" .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/diman-todorov>",
+    "operation": "INSERT_DATA",
+    "triples": "<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/family_name> \"Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/firstName> \"Diman\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/demo-5> .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.w3.org/2000/01/rdf-schema#label> \"Diman Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://xmlns.com/foaf/0.1/name> \"Diman Todorov\" .\n<http://data.semanticweb.org/person/diman-todorov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/diman-todorov> <http://www.example.org/test> <http://www.example.org/test/163> .\n"
 }

@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/rod-rasmussen>",
-    "operation": "GSP_POST",
-    "triples": "<http://data.semanticweb.org/person/rod-rasmussen> <http://www.example.org/test> <http://www.example.org/test/133> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/rod-rasmussen> <http://data.semanticweb.org/ns/swc/ontology#isPanelistAt> <http://data.semanticweb.org/conference/www/2008/panel/ProtectingTheWeb> .\n<http://data.semanticweb.org/person/rod-rasmussen> <http://xmlns.com/foaf/0.1/name> \"Rod Rasmussen\" .\n<http://data.semanticweb.org/person/rod-rasmussen> <http://www.w3.org/2000/01/rdf-schema#label> \"Rod Rasmussen\" .\n<http://data.semanticweb.org/person/rod-rasmussen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validation_named": "<http://data.semanticweb.org/person/rod-rasmussen> <http://www.example.org/test> <http://www.example.org/test/133> .\n"
+    "subject": "<http://data.semanticweb.org/person/andrey-rzhetsky>",
+    "operation": "GSP_PUT",
+    "triples": "<http://data.semanticweb.org/person/andrey-rzhetsky> <http://www.example.org/test> <http://www.example.org/test/128> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/andrey-rzhetsky> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/evodyn/2011/pcmember> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-of-genomics-and-systems-biology-university-of-chicago> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/computation-institute-university-of-chicago> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/dept-of-medicine-and-human-genetics-university-of-chicago> .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://www.w3.org/2000/01/rdf-schema#label> \"Andrey Rzhetsky\" .\n<http://data.semanticweb.org/person/andrey-rzhetsky> <http://xmlns.com/foaf/0.1/name> \"Andrey Rzhetsky\" .\n",
+    "validation_named": "<http://data.semanticweb.org/person/andrey-rzhetsky> <http://www.example.org/test> <http://www.example.org/test/128> .\n"
 }

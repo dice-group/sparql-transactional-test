@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/chomicha-bendahman>",
-    "operation": "GSP_DELETE",
-    "triples": "",
-    "validation_default": "<http://data.semanticweb.org/person/chomicha-bendahman> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/elda> .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://xmlns.com/foaf/0.1/name> \"Chomicha Bendahman\" .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://www.w3.org/2000/01/rdf-schema#label> \"Chomicha Bendahman\" .\n<http://data.semanticweb.org/person/chomicha-bendahman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/915> .\n",
+    "subject": "<http://data.semanticweb.org/person/elmar-donar>",
+    "operation": "DELETE_DATA",
+    "triples": "<http://data.semanticweb.org/person/elmar-donar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sap-ag> .\n<http://data.semanticweb.org/person/elmar-donar> <http://www.w3.org/2000/01/rdf-schema#label> \"Elmar Donar\" .\n<http://data.semanticweb.org/person/elmar-donar> <http://xmlns.com/foaf/0.1/name> \"Elmar Donar\" .\n<http://data.semanticweb.org/person/elmar-donar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/elmar-donar> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/pc-member-at-iswc2005-industrial-track> .\n",
     "validation_named": ""
 }

@@ -1,7 +1,7 @@
 {
-    "subject": "<http://data.semanticweb.org/person/georges-linares>",
-    "operation": "DELETE_DATA",
-    "triples": "<http://data.semanticweb.org/person/georges-linares> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-avignon> .\n",
-    "validation_default": "<http://data.semanticweb.org/person/georges-linares> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/georges-linares> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/193> .\n<http://data.semanticweb.org/person/georges-linares> <http://xmlns.com/foaf/0.1/name> \"Georges Linares\" .\n<http://data.semanticweb.org/person/georges-linares> <http://www.w3.org/2000/01/rdf-schema#label> \"Georges Linares\" .\n",
-    "validation_named": ""
+    "subject": "<http://data.semanticweb.org/person/andrejs-vasi_jevs>",
+    "operation": "INSERT_DATA",
+    "triples": "<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://www.example.org/test> <http://www.example.org/test/176> .\n",
+    "validation_default": "<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://xmlns.com/foaf/0.1/firstName> \"Andrejs\" .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://xmlns.com/foaf/0.1/lastName> \"Vasi_jevs\" .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/nya/11/talk/speaker> .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"fd1785a85c5aaad0bf7add62abc12e11e7fbc521\" .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://www.example.org/test> <http://www.example.org/test/176> .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://www.w3.org/2000/01/rdf-schema#label> \"Andrejs Vasi_jevs\" .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://xmlns.com/foaf/0.1/name> \"Andrejs Vasi_jevs\" .\n<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
+    "validation_named": "<http://data.semanticweb.org/person/andrejs-vasi_jevs> <http://www.example.org/test> <http://www.example.org/test/176> .\n"
 }
