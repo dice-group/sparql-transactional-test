@@ -8,6 +8,7 @@ use crate::{
     kill_worker::KillWorker,
     random_read_worker::{FileSourceQueryGenerator, QueryGenerator},
 };
+use anyhow::Context;
 use clap::Parser;
 use random_read_worker::{RandomLimitSelectStartQueryGenerator, RandomReadWorker};
 use reqwest::Url;
@@ -19,7 +20,6 @@ use std::{
     sync::Arc,
     time::Duration,
 };
-use anyhow::Context;
 use tokio::{
     select,
     sync::{Barrier, Notify},
@@ -27,8 +27,8 @@ use tokio::{
 use update_worker::UpdateWorker;
 
 type Query = String;
-type QPS = f64;
-type AvgQPS = f64;
+type Qps = f64;
+type AvgQps = f64;
 
 #[derive(serde::Serialize)]
 struct QPSMeasurement {
@@ -44,7 +44,7 @@ struct UpdateJobResult {
 
 struct ReadJobResult {
     worker_id: usize,
-    qps_measurements: Result<BTreeMap<usize, QPS>, WorkerError>,
+    qps_measurements: Result<BTreeMap<usize, Qps>, WorkerError>,
 }
 
 struct KillJobResult {
@@ -316,11 +316,9 @@ async fn run(opts: Command) -> anyhow::Result<()> {
                 }
             },
             kjobres = kill_worker_finished_rx.recv() => {
-                if let Some(KillJobResult { result }) = kjobres {
-                    if let Err(e) = result {
-                        tracing::error!("Kill worker encountered an error: {e}");
-                        return Err(anyhow::anyhow!("Test failed, unable to perform lifecycle management"));
-                    }
+                if let Some(KillJobResult { result: Err(e) }) = kjobres {
+                    tracing::error!("Kill worker encountered an error: {e}");
+                    return Err(anyhow::anyhow!("Test failed, unable to perform lifecycle management"));
                 }
             },
         }
@@ -334,12 +332,12 @@ async fn run(opts: Command) -> anyhow::Result<()> {
 
     stop_notify.notify_waiters();
 
-    let mut qps_sum: QPS = 0.0;
+    let mut qps_sum: Qps = 0.0;
 
     while let Some(ReadJobResult { worker_id, qps_measurements }) = readers_finished_rx.recv().await {
         match qps_measurements {
             Ok(qps_measurements) => {
-                let reader_avgqps: AvgQPS = qps_measurements.values().sum::<QPS>() / qps_measurements.len() as f64;
+                let reader_avgqps: AvgQps = qps_measurements.values().sum::<Qps>() / qps_measurements.len() as f64;
                 tracing::info!("Random read worker {worker_id} achieved {reader_avgqps:.2} AvgQPS");
                 qps_sum += reader_avgqps;
 

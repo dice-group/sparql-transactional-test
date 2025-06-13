@@ -29,7 +29,7 @@ impl KillWorker {
         if status.success() {
             Ok(())
         } else {
-            Err(map_err(io::Error::new(io::ErrorKind::Other, "Exit code != 0")))
+            Err(map_err(io::Error::other("Exit code != 0")))
         }
     }
 

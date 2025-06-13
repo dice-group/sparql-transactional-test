@@ -5,25 +5,18 @@ use crate::{
 use anyhow::Context;
 use reqwest::{header, Client, Response, Url};
 use serde::Deserialize;
-use std::{fs::File, io, path::Path};
-use std::ops::ControlFlow;
+use std::{fs::File, io, ops::ControlFlow, path::Path};
 
 type DbState = String;
 type Subject = String;
 type Graph = String;
 
 fn normalize_dbstate(state: DbState) -> DbState {
-    let mut lines: Vec<&str> = state
-        .lines()
-        .map(|line| line.trim())
-        .collect();
+    let mut lines: Vec<&str> = state.lines().map(|line| line.trim()).collect();
 
     lines.sort();
 
-    lines.into_iter()
-        .map(|line| [line, "\n"])
-        .flatten()
-        .collect()
+    lines.into_iter().flat_map(|line| [line, "\n"]).collect()
 }
 
 #[derive(Debug, Deserialize)]
@@ -71,7 +64,9 @@ impl UpdateWorker {
     }
 
     fn make_named_verify_query(subject: &str) -> String {
-        format!("CONSTRUCT {{ {subject} ?p ?o }} WHERE {{ GRAPH {subject} {{ {subject} ?p ?o . FILTER(!isBlank(?o)) }} }}")
+        format!(
+            "CONSTRUCT {{ {subject} ?p ?o }} WHERE {{ GRAPH {subject} {{ {subject} ?p ?o . FILTER(!isBlank(?o)) }} }}"
+        )
     }
 
     pub fn new(
@@ -97,7 +92,11 @@ impl UpdateWorker {
             queries.push(update.normalize());
         }
 
-        anyhow::ensure!(queries.len() > 0, "Did not find any operations for update worker in {}", base_dir.display());
+        anyhow::ensure!(
+            !queries.is_empty(),
+            "Did not find any operations for update worker in {}",
+            base_dir.display()
+        );
 
         Ok(Self {
             query_endpoint,
@@ -110,7 +109,7 @@ impl UpdateWorker {
         })
     }
 
-    async fn read_current_state_impl(&self, query: String) -> reqwest::Result<Option<DbState>> {
+    async fn read_current_state_impl(&self, query: String) -> reqwest::Result<ControlFlow<DbState>> {
         let resp = self
             .client
             .get(self.query_endpoint.clone())
@@ -123,17 +122,17 @@ impl UpdateWorker {
             Ok(resp) => {
                 let resp = resp.error_for_status()?;
                 match resp.text().await {
-                    Ok(state) => Ok(Some(normalize_dbstate(state))),
-                    Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+                    Ok(state) => Ok(ControlFlow::Break(normalize_dbstate(state))),
+                    Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(ControlFlow::Continue(())),
                     Err(e) => Err(e),
                 }
             },
-            Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(None),
+            Err(_) if self.behav == WorkerBehaviour::IgnoreConnectionError => Ok(ControlFlow::Continue(())),
             Err(e) => Err(e),
         }
     }
 
-    async fn read_current_state(&self, subject: &str) -> reqwest::Result<Option<(DbState, DbState)>> {
+    async fn read_current_state(&self, subject: &str) -> reqwest::Result<ControlFlow<(DbState, DbState)>> {
         let (default_state, named_state) = tokio::join!(
             self.read_current_state_impl(Self::make_verify_query(subject)),
             self.read_current_state_impl(Self::make_named_verify_query(subject))
@@ -142,8 +141,10 @@ impl UpdateWorker {
         let default_state = default_state?;
         let named_state = named_state?;
 
-        assert_eq!(default_state.is_none(), named_state.is_none());
-        Ok(default_state.zip(named_state))
+        Ok(match (default_state, named_state) {
+            (ControlFlow::Break(default), ControlFlow::Break(named)) => ControlFlow::Break((default, named)),
+            (_, _) => ControlFlow::Continue(()),
+        })
     }
 
     fn map_response(&self, resp: reqwest::Result<Response>) -> reqwest::Result<ControlFlow<()>> {
@@ -202,7 +203,10 @@ impl UpdateWorker {
                 self.client
                     .put(self.graph_store_endpoint.clone())
                     .header(header::CONTENT_TYPE, "application/n-triples")
-                    .query(&[("graph", subject.trim_start_matches('<').trim_end_matches('>').to_owned())])
+                    .query(&[(
+                        "graph",
+                        subject.trim_start_matches('<').trim_end_matches('>').to_owned(),
+                    )])
                     .body(triples.clone())
                     .send()
                     .await
@@ -216,8 +220,8 @@ impl UpdateWorker {
         for (id, update) in self.queries.iter().enumerate() {
             loop {
                 match self.issue_update(update).await {
-                    Ok(ControlFlow::Continue(_)) => continue,
-                    Ok(ControlFlow::Break(_)) => break Ok(()),
+                    Ok(ControlFlow::Continue(())) => continue,
+                    Ok(ControlFlow::Break(())) => break Ok(()),
                     Err(err) => {
                         break Err(WorkerError::UpdateFailed {
                             update_id: id,
@@ -234,14 +238,14 @@ impl UpdateWorker {
 
             loop {
                 match self.read_current_state(&update.subject).await {
-                    Ok(None) => continue,
-                    Ok(Some((actual_default_state, actual_named_state)))
+                    Ok(ControlFlow::Continue(())) => continue,
+                    Ok(ControlFlow::Break((actual_default_state, actual_named_state)))
                         if actual_default_state == update.validation_default
                             && actual_named_state == update.validation_named =>
                     {
                         break Ok(())
                     },
-                    Ok(Some(actual_state)) => {
+                    Ok(ControlFlow::Break(actual_state)) => {
                         break Err(WorkerError::InvalidState {
                             update_id: id,
                             verbose_info: if self.verbose {

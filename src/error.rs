@@ -59,7 +59,11 @@ impl Display for WorkerError {
             WorkerError::InvalidState { update_id, verbose_info } => {
                 write!(f, "Unexpected result at update {update_id}")?;
 
-                if let Some(InvalidStateVerboseInfo { expected, actual }) = verbose_info {
+                if let Some(InvalidStateVerboseInfo {
+                    expected: (expected_default, expected_named),
+                    actual: (actual_default, actual_named),
+                }) = verbose_info
+                {
                     /*write!(f, "\nQuery: ")?;
                     if update.starts_with("INSERT DATA") || update.starts_with("DELETE DATA") {
                         format_insert_or_delete_data(f, update)?;
@@ -67,15 +71,21 @@ impl Display for WorkerError {
                         writeln!(f, "{}", update)?;
                     }*/
 
-                    writeln!(f, "\nExpected Default :\n{}", actual.0)?;
-                    writeln!(f, "\nActual Default:\n{}", expected.0)?;
+                    if expected_default != actual_default {
+                        writeln!(
+                            f,
+                            "\nDifference between expected and actual in default graph:\n{}",
+                            prettydiff::diff_lines(expected_default, actual_default)
+                        )?;
+                    }
 
-                    write!(f, "\nDiff:\n{}", prettydiff::diff_lines(&expected.0, &actual.0))?;
-
-                    writeln!(f, "\nExpected Default :\n{}", actual.1)?;
-                    writeln!(f, "\nActual Default:\n{}", expected.1)?;
-
-                    write!(f, "\nDiff:\n{}", prettydiff::diff_lines(&expected.1, &actual.1))?;
+                    if expected_named != actual_named {
+                        writeln!(
+                            f,
+                            "\nDifference between expected and actual in named graph:\n{}",
+                            prettydiff::diff_lines(expected_named, actual_named)
+                        )?;
+                    }
 
                     Ok(())
                 } else {

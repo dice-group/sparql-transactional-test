@@ -1,4 +1,4 @@
-use crate::{error::WorkerError, Query, WorkerBehaviour, QPS};
+use crate::{error::WorkerError, Qps, Query, WorkerBehaviour};
 use rand::{seq::SliceRandom, Rng};
 use reqwest::{Client, Response, Url};
 use std::{
@@ -102,7 +102,7 @@ impl RandomReadWorker {
         }
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> Result<BTreeMap<usize, QPS>, WorkerError> {
+    pub async fn execute(&mut self, stop: Arc<Notify>) -> Result<BTreeMap<usize, Qps>, WorkerError> {
         let mut query_timings: BTreeMap<_, Vec<Duration>> = Default::default();
 
         let worker = async {
