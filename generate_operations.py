@@ -193,7 +193,7 @@ class RDFStore:
                                headers=headers,
                                method=Method.POST,
                                body=body,
-                               validate=self.validation_named_graph(ident))
+                               validate=self.validation_default_and_named_graph(ident))
 
     def gsp_put(self, ident: rdflib.URIRef, triples: rdflib.Graph) -> UpdateOperation:
         params = {"graph": ident}
