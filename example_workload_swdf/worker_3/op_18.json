@@ -1,13 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/ricardo-borillo-domench"
+        "graph": "http://data.semanticweb.org/person/kevin-huguenin"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/kevin-huguenin> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/ricardo-borillo-domench> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/ricardo-borillo-domench> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/kevin-huguenin> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/kevin-huguenin> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/kevin-huguenin> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/firstName> \"K\u00e9vin\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/lastName> \"Huguenin\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/epfl> .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Switzerland> .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/921> .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/15> .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"f6239589a8d4cde4da7846dcb383ec8d8334b442\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://www.w3.org/2000/01/rdf-schema#label> \"K\u00e9vin Huguenin\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://www.w3.org/2000/01/rdf-schema#label> \"Kevin Huguenin\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/name> \"K\u00e9vin Huguenin\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://xmlns.com/foaf/0.1/name> \"Kevin Huguenin\" .\n<http://data.semanticweb.org/person/kevin-huguenin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

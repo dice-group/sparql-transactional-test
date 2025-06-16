@@ -1,13 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/david-w-walker"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/sihong-xie> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/sihong-xie> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/david-w-walker> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/david-w-walker> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sihong-xie> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/sihong-xie> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/sihong-xie> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/family_name> \"Xie\" .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/firstName> \"Sihong\" .\n<http://data.semanticweb.org/person/sihong-xie> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/sun-yat-sen-university> .\n<http://data.semanticweb.org/person/sihong-xie> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-illinois-at-chicago> .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/54> .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/10> .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"cc7fabb68f3c0a740e58422bd0e72edfd9735451\" .\n<http://data.semanticweb.org/person/sihong-xie> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/sihong-xie> <http://www.w3.org/2000/01/rdf-schema#label> \"Sihong Xie\" .\n<http://data.semanticweb.org/person/sihong-xie> <http://xmlns.com/foaf/0.1/name> \"Sihong Xie\" .\n<http://data.semanticweb.org/person/sihong-xie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

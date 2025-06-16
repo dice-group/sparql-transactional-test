@@ -1,15 +1,13 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/christoph-stasch"
+        "graph": "http://data.semanticweb.org/person/mike-lindelsee"
     },
-    "headers": {
-        "Content-type": "application/n-triples"
-    },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/christoph-stasch> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/christoph-stasch> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/christoph-stasch> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/mike-lindelsee> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/mike-lindelsee> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }

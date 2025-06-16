@@ -1,13 +1,13 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/joanne-luciano"
     },
-    "method": "POST",
-    "body": "INSERT DATA { <http://data.semanticweb.org/person/dae-ki-kang> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/dae-ki-kang> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/dae-ki-kang> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/dae-ki-kang> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/dae-ki-kang> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
-        "expected": "<http://data.semanticweb.org/person/dae-ki-kang> <http://xmlns.com/foaf/0.1/name> \"Dae-Ki Kang\" .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://www.w3.org/2000/01/rdf-schema#label> \"Dae-Ki Kang\" .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Korea,_Republic_of> .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"a3f9098f5457fee65825ef8d44717ca522d745df\" .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/dongseo-university> .\n<http://data.semanticweb.org/person/dae-ki-kang> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2010/social_web/pcmember> .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/joanne-luciano> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/joanne-luciano> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
     }
 }

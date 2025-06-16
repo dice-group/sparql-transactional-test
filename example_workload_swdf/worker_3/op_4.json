@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/adam-kilgarriff"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/houda-khrouf> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/houda-khrouf> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/adam-kilgarriff> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/adam-kilgarriff> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/houda-khrouf> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/houda-khrouf> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/houda-khrouf> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/houda-khrouf> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/eurecom> .\n<http://data.semanticweb.org/person/houda-khrouf> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-eurecom> .\n<http://data.semanticweb.org/person/houda-khrouf> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/78> .\n<http://data.semanticweb.org/person/houda-khrouf> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/houda-khrouf> <http://www.w3.org/2000/01/rdf-schema#label> \"Houda Khrouf\" .\n<http://data.semanticweb.org/person/houda-khrouf> <http://xmlns.com/foaf/0.1/name> \"Houda Khrouf\" .\n<http://data.semanticweb.org/person/houda-khrouf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

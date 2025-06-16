@@ -1,15 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/zhe-wang"
+        "graph": "http://data.semanticweb.org/person/sumit-mittal"
     },
     "headers": {
         "Content-type": "application/n-triples"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/zhe-wang> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/sumit-mittal> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/zhe-wang> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/zhe-wang> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sumit-mittal> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/sumit-mittal> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/sumit-mittal> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/sumit-mittal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-india-research-laboratory-new-delhi> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/India> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2008/paper/396> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/proceedings/paper-33> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"b748b886daf9671fa6b3d421f9ac5e06a4a6a085\" .\n<http://data.semanticweb.org/person/sumit-mittal> <http://www.w3.org/2000/01/rdf-schema#label> \"Sumit Mittal\" .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/name> \"Sumit Mittal\" .\n<http://data.semanticweb.org/person/sumit-mittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

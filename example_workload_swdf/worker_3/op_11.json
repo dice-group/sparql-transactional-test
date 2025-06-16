@@ -1,13 +1,13 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/he-hu"
     },
-    "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/alexander-haas> <http://xmlns.com/foaf/0.1/name> \"Alexander Haas\" .\n<http://data.semanticweb.org/person/alexander-haas> <http://www.w3.org/2000/01/rdf-schema#label> \"Alexander Haas\" .\n<http://data.semanticweb.org/person/alexander-haas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/alexander-haas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwiki/2010/paper/main/16> .\n }",
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/alexander-haas> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/alexander-haas> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/he-hu> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/he-hu> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }

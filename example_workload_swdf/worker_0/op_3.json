@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/lito-cruz"
+    },
     "headers": {
-        "Content-type": "application/sparql-update"
+        "Content-type": "application/n-triples"
     },
     "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/david-w-walker> <http://xmlns.com/foaf/0.1/name> \"David W. Walker\" .\n<http://data.semanticweb.org/person/david-w-walker> <http://www.w3.org/2000/01/rdf-schema#label> \"David W. Walker\" .\n<http://data.semanticweb.org/person/david-w-walker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/david-w-walker> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/proceedings/paper-15> .\n }",
+    "body": "<http://data.semanticweb.org/person/lito-cruz> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/david-w-walker> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/david-w-walker> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/lito-cruz> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/lito-cruz> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/lito-cruz> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/lito-cruz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-04> .\n<http://data.semanticweb.org/person/lito-cruz> <http://www.w3.org/2000/01/rdf-schema#label> \"Lito Cruz\" .\n<http://data.semanticweb.org/person/lito-cruz> <http://xmlns.com/foaf/0.1/name> \"Lito Cruz\" .\n<http://data.semanticweb.org/person/lito-cruz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

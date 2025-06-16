@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/jens-hartmann"
     },
-    "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/pramod-jamkhedkar> <http://xmlns.com/foaf/0.1/firstName> \"Pramod\" .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://xmlns.com/foaf/0.1/name> \"Pramod Jamkhedkar\" .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://www.w3.org/2000/01/rdf-schema#label> \"Pramod Jamkhedkar\" .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ca802276eeadb460d6b50a9ead2d6fa9f1a94074\" .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://xmlns.com/foaf/0.1/lastName> \"Jamkhedkar\" .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/jens-hartmann> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/pramod-jamkhedkar> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/pramod-jamkhedkar> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
-        "expected": "<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/program-committee-member> .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/pramod-jamkhedkar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/princeton-university> .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jens-hartmann> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jens-hartmann> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
     }
 }

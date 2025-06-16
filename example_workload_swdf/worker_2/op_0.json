@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/kerstin-denecke"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/kerstin-denecke> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/damon-horowitz> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/damon-horowitz> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/kerstin-denecke> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/kerstin-denecke> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/damon-horowitz> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/damon-horowitz> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/damon-horowitz> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/damon-horowitz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/1104> .\n<http://data.semanticweb.org/person/damon-horowitz> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"149287925d0fc288e36fc0318e011f42baedd14b\" .\n<http://data.semanticweb.org/person/damon-horowitz> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/damon-horowitz> <http://www.w3.org/2000/01/rdf-schema#label> \"Damon Horowitz\" .\n<http://data.semanticweb.org/person/damon-horowitz> <http://xmlns.com/foaf/0.1/name> \"Damon Horowitz\" .\n<http://data.semanticweb.org/person/damon-horowitz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

@@ -1,15 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/chao-liu"
+        "graph": "http://data.semanticweb.org/person/he-hu"
     },
     "headers": {
         "Content-type": "application/n-triples"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/chao-liu> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "<http://data.semanticweb.org/person/he-hu> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/chao-liu> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/chao-liu> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/he-hu> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/he-hu> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/he-hu> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/he-hu> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/He_Hu> .\n<http://data.semanticweb.org/person/he-hu> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/He_Hu> .\n<http://data.semanticweb.org/person/he-hu> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/renmin-university-of-china> .\n<http://data.semanticweb.org/person/he-hu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2007/papers/467> .\n<http://data.semanticweb.org/person/he-hu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/2> .\n<http://data.semanticweb.org/person/he-hu> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"fc6e66349a06b4fbfa15624dc9ede5e5a5f9a07c\" .\n<http://data.semanticweb.org/person/he-hu> <http://www.w3.org/2000/01/rdf-schema#label> \"He Hu\" .\n<http://data.semanticweb.org/person/he-hu> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/He_Hu> .\n<http://data.semanticweb.org/person/he-hu> <http://xmlns.com/foaf/0.1/name> \"He Hu\" .\n<http://data.semanticweb.org/person/he-hu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

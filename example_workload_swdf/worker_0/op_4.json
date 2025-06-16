@@ -1,13 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/myung-jae-park"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/richard-crowder> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/richard-crowder> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/myung-jae-park> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/myung-jae-park> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/richard-crowder> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/richard-crowder> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/richard-crowder> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Richard_Crowder> .\n<http://data.semanticweb.org/person/richard-crowder> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Richard_Crowder> .\n<http://data.semanticweb.org/person/richard-crowder> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-southampton> .\n<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/semwebdesign/2007/papers/536> .\n<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"2cc635a5f0edaee0f88a1c5f8b14c38ea34f9d35\" .\n<http://data.semanticweb.org/person/richard-crowder> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/richard-crowder> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Richard_Crowder> .\n<http://data.semanticweb.org/person/richard-crowder> <http://xmlns.com/foaf/0.1/name> \"Richard Crowder\" .\n<http://data.semanticweb.org/person/richard-crowder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

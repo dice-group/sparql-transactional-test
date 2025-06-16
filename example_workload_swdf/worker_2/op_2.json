@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/jacky-snoep"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/jacky-snoep> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/bart-pieters> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Belgium> .\n<http://data.semanticweb.org/person/bart-pieters> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/dev/37> .\n<http://data.semanticweb.org/person/bart-pieters> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"770433ebdd7bab37b166b13c18f3e2e155f68013\" .\n<http://data.semanticweb.org/person/bart-pieters> <http://www.w3.org/2000/01/rdf-schema#label> \"Bart Pieters\" .\n<http://data.semanticweb.org/person/bart-pieters> <http://xmlns.com/foaf/0.1/name> \"Bart Pieters\" .\n<http://data.semanticweb.org/person/bart-pieters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jacky-snoep> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jacky-snoep> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/bart-pieters> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/bart-pieters> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/bart-pieters> <http://xmlns.com/foaf/0.1/firstName> \"Bart\" .\n<http://data.semanticweb.org/person/bart-pieters> <http://xmlns.com/foaf/0.1/lastName> \"Pieters\" .\n<http://data.semanticweb.org/person/bart-pieters> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-ghent-multimedia-lab> .\n"
     }
 }

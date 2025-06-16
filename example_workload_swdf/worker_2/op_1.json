@@ -1,15 +1,13 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/marcio-napoli"
+        "graph": "http://data.semanticweb.org/person/jeremy-blackburn"
     },
-    "headers": {
-        "Content-type": "application/n-triples"
-    },
-    "method": "POST",
-    "body": "<http://data.semanticweb.org/person/marcio-napoli> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/marcio-napoli> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/marcio-napoli> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jeremy-blackburn> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jeremy-blackburn> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }

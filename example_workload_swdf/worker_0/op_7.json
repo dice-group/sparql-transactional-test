@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/ulrich-basters"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/ulrich-basters> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/marie-claire-forgue> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/marie-claire-forgue> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/ulrich-basters> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/ulrich-basters> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/marie-claire-forgue> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/marie-claire-forgue> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/marie-claire-forgue> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://xmlns.com/foaf/0.1/firstName> \"Marie-Claire\" .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://xmlns.com/foaf/0.1/lastName> \"Marie-Claire\" .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/w3c-track-chair> .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2008/chair/refereedpapertrackchair> .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://www.w3.org/2000/01/rdf-schema#label> \"Marie-Claire Forgue\" .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://xmlns.com/foaf/0.1/name> \"Marie-Claire Forgue\" .\n<http://data.semanticweb.org/person/marie-claire-forgue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

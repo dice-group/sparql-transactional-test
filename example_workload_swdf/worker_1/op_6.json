@@ -1,13 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/ulrich-basters"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/barbara-kieslinger> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-29> .\n<http://data.semanticweb.org/person/barbara-kieslinger> <http://www.w3.org/2000/01/rdf-schema#label> \"Barbara Kieslinger\" .\n<http://data.semanticweb.org/person/barbara-kieslinger> <http://xmlns.com/foaf/0.1/name> \"Barbara Kieslinger\" .\n<http://data.semanticweb.org/person/barbara-kieslinger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/ulrich-basters> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/ulrich-basters> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/barbara-kieslinger> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/barbara-kieslinger> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
         "expected": ""
     }
 }

@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/hongyun-bao"
     },
-    "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/jean-loup-guillaume> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"08445a31a78661b5c746feff39a9db6e4e2cc5cf\" .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/msnd/2012/paper/16> .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://xmlns.com/foaf/0.1/name> \"Jean-Loup Guillaume\" .\n }",
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/hongyun-bao> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jean-loup-guillaume> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/jean-loup-guillaume> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
-        "expected": "<http://data.semanticweb.org/person/jean-loup-guillaume> <http://www.w3.org/2000/01/rdf-schema#label> \"Jean-Loup Guillaume\" .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"215fc9864b04281712319d89c224e8795a1df2ea\" .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/msnd/2012/paper/18> .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/laboratoire-dinformatique-de-paris-6-lip6-> .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/lip6-upmc> .\n<http://data.semanticweb.org/person/jean-loup-guillaume> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/hongyun-bao> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/hongyun-bao> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
     }
 }

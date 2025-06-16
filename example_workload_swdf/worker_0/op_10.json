@@ -1,15 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/jose-emilio-labra"
+        "graph": "http://data.semanticweb.org/person/hu-guan"
     },
     "headers": {
         "Content-type": "application/n-triples"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/jose-emilio-labra> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "<http://data.semanticweb.org/person/hu-guan> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jose-emilio-labra> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jose-emilio-labra> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/hu-guan> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/hu-guan> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/hu-guan> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/hu-guan> <http://xmlns.com/foaf/0.1/family_name> \"Guan\" .\n<http://data.semanticweb.org/person/hu-guan> <http://xmlns.com/foaf/0.1/firstName> \"Hu\" .\n<http://data.semanticweb.org/person/hu-guan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/shanghai-jiao-tong-university-china> .\n<http://data.semanticweb.org/person/hu-guan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/21> .\n<http://data.semanticweb.org/person/hu-guan> <http://xmlns.com/foaf/0.1/name> \"Hu Guan\" .\n<http://data.semanticweb.org/person/hu-guan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

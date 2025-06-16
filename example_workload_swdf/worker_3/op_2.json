@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/patrick-minder"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/patrick-minder> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/satoru-izumi> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/satoru-izumi> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/patrick-minder> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/patrick-minder> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/satoru-izumi> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/satoru-izumi> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/satoru-izumi> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Satoru_Izumi> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Satoru_Izumi> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/tohoku-university> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/posters-demos/papers/364> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"b437bc6298c87b72d26b3fa7b82cf221323a04c6\" .\n<http://data.semanticweb.org/person/satoru-izumi> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Satoru_Izumi> .\n<http://data.semanticweb.org/person/satoru-izumi> <http://xmlns.com/foaf/0.1/name> \"Satoru Izumi\" .\n<http://data.semanticweb.org/person/satoru-izumi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

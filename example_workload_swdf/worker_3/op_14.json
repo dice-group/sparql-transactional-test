@@ -1,13 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/lydia-b-chilton"
+        "graph": "http://data.semanticweb.org/person/jens-hartmann"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/jens-hartmann> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/lydia-b-chilton> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/lydia-b-chilton> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jens-hartmann> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jens-hartmann> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }

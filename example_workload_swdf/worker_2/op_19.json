@@ -5,9 +5,9 @@
         "Content-type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/yoshihiro-shigeta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/yoshihiro-shigeta> <http://xmlns.com/foaf/0.1/name> \"Yoshihiro Shigeta\" .\n<http://data.semanticweb.org/person/yoshihiro-shigeta> <http://www.w3.org/2000/01/rdf-schema#label> \"Yoshihiro Shigeta\" .\n<http://data.semanticweb.org/person/yoshihiro-shigeta> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/poster-proceedings/paper-36> .\n }",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/lei-ji> <http://xmlns.com/foaf/0.1/family_name> \"Ji\" .\n<http://data.semanticweb.org/person/lei-ji> <http://xmlns.com/foaf/0.1/firstName> \"Lei\" .\n<http://data.semanticweb.org/person/lei-ji> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft-research-asia> .\n<http://data.semanticweb.org/person/lei-ji> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/sparse-hidden-dynamics-conditional-random-fields-f> .\n<http://data.semanticweb.org/person/lei-ji> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/179> .\n<http://data.semanticweb.org/person/lei-ji> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"21f69034094b52ceba03d0937820edab718dc127\" .\n<http://data.semanticweb.org/person/lei-ji> <http://www.w3.org/2000/01/rdf-schema#label> \"Lei Ji\" .\n<http://data.semanticweb.org/person/lei-ji> <http://xmlns.com/foaf/0.1/name> \"Lei Ji\" .\n<http://data.semanticweb.org/person/lei-ji> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/yoshihiro-shigeta> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/yoshihiro-shigeta> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/lei-ji> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/lei-ji> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
         "expected": ""
     }
 }

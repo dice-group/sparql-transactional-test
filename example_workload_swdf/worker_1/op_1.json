@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/shengbo-guo"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/shengbo-guo> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/francesco-ronzano> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/francesco-ronzano> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/shengbo-guo> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/shengbo-guo> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/francesco-ronzano> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/francesco-ronzano> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/francesco-ronzano> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://xmlns.com/foaf/0.1/firstName> \"Francesco\" .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://xmlns.com/foaf/0.1/lastName> \"Ronzano\" .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/semeval/23> .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"64513ce25320af51b1283ecb7ff4989e915911c4\" .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://www.w3.org/2000/01/rdf-schema#label> \"Francesco Ronzano\" .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://xmlns.com/foaf/0.1/name> \"Francesco Ronzano\" .\n<http://data.semanticweb.org/person/francesco-ronzano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
     }
 }

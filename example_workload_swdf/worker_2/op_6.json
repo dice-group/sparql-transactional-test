@@ -1,13 +1,13 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/hongyun-bao"
     },
-    "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/matthias-fluegge> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.fokus.fraunhofer.de> .\n<http://data.semanticweb.org/person/matthias-fluegge> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#matthias-fluegge> .\n<http://data.semanticweb.org/person/matthias-fluegge> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2006/roles/delegate> .\n }",
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/matthias-fluegge> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/matthias-fluegge> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
-        "expected": "<http://data.semanticweb.org/person/matthias-fluegge> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"7230ab1e09a7cc35d47091b78222bdca4ce93b5d\" .\n<http://data.semanticweb.org/person/matthias-fluegge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/matthias-fluegge> <http://xmlns.com/foaf/0.1/name> \"Matthias Fluegge\" .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/hongyun-bao> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/hongyun-bao> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
     }
 }

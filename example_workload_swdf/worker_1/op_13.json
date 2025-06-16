@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/henson-graves"
     },
-    "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/firstName> \"Xing\" .\n<http://data.semanticweb.org/person/xing-yi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-massachusetts-amherst> .\n<http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/family_name> \"Yi\" .\n<http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/name> \"Xing Yi\" .\n<http://data.semanticweb.org/person/xing-yi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/49> .\n }",
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/henson-graves> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/xing-yi> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/xing-yi> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/henson-graves> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/henson-graves> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }
