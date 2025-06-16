@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/ismail-fahmi>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/david-w-walker"
+    },
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/david-w-walker> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/david-w-walker> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

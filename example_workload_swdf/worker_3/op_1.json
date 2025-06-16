@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/aixin-sun>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/ioanna-zidianaki"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/ioanna-zidianaki> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/ioanna-zidianaki> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/ioanna-zidianaki> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

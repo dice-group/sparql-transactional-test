@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/amrapali-zaveri>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/joel-a-nava> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/joel-a-nava> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/joel-a-nava> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/joel-a-nava> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/joel-a-nava> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/joel-a-nava> <http://xmlns.com/foaf/0.1/name> \"Joel A. Nava\" .\n<http://data.semanticweb.org/person/joel-a-nava> <http://www.w3.org/2000/01/rdf-schema#label> \"Joel A. Nava\" .\n<http://data.semanticweb.org/person/joel-a-nava> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/joel-a-nava> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/verticalnet> .\n<http://data.semanticweb.org/person/joel-a-nava> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n<http://data.semanticweb.org/person/joel-a-nava> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

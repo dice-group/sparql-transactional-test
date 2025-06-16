@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/lynne-siemens>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/lynne-siemens> <http://www.example.org/test> <http://www.example.org/test/35> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/lynne-siemens> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-victoria> .\n<http://data.semanticweb.org/person/lynne-siemens> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-623> .\n<http://data.semanticweb.org/person/lynne-siemens> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/session/ab-890> .\n<http://data.semanticweb.org/person/lynne-siemens> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e42318a4e4bafdd85c519928c2a7ec4369a0a348\" .\n<http://data.semanticweb.org/person/lynne-siemens> <http://www.example.org/test> <http://www.example.org/test/35> .\n<http://data.semanticweb.org/person/lynne-siemens> <http://www.w3.org/2000/01/rdf-schema#label> \"Lynne Siemens\" .\n<http://data.semanticweb.org/person/lynne-siemens> <http://xmlns.com/foaf/0.1/name> \"Lynne Siemens\" .\n<http://data.semanticweb.org/person/lynne-siemens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/christoph-stasch> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/christoph-stasch> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/christoph-stasch> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/christoph-stasch> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/christoph-stasch> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .\n<http://data.semanticweb.org/person/christoph-stasch> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-muenster> .\n<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2009/paper/main/6> .\n<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/name> \"Christoph Stasch\" .\n<http://data.semanticweb.org/person/christoph-stasch> <http://www.w3.org/2000/01/rdf-schema#label> \"Christoph Stasch\" .\n<http://data.semanticweb.org/person/christoph-stasch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/christoph-stasch> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/christoph-stasch> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"5c16e35d025bfc99a3d90e44c43096f67cc2dec4\" .\n<http://data.semanticweb.org/person/christoph-stasch> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/lisc/2011/pcmember> .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/emmanuel-desmontils>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.example.org/test> <http://www.example.org/test/160> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/firstName> \"Emmanuel\" .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/lastName> \"Desmontils\" .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/lina> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/irin-university-of-nantes> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/swcs/2012/paper/9> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2001/proceedings/paper-15> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"4251a94b49c5511ba696e33f8fc1a6ebe1ec690a\" .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.example.org/test> <http://www.example.org/test/160> .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.w3.org/2000/01/rdf-schema#label> \"Emmanuel Desmontils\" .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://xmlns.com/foaf/0.1/name> \"Emmanuel Desmontils\" .\n<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/gisela-granitzer> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/gisela-granitzer> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/gisela-granitzer> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/gisela-granitzer> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/gisela-granitzer> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/gisela-granitzer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/gisela-granitzer> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/gisela-granitzer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/isemantics/2009/paper/main/12> .\n<http://data.semanticweb.org/person/gisela-granitzer> <http://xmlns.com/foaf/0.1/name> \"Gisela Granitzer\" .\n<http://data.semanticweb.org/person/gisela-granitzer> <http://www.w3.org/2000/01/rdf-schema#label> \"Gisela Granitzer\" .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

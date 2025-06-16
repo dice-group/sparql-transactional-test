@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/lidia-grauer>",
-    "endpoint": "update",
-    "operation": "DELETE_DATA",
-    "query": "default",
-    "query_triples": "<http://data.semanticweb.org/person/lidia-grauer> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yandex> .\n<http://data.semanticweb.org/person/lidia-grauer> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Russian_Federation> .\n<http://data.semanticweb.org/person/lidia-grauer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/132> .\n<http://data.semanticweb.org/person/lidia-grauer> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"486b76c9feeaaa27057a113fcf085de99daf7799\" .\n<http://data.semanticweb.org/person/lidia-grauer> <http://www.w3.org/2000/01/rdf-schema#label> \"Lidia Grauer\" .\n<http://data.semanticweb.org/person/lidia-grauer> <http://xmlns.com/foaf/0.1/name> \"Lidia Grauer\" .\n<http://data.semanticweb.org/person/lidia-grauer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validate": "default",
-    "validate_triples": ""
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/sophie-rosset"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/sophie-rosset> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sophie-rosset> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/sophie-rosset> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

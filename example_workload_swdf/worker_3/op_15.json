@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/boon-thau-loo>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/boon-thau-loo> <http://www.example.org/test> <http://www.example.org/test/199> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/boon-thau-loo> <http://xmlns.com/foaf/0.1/firstName> \"Boon Thau\" .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://xmlns.com/foaf/0.1/lastName> \"Loo\" .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/data-mgmt-track-committee-member> .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-pennsylvania> .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"254dc4a6d876d05ab12776fb21b920b9f30b76a9\" .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://www.example.org/test> <http://www.example.org/test/199> .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://www.w3.org/2000/01/rdf-schema#label> \"Boon Thau Loo\" .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://xmlns.com/foaf/0.1/name> \"Boon Thau Loo\" .\n<http://data.semanticweb.org/person/boon-thau-loo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/sophie-rosset"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/sophie-rosset> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sophie-rosset> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/sophie-rosset> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

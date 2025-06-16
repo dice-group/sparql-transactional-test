@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/ismail-fahmi>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/ismail-fahmi> <http://www.example.org/test> <http://www.example.org/test/59> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/ismail-fahmi> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"Information Science, University of Groningen\" .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://xmlns.com/foaf/0.1/family_name> \"Fahmi\" .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://xmlns.com/foaf/0.1/firstName> \"Ismail\" .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://xmlns.com/foaf/0.1/homepage> <http://odur.let.rug.nl/fahmi> .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/paper-293> .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"316f87018dfd0afb6e72fbb9fad6b527b26257\" .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://www.example.org/test> <http://www.example.org/test/59> .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://www.w3.org/2000/01/rdf-schema#label> \"Ismail Fahmi\" .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://xmlns.com/foaf/0.1/name> \"Ismail Fahmi\" .\n<http://data.semanticweb.org/person/ismail-fahmi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/amit-joshi"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/amit-joshi> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/amit-joshi> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/amit-joshi> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

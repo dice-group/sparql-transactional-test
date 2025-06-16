@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/dan-cosley>",
-    "endpoint": "gsp",
-    "operation": "GSP_POST",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/dan-cosley> <http://www.example.org/test> <http://www.example.org/test/93> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/family_name> \"Cosley\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/firstName> \"Dan\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/lastName> \"Cosley\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/user-inferfaces-track-committee-member> .\n<http://data.semanticweb.org/person/dan-cosley> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cornell-university> .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/poster/mining-collective-local-knowledge-from-google-myma> .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"bd5e037d35fee9fb8c1375aeb8f4d52ee72c6ea8\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"fc2e34bef6e86bfb39c317096e32afa75a1482cd\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://www.w3.org/2000/01/rdf-schema#label> \"Dan Cosley\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://xmlns.com/foaf/0.1/name> \"Dan Cosley\" .\n<http://data.semanticweb.org/person/dan-cosley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/randall-a-lewis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/here-there-and-everywhere-correlated-online-behavi> .\n<http://data.semanticweb.org/person/randall-a-lewis> <http://xmlns.com/foaf/0.1/firstName> \"Randall\" .\n<http://data.semanticweb.org/person/randall-a-lewis> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"c1f5a34778f7a9fab2b8fe114b0f4685615c6035\" .\n<http://data.semanticweb.org/person/randall-a-lewis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/randall-a-lewis> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/randall-a-lewis> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/randall-a-lewis> <http://xmlns.com/foaf/0.1/name> \"Randall A. Lewis\" .\n<http://data.semanticweb.org/person/randall-a-lewis> <http://www.w3.org/2000/01/rdf-schema#label> \"Randall A. Lewis\" .\n<http://data.semanticweb.org/person/randall-a-lewis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yahoo-research> .\n<http://data.semanticweb.org/person/randall-a-lewis> <http://xmlns.com/foaf/0.1/family_name> \"Lewis\" .\n"
+    }
 }

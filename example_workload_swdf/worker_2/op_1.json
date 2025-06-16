@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/christopher-coufal>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/christopher-coufal> <http://www.example.org/test> <http://www.example.org/test/117> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/christopher-coufal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/duquesne-university> .\n<http://data.semanticweb.org/person/christopher-coufal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-755> .\n<http://data.semanticweb.org/person/christopher-coufal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"dadb0c7033f035689a4d4a19a1bbde43790a6e91\" .\n<http://data.semanticweb.org/person/christopher-coufal> <http://www.example.org/test> <http://www.example.org/test/117> .\n<http://data.semanticweb.org/person/christopher-coufal> <http://www.w3.org/2000/01/rdf-schema#label> \"Christopher Coufal\" .\n<http://data.semanticweb.org/person/christopher-coufal> <http://xmlns.com/foaf/0.1/name> \"Christopher Coufal\" .\n<http://data.semanticweb.org/person/christopher-coufal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/marcio-napoli"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/marcio-napoli> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/marcio-napoli> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/marcio-napoli> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

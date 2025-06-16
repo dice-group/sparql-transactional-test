@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/mohammad-hossein-rezvani>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://www.example.org/test> <http://www.example.org/test/9> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/iran-university-of-science-and-technology-iust> .\n<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/fis/2010/paper/network_architecture_protocols/5> .\n<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"adfb9f7ae9c8f15161817153b044850e495c8489\" .\n<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://www.example.org/test> <http://www.example.org/test/9> .\n<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://www.w3.org/2000/01/rdf-schema#label> \"Mohammad Hossein Rezvani\" .\n<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://xmlns.com/foaf/0.1/name> \"Mohammad Hossein Rezvani\" .\n<http://data.semanticweb.org/person/mohammad-hossein-rezvani> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/monika-solanki"
+    },
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/monika-solanki> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/monika-solanki> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

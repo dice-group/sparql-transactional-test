@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/jon-iturrioz>",
-    "endpoint": "update",
-    "operation": "DELETE_DATA",
-    "query": "default",
-    "query_triples": "<http://data.semanticweb.org/person/jon-iturrioz> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#jon-iturrioz> .\n<http://data.semanticweb.org/person/jon-iturrioz> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/paper/iturrioz-anzuola> .\n<http://data.semanticweb.org/person/jon-iturrioz> <http://xmlns.com/foaf/0.1/name> \"Jon Iturrioz\" .\n<http://data.semanticweb.org/person/jon-iturrioz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validate": "default",
-    "validate_triples": ""
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/kerstin-denecke"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/kerstin-denecke> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/kerstin-denecke> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/kerstin-denecke> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

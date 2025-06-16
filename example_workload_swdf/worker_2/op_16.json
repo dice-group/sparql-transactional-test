@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/jan-pedersen>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/theodoros-kostoulas> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-patras> .\n<http://data.semanticweb.org/person/theodoros-kostoulas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/557> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/theodoros-kostoulas> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/theodoros-kostoulas> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/theodoros-kostoulas> <http://xmlns.com/foaf/0.1/name> \"Theodoros Kostoulas\" .\n<http://data.semanticweb.org/person/theodoros-kostoulas> <http://www.w3.org/2000/01/rdf-schema#label> \"Theodoros Kostoulas\" .\n<http://data.semanticweb.org/person/theodoros-kostoulas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/theodoros-kostoulas> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/664> .\n"
+    }
 }

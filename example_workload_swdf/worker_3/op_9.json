@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/michael-nelson>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/michael-wybrow> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/84> .\n<http://data.semanticweb.org/person/michael-wybrow> <http://xmlns.com/foaf/0.1/firstName> \"Michael\" .\n<http://data.semanticweb.org/person/michael-wybrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/michael-wybrow> <http://xmlns.com/foaf/0.1/name> \"Michael Wybrow\" .\n<http://data.semanticweb.org/person/michael-wybrow> <http://xmlns.com/foaf/0.1/family_name> \"Wybrow\" .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/michael-wybrow> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/michael-wybrow> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/michael-wybrow> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/monash-university> .\n"
+    }
 }

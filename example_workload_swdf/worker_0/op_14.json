@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/eva-hajicova>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/eva-hajicova> <http://www.example.org/test> <http://www.example.org/test/40> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/eva-hajicova> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/charles-university-prague> .\n<http://data.semanticweb.org/person/eva-hajicova> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/638> .\n<http://data.semanticweb.org/person/eva-hajicova> <http://www.example.org/test> <http://www.example.org/test/40> .\n<http://data.semanticweb.org/person/eva-hajicova> <http://www.w3.org/2000/01/rdf-schema#label> \"Eva Hajicov\u00e1\" .\n<http://data.semanticweb.org/person/eva-hajicova> <http://xmlns.com/foaf/0.1/name> \"Eva Hajicov\u00e1\" .\n<http://data.semanticweb.org/person/eva-hajicova> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/michael-smith> <http://xmlns.com/foaf/0.1/family_name> \"Smith\" .\n<http://data.semanticweb.org/person/michael-smith> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"Clark & Parsia LLC\" .\n<http://data.semanticweb.org/person/michael-smith> <http://xmlns.com/foaf/0.1/firstName> \"Michael\" .\n<http://data.semanticweb.org/person/michael-smith> <http://xmlns.com/foaf/0.1/name> \"Michael Smith\" .\n<http://data.semanticweb.org/person/michael-smith> <http://www.w3.org/2000/01/rdf-schema#label> \"Michael Smith\" .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/michael-smith> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/michael-smith> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/michael-smith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/michael-smith> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/michael-smith> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"6a51753815324c6f2b91e234ff65a6e957cf8053\" .\n<http://data.semanticweb.org/person/michael-smith> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/clark-parsia> .\n<http://data.semanticweb.org/person/michael-smith> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2008/in_use/pcmember> .\n"
+    }
 }

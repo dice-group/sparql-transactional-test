@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/zygmunt-vetulani>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/zygmunt-vetulani> <http://www.example.org/test> <http://www.example.org/test/182> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/zygmunt-vetulani> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/adam-mickiewicz-university-in-poznan> .\n<http://data.semanticweb.org/person/zygmunt-vetulani> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/398> .\n<http://data.semanticweb.org/person/zygmunt-vetulani> <http://www.example.org/test> <http://www.example.org/test/182> .\n<http://data.semanticweb.org/person/zygmunt-vetulani> <http://www.w3.org/2000/01/rdf-schema#label> \"Zygmunt Vetulani\" .\n<http://data.semanticweb.org/person/zygmunt-vetulani> <http://xmlns.com/foaf/0.1/name> \"Zygmunt Vetulani\" .\n<http://data.semanticweb.org/person/zygmunt-vetulani> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/yoshihiro-shigeta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/yoshihiro-shigeta> <http://xmlns.com/foaf/0.1/name> \"Yoshihiro Shigeta\" .\n<http://data.semanticweb.org/person/yoshihiro-shigeta> <http://www.w3.org/2000/01/rdf-schema#label> \"Yoshihiro Shigeta\" .\n<http://data.semanticweb.org/person/yoshihiro-shigeta> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/poster-proceedings/paper-36> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/yoshihiro-shigeta> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/yoshihiro-shigeta> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": ""
+    }
 }

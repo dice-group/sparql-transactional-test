@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/nick-kanellos>",
-    "endpoint": "update",
-    "operation": "DELETE_DATA",
-    "query": "default",
-    "query_triples": "<http://data.semanticweb.org/person/nick-kanellos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2009/paper/inuse/157> .\n<http://data.semanticweb.org/person/nick-kanellos> <http://www.w3.org/2000/01/rdf-schema#label> \"Nick Kanellos\" .\n<http://data.semanticweb.org/person/nick-kanellos> <http://xmlns.com/foaf/0.1/name> \"Nick Kanellos\" .\n<http://data.semanticweb.org/person/nick-kanellos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/nick-kanellos> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-software-group> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/natalia-grabar> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/natalia-grabar> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/natalia-grabar> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/natalia-grabar> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/natalia-grabar> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/natalia-grabar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/natalia-grabar> <http://xmlns.com/foaf/0.1/name> \"Natalia Grabar\" .\n<http://data.semanticweb.org/person/natalia-grabar> <http://www.w3.org/2000/01/rdf-schema#label> \"Natalia Grabar\" .\n<http://data.semanticweb.org/person/natalia-grabar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inserm-universite-rene-descartes> .\n<http://data.semanticweb.org/person/natalia-grabar> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/natalia-grabar> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/743> .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

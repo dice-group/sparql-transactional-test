@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/brian-mcfee>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/brian-mcfee> <http://www.example.org/test> <http://www.example.org/test/225> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/brian-mcfee> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/workshop/admire/2012/programme-committee-member> .\n<http://data.semanticweb.org/person/brian-mcfee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ucsd> .\n<http://data.semanticweb.org/person/brian-mcfee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-san-diego> .\n<http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/10> .\n<http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e34a87b98bc853eb016135e3b36e97bf639c06c0\" .\n<http://data.semanticweb.org/person/brian-mcfee> <http://www.example.org/test> <http://www.example.org/test/225> .\n<http://data.semanticweb.org/person/brian-mcfee> <http://www.w3.org/2000/01/rdf-schema#label> \"Brian Mcfee\" .\n<http://data.semanticweb.org/person/brian-mcfee> <http://www.w3.org/2000/01/rdf-schema#label> \"Brian McFee\" .\n<http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/name> \"Brian Mcfee\" .\n<http://data.semanticweb.org/person/brian-mcfee> <http://xmlns.com/foaf/0.1/name> \"Brian McFee\" .\n<http://data.semanticweb.org/person/brian-mcfee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/dionysios-anastasopoulos> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/dionysios-anastasopoulos> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/dionysios-anastasopoulos> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/dionysios-anastasopoulos> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/dionysios-anastasopoulos> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/dionysios-anastasopoulos> <http://xmlns.com/foaf/0.1/name> \"Dionysios Anastasopoulos\" .\n<http://data.semanticweb.org/person/dionysios-anastasopoulos> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/demo-papers/FD10-Saathoff> .\n<http://data.semanticweb.org/person/dionysios-anastasopoulos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/dionysios-anastasopoulos> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#dionysios-anastasopoulos> .\n<http://data.semanticweb.org/person/dionysios-anastasopoulos> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

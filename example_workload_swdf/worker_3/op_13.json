@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/bill-mcdaniel>",
-    "endpoint": "gsp",
-    "operation": "GSP_POST",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/bill-mcdaniel> <http://www.example.org/test> <http://www.example.org/test/191> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/bill-mcdaniel> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"Digital Enterprise Research Institute, National University of Ireland, Galway\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/family_name> \"McDaniel\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/firstName> \"Bill\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"1513f6881fc4705fe0de433a57879f66d4ca2e81\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://www.w3.org/2000/01/rdf-schema#label> \"Bill McDaniel\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://xmlns.com/foaf/0.1/name> \"Bill McDaniel\" .\n<http://data.semanticweb.org/person/bill-mcdaniel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/zhi-nie> <http://xmlns.com/foaf/0.1/family_name> \"Nie\" .\n<http://data.semanticweb.org/person/zhi-nie> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/People%27s_Republic_of_China> .\n<http://data.semanticweb.org/person/zhi-nie> <http://xmlns.com/foaf/0.1/firstName> \"Zhi\" .\n<http://data.semanticweb.org/person/zhi-nie> <http://xmlns.com/foaf/0.1/name> \"Zhi Nie\" .\n<http://data.semanticweb.org/person/zhi-nie> <http://www.w3.org/2000/01/rdf-schema#label> \"Zhi Nie\" .\n<http://data.semanticweb.org/person/zhi-nie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/zhi-nie> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2010/research/reviewer> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/zhi-nie> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/zhi-nie> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": ""
+    }
 }

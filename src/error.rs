@@ -6,8 +6,9 @@ use thiserror::Error;
 
 #[derive(Debug)]
 pub struct InvalidStateVerboseInfo {
-    pub expected: (String, String),
-    pub actual: (String, String),
+    pub query: String,
+    pub expected: String,
+    pub actual: String,
 }
 
 #[derive(Debug)]
@@ -27,7 +28,6 @@ pub enum WorkerError {
     },
     UpdateVerifyFailed {
         update_id: usize,
-        subject: String,
         err: reqwest::Error,
     },
     UpdateFailed {
@@ -39,31 +39,13 @@ pub enum WorkerError {
     RestartFailed(io::Error),
 }
 
-fn format_insert_or_delete_data(f: &mut Formatter<'_>, q: &str) -> std::fmt::Result {
-    let (head, body) = q.split_once("{ <").unwrap();
-    let (body, _) = body.rsplit_once(". }").unwrap();
-
-    writeln!(f, "{head}{{")?;
-
-    for triple in body.split(". <") {
-        writeln!(f, "    <{triple}.")?;
-    }
-
-    writeln!(f, "}}")?;
-    Ok(())
-}
-
 impl Display for WorkerError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             WorkerError::InvalidState { update_id, verbose_info } => {
                 write!(f, "Unexpected result at update {update_id}")?;
 
-                if let Some(InvalidStateVerboseInfo {
-                    expected: (expected_default, expected_named),
-                    actual: (actual_default, actual_named),
-                }) = verbose_info
-                {
+                if let Some(InvalidStateVerboseInfo { query, expected, actual }) = verbose_info {
                     /*write!(f, "\nQuery: ")?;
                     if update.starts_with("INSERT DATA") || update.starts_with("DELETE DATA") {
                         format_insert_or_delete_data(f, update)?;
@@ -71,19 +53,12 @@ impl Display for WorkerError {
                         writeln!(f, "{}", update)?;
                     }*/
 
-                    if expected_default != actual_default {
+                    if expected != actual {
                         writeln!(
                             f,
-                            "\nDifference between expected and actual in default graph:\n{}",
-                            prettydiff::diff_lines(expected_default, actual_default)
-                        )?;
-                    }
-
-                    if expected_named != actual_named {
-                        writeln!(
-                            f,
-                            "\nDifference between expected and actual in named graph:\n{}",
-                            prettydiff::diff_lines(expected_named, actual_named)
+                            "\nQuery:\n{}\n\nDifference between expected and actual state:\n{}",
+                            query,
+                            prettydiff::diff_lines(expected, actual)
                         )?;
                     }
 
@@ -92,10 +67,10 @@ impl Display for WorkerError {
                     Ok(())
                 }
             },
-            WorkerError::UpdateVerifyFailed { update_id, subject, err } => {
+            WorkerError::UpdateVerifyFailed { update_id, err } => {
                 write!(
                     f,
-                    "Unable to execute verification query for update {update_id}. Error: {err}\nSubject: {subject}"
+                    "Unable to execute verification query for update {update_id}. Error: {err}"
                 )
             },
             WorkerError::UpdateFailed { update_id, err, verbose_info } => {

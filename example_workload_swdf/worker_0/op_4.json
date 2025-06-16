@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/georg-guentner>",
-    "endpoint": "update",
-    "operation": "DELETE_DATA",
-    "query": "default",
-    "query_triples": "<http://data.semanticweb.org/person/georg-guentner> <http://xmlns.com/foaf/0.1/lastName> \"G\u00fcntner\" .\n<http://data.semanticweb.org/person/georg-guentner> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/salzburg-research> .\n<http://data.semanticweb.org/person/georg-guentner> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .\n<http://data.semanticweb.org/person/georg-guentner> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/demo/65> .\n<http://data.semanticweb.org/person/georg-guentner> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"2c4639d19c0f2e220e6837a6144d5a91cc8ae533\" .\n<http://data.semanticweb.org/person/georg-guentner> <http://www.w3.org/2000/01/rdf-schema#label> \"Georg G\u00fcntner\" .\n<http://data.semanticweb.org/person/georg-guentner> <http://xmlns.com/foaf/0.1/name> \"Georg G\u00fcntner\" .\n<http://data.semanticweb.org/person/georg-guentner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/georg-guentner> <http://xmlns.com/foaf/0.1/firstName> \"Georg\" .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/myung-jae-park"
+    },
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/myung-jae-park> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/myung-jae-park> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/eva-hajicova>",
-    "endpoint": "gsp",
-    "operation": "GSP_PUT",
-    "query": "named",
-    "query_triples": "<http://data.semanticweb.org/person/eva-hajicova> <http://www.example.org/test> <http://www.example.org/test/205> .\n",
-    "validate": "named",
-    "validate_triples": "<http://data.semanticweb.org/person/eva-hajicova> <http://www.example.org/test> <http://www.example.org/test/205> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/horst-hering"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/horst-hering> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/horst-hering> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/horst-hering> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

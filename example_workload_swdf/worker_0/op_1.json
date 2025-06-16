@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/melissa-kronenthal>",
-    "endpoint": "gsp",
-    "operation": "GSP_PUT",
-    "query": "named",
-    "query_triples": "<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.example.org/test> <http://www.example.org/test/8> .\n",
-    "validate": "named",
-    "validate_triples": "<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.example.org/test> <http://www.example.org/test/8> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/monika-solanki> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/monika-solanki> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/monika-solanki> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/monika-solanki> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/monika-solanki> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/firstName> \"Monika\" .\n<http://data.semanticweb.org/person/monika-solanki> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2011/programme-committee-member> .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"6309535a50c5e1a42c6260eeb139791695589d47\" .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/cold/2013/proceedings/paper-07> .\n<http://data.semanticweb.org/person/monika-solanki> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2012/demonstation-track-committee-member> .\n<http://data.semanticweb.org/person/monika-solanki> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"006555fcc637d698a751a72c6f062a91c2fdef3b\" .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2009/paper/88> .\n<http://data.semanticweb.org/person/monika-solanki> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2012/poster-track-committee-member> .\n<http://data.semanticweb.org/person/monika-solanki> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/monika-solanki> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-leicester> .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/name> \"Monika Solanki\" .\n<http://data.semanticweb.org/person/monika-solanki> <http://www.w3.org/2000/01/rdf-schema#label> \"Monika Solanki\" .\n<http://data.semanticweb.org/person/monika-solanki> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/birmingham-city-university> .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_Kingdom> .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/derive/2013/proceedings/paper-03> .\n<http://data.semanticweb.org/person/monika-solanki> <http://xmlns.com/foaf/0.1/lastName> \"Solanki\" .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

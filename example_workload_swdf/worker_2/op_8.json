@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/tok-wang-ling>",
-    "endpoint": "gsp",
-    "operation": "GSP_POST",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/tok-wang-ling> <http://www.example.org/test> <http://www.example.org/test/135> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/family_name> \"Ling\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/family_name> \"Wang Ling\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/firstName> \"Tok Wang\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/firstName> \"Tok\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/national-university-of-singapore> .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/poster/an-adaptive-ontology-based-approach-to-identify-co> .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/101> .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"6450e6a546d4ee6a4a55f05193b65ff58fd21408\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://www.w3.org/2000/01/rdf-schema#label> \"Tok Wang Ling\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://xmlns.com/foaf/0.1/name> \"Tok Wang Ling\" .\n<http://data.semanticweb.org/person/tok-wang-ling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/christoph-stasch"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/christoph-stasch> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/christoph-stasch> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/christoph-stasch> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

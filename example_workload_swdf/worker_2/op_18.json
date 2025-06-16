@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/ben-fei>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/ben-fei> <http://www.example.org/test> <http://www.example.org/test/176> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/ben-fei> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-china-research-laboratory> .\n<http://data.semanticweb.org/person/ben-fei> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2007/paper/main/733> .\n<http://data.semanticweb.org/person/ben-fei> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2007/paper/main/397> .\n<http://data.semanticweb.org/person/ben-fei> <http://www.example.org/test> <http://www.example.org/test/176> .\n<http://data.semanticweb.org/person/ben-fei> <http://www.w3.org/2000/01/rdf-schema#label> \"Ben Fei\" .\n<http://data.semanticweb.org/person/ben-fei> <http://xmlns.com/foaf/0.1/name> \"Ben Fei\" .\n<http://data.semanticweb.org/person/ben-fei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/matthias-fluegge"
+    },
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/matthias-fluegge> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/matthias-fluegge> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

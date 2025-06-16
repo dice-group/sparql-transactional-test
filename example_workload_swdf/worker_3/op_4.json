@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/sahely-bhadra>",
-    "endpoint": "update",
-    "operation": "DELETE_DATA",
-    "query": "default",
-    "query_triples": "<http://data.semanticweb.org/person/sahely-bhadra> <http://xmlns.com/foaf/0.1/name> \"Sahely Bhadra\" .\n<http://data.semanticweb.org/person/sahely-bhadra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/sahely-bhadra> <http://xmlns.com/foaf/0.1/family_name> \"Bhadra\" .\n<http://data.semanticweb.org/person/sahely-bhadra> <http://xmlns.com/foaf/0.1/firstName> \"Sahely\" .\n<http://data.semanticweb.org/person/sahely-bhadra> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/csa-indian-institute-of-science> .\n<http://data.semanticweb.org/person/sahely-bhadra> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/poster/web-information-extraction-using-markov-logic-netw> .\n<http://data.semanticweb.org/person/sahely-bhadra> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"46126243b45442584623e571677cdab704237c9f\" .\n<http://data.semanticweb.org/person/sahely-bhadra> <http://www.w3.org/2000/01/rdf-schema#label> \"Sahely Bhadra\" .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/adam-kilgarriff"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/adam-kilgarriff> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/adam-kilgarriff> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/adam-kilgarriff> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

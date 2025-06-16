@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/henry-m-levy>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/chao-liu"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/chao-liu> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/chao-liu> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/chao-liu> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

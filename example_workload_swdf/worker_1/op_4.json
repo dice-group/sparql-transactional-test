@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/yukie-nakao>",
-    "endpoint": "gsp",
-    "operation": "GSP_PUT",
-    "query": "named",
-    "query_triples": "<http://data.semanticweb.org/person/yukie-nakao> <http://www.example.org/test> <http://www.example.org/test/85> .\n",
-    "validate": "named",
-    "validate_triples": "<http://data.semanticweb.org/person/yukie-nakao> <http://www.example.org/test> <http://www.example.org/test/85> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/rajeev-rastogi"
+    },
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/rajeev-rastogi> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/rajeev-rastogi> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

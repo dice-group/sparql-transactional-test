@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/lieven-trappeniers>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/jinyun-yan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rutgers-new-brunswick> .\n<http://data.semanticweb.org/person/jinyun-yan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/92> .\n<http://data.semanticweb.org/person/jinyun-yan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/jinyun-yan> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/poster/92/talk/speaker> .\n<http://data.semanticweb.org/person/jinyun-yan> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/jinyun-yan> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"8ca75c39562924884dafd580a99654df21fbeb36\" .\n<http://data.semanticweb.org/person/jinyun-yan> <http://xmlns.com/foaf/0.1/lastName> \"Yan\" .\n<http://data.semanticweb.org/person/jinyun-yan> <http://xmlns.com/foaf/0.1/firstName> \"Jinyun\" .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jinyun-yan> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/jinyun-yan> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/jinyun-yan> <http://xmlns.com/foaf/0.1/name> \"Jinyun Yan\" .\n<http://data.semanticweb.org/person/jinyun-yan> <http://www.w3.org/2000/01/rdf-schema#label> \"Jinyun Yan\" .\n"
+    }
 }

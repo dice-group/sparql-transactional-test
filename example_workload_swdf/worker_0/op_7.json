@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/e-cusenza>",
-    "endpoint": "gsp",
-    "operation": "GSP_POST",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/e-cusenza> <http://www.example.org/test> <http://www.example.org/test/26> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/e-cusenza> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2004/demo-proceedings/paper-37> .\n<http://data.semanticweb.org/person/e-cusenza> <http://www.w3.org/2000/01/rdf-schema#label> \"E. Cusenza\" .\n<http://data.semanticweb.org/person/e-cusenza> <http://xmlns.com/foaf/0.1/name> \"E. Cusenza\" .\n<http://data.semanticweb.org/person/e-cusenza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/ulrich-basters"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/ulrich-basters> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/ulrich-basters> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/ulrich-basters> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

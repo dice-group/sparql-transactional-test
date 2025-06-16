@@ -1,9 +1,15 @@
 {
-    "subject": "<http://data.semanticweb.org/person/iv-ramakrishnan>",
-    "endpoint": "gsp",
-    "operation": "GSP_POST",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/iv-ramakrishnan> <http://www.example.org/test> <http://www.example.org/test/213> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/iv-ramakrishnan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2003/poster-demo-proceedings/paper-48> .\n<http://data.semanticweb.org/person/iv-ramakrishnan> <http://www.w3.org/2000/01/rdf-schema#label> \"I.V. Ramakrishnan\" .\n<http://data.semanticweb.org/person/iv-ramakrishnan> <http://xmlns.com/foaf/0.1/name> \"I.V. Ramakrishnan\" .\n<http://data.semanticweb.org/person/iv-ramakrishnan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/alessandro-mazzei"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/alessandro-mazzei> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/alessandro-mazzei> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/alessandro-mazzei> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
 }

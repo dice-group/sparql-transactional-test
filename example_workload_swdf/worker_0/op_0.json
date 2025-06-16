@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/melissa-kronenthal>",
-    "endpoint": "update",
-    "operation": "INSERT_DATA",
-    "query": "both",
-    "query_triples": "<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/melissa-kronenthal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-edinburgh> .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/237> .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.w3.org/2000/01/rdf-schema#label> \"Melissa Kronenthal\" .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://xmlns.com/foaf/0.1/name> \"Melissa Kronenthal\" .\n<http://data.semanticweb.org/person/melissa-kronenthal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/myung-jae-park> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/myung-jae-park> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/myung-jae-park> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/myung-jae-park> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/myung-jae-park> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/myung-jae-park> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2013/poster-demo-proceedings/paper-63> .\n<http://data.semanticweb.org/person/myung-jae-park> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kaist> .\n<http://data.semanticweb.org/person/myung-jae-park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/myung-jae-park> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/myung-jae-park> <http://xmlns.com/foaf/0.1/name> \"Myung-Jae Park\" .\n<http://data.semanticweb.org/person/myung-jae-park> <http://www.w3.org/2000/01/rdf-schema#label> \"Myung-Jae Park\" .\n<http://data.semanticweb.org/person/myung-jae-park> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"25e4237b8e8b4fd1f5fe9536ae88478970dafac9\" .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

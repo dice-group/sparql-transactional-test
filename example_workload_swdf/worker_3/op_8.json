@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/emmanuel-desmontils>",
-    "endpoint": "gsp",
-    "operation": "GSP_PUT",
-    "query": "named",
-    "query_triples": "<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.example.org/test> <http://www.example.org/test/187> .\n",
-    "validate": "named",
-    "validate_triples": "<http://data.semanticweb.org/person/emmanuel-desmontils> <http://www.example.org/test> <http://www.example.org/test/187> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/fabian-suchanek> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/fabian-suchanek> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/fabian-suchanek> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/fabian-suchanek> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/fabian-suchanek> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/fabian-suchanek> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://xmlns.com/foaf/0.1/firstName> \"Fabian\" .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://xmlns.com/foaf/0.1/name> \"Fabian Suchanek\" .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://www.w3.org/2000/01/rdf-schema#label> \"Fabian Suchanek\" .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"21b155868c3c2b209f9cc377a6d3014707d268a3\" .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/inria-saclay> .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/content-analysis-track-committee-member> .\n<http://data.semanticweb.org/person/fabian-suchanek> <http://xmlns.com/foaf/0.1/lastName> \"Suchanek\" .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
+    }
 }

@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/sarah-magidson>",
-    "endpoint": "gsp",
-    "operation": "GSP_DELETE",
-    "query": "named",
-    "query_triples": "",
-    "validate": "named",
-    "validate_triples": ""
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/jihye-lee> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2008/paper/poster_demo/89> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jihye-lee> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/jihye-lee> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/jihye-lee> <http://xmlns.com/foaf/0.1/name> \"Jihye Lee\" .\n<http://data.semanticweb.org/person/jihye-lee> <http://www.w3.org/2000/01/rdf-schema#label> \"Jihye Lee\" .\n<http://data.semanticweb.org/person/jihye-lee> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Korea,_South> .\n<http://data.semanticweb.org/person/jihye-lee> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kisti> .\n<http://data.semanticweb.org/person/jihye-lee> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"d64fe8560626b70999b70f304e13d5b4d1de1c7f\" .\n<http://data.semanticweb.org/person/jihye-lee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
 }

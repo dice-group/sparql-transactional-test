@@ -1,9 +1,13 @@
 {
-    "subject": "<http://data.semanticweb.org/person/jeroen-wester>",
-    "endpoint": "update",
-    "operation": "DELETE_DATA",
-    "query": "default",
-    "query_triples": "<http://data.semanticweb.org/person/jeroen-wester> <http://xmlns.com/foaf/0.1/name> \"Jeroen Wester\" .\n<http://data.semanticweb.org/person/jeroen-wester> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n",
-    "validate": "default",
-    "validate_triples": "<http://data.semanticweb.org/person/jeroen-wester> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#jeroen-wester> .\n<http://data.semanticweb.org/person/jeroen-wester> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/posters/FP41-Broekstra> .\n"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/firstName> \"Xing\" .\n<http://data.semanticweb.org/person/xing-yi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-massachusetts-amherst> .\n<http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/family_name> \"Yi\" .\n<http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/name> \"Xing Yi\" .\n<http://data.semanticweb.org/person/xing-yi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/xing-yi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/49> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/xing-yi> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/xing-yi> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": ""
+    }
 }
