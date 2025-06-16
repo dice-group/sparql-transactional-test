@@ -46,13 +46,6 @@ impl Display for WorkerError {
                 write!(f, "Unexpected result at update {update_id}")?;
 
                 if let Some(InvalidStateVerboseInfo { query, expected, actual }) = verbose_info {
-                    /*write!(f, "\nQuery: ")?;
-                    if update.starts_with("INSERT DATA") || update.starts_with("DELETE DATA") {
-                        format_insert_or_delete_data(f, update)?;
-                    } else {
-                        writeln!(f, "{}", update)?;
-                    }*/
-
                     if expected != actual {
                         writeln!(
                             f,
