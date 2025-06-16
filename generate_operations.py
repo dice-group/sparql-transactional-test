@@ -4,7 +4,6 @@ import enum
 import json
 import os
 import random
-from email.policy import default
 
 import rdflib
 import requests
