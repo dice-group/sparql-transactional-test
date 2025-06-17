@@ -280,8 +280,8 @@ if __name__ == '__main__':
         for o_idx in range(0, N_OPERATIONS):
             # randomly select an operation
 
-            # first subject, always start with insert data
-            op_kind = OperationKind.INSERT_DATA if subject_index + o_idx == 0 else random.choice(list(OperationKind))
+            # first worker's operation, always start with insert data
+            op_kind = OperationKind.INSERT_DATA if o_idx == 0 else random.choice(list(OperationKind))
 
             # INSERT DATA
             if op_kind == OperationKind.INSERT_DATA:
