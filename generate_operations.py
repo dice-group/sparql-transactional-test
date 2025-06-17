@@ -271,6 +271,8 @@ if __name__ == '__main__':
     gen = TripleGenerator()
 
     for w_idx in range(0, N_WORKERS):
+        assert subject_index < len(subjects)
+        worker_first_subject_index = subject_index
         # create worker directory
         worker_dir = f"{args.output_directory}/worker_{w_idx}"
         os.mkdir(worker_dir)
@@ -307,7 +309,7 @@ if __name__ == '__main__':
             # Graph Store Protocol: PUT
             elif op_kind == OperationKind.GSP_PUT:
                 # select an already used subject
-                subject = subjects[random.randrange(0, subject_index + o_idx)]
+                subject = subjects[random.randrange(worker_first_subject_index, subject_index + o_idx)]
                 number_of_triples = random.randrange(INSERT_DATA_TEMPLATE_SIZE_MIN, INSERT_DATA_TEMPLATE_SIZE_MAX)
                 ntriples_for_operation = gen.generate_triples(number_of_triples, subject)
 
@@ -316,7 +318,7 @@ if __name__ == '__main__':
             # Graph Store Protocol: DELETE
             elif op_kind == OperationKind.GSP_DELETE:
                 # select and already used subject
-                subject = subjects[random.randrange(0, subject_index + o_idx)]
+                subject = subjects[random.randrange(worker_first_subject_index, subject_index + o_idx)]
 
                 operation = rdfstore.gsp_delete(subject)
 
