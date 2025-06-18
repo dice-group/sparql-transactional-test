@@ -1,0 +1,15 @@
+{
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/joanne-luciano"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/joanne-luciano> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/joanne-luciano> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/joanne-luciano> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/joanne-luciano> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/joanne-luciano> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"Harvard Medical School\" .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/family_name> \"Luciano\" .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/firstName> \"Joanne\" .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/homepage> <http://arep.med.harvard.edu/~jluciano> .\n<http://data.semanticweb.org/person/joanne-luciano> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/tetherless-world-constellation-rensselaer-polytechnic-institute> .\n<http://data.semanticweb.org/person/joanne-luciano> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rensselaer-polytechnic-institute> .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/poster-demo-proceedings/paper-02> .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/86> .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/semantic-web-in-use/76> .\n<http://data.semanticweb.org/person/joanne-luciano> <http://www.w3.org/2000/01/rdf-schema#label> \"Joanne Luciano\" .\n<http://data.semanticweb.org/person/joanne-luciano> <http://xmlns.com/foaf/0.1/name> \"Joanne Luciano\" .\n<http://data.semanticweb.org/person/joanne-luciano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

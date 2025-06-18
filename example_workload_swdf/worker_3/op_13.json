@@ -1,0 +1,13 @@
+{
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/massimo-mecella"
+    },
+    "headers": {},
+    "method": "DELETE",
+    "body": "",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/massimo-mecella> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/massimo-mecella> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "expected": ""
+    }
+}

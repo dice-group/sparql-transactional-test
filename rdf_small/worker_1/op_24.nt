@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/abigail-tarem> <http://xmlns.com/foaf/0.1/status> "Industry" .
-<http://data.semanticweb.org/person/abigail-tarem> <http://xmlns.com/foaf/0.1/family_name> "Tarem" .
-<http://data.semanticweb.org/person/abigail-tarem> <http://xmlns.com/foaf/0.1/homepage> <http://www.haifa.il.ibm.com/info/200904_MAGEN.shtml> .
-<http://data.semanticweb.org/person/abigail-tarem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

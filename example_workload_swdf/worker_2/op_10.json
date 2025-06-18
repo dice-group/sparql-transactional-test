@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/andre-bolles> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"0eddf78918eefad43491a590209f395ab2bf3175\" .\n<http://data.semanticweb.org/person/andre-bolles> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"d990be9a3d72ff9a08e98bebcf65e6bce7b9f7e8\" .\n<http://data.semanticweb.org/person/andre-bolles> <http://www.w3.org/2000/01/rdf-schema#label> \"Andre Bolles\" .\n<http://data.semanticweb.org/person/andre-bolles> <http://xmlns.com/foaf/0.1/name> \"Andre Bolles\" .\n<http://data.semanticweb.org/person/andre-bolles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/andre-bolles> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/andre-bolles> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/andre-bolles> <http://xmlns.com/foaf/0.1/page> <http://www-is.informatik.uni-oldenburg.de> .\n<http://data.semanticweb.org/person/andre-bolles> <http://www.w3.org/2002/07/owl#sameAs> <http://semanticweb.org/id/Andre_Bolles> .\n<http://data.semanticweb.org/person/andre-bolles> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2011/programme-committee-member> .\n<http://data.semanticweb.org/person/andre-bolles> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-oldenburg-department-of-computer-science> .\n<http://data.semanticweb.org/person/andre-bolles> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-oldenburg> .\n<http://data.semanticweb.org/person/andre-bolles> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .\n<http://data.semanticweb.org/person/andre-bolles> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2008/paper/3> .\n"
+    }
+}

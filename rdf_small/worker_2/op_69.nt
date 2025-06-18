@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/alain-mille> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-de-lyon-cnrs-universite-lyon-1-liris-umr5205-f-69622> .
-<http://data.semanticweb.org/person/alain-mille> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-de-lyon> .
-<http://data.semanticweb.org/person/alain-mille> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
-<http://data.semanticweb.org/person/alain-mille> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/xperience/2012/paper/5> .

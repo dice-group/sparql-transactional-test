@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/vicky-dritsou> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/vicky-dritsou> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/vicky-dritsou> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/vicky-dritsou> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/vicky-dritsou> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/digital-curation-unit-athena-research-centre> .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/athens-university-of-economics-and-business> .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Greece> .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2011/paper/semantic-data-management/26> .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"2e4e7e7a964ce15ce2a83f426dec9155191b1da6\" .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://www.w3.org/2000/01/rdf-schema#label> \"Vicky Dritsou\" .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://xmlns.com/foaf/0.1/name> \"Vicky Dritsou\" .\n<http://data.semanticweb.org/person/vicky-dritsou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/aleksander-waloszek> <http://data.semanticweb.org/ns/swc/ontology#affiliation> "Gdansk University of Technology" .
-<http://data.semanticweb.org/person/aleksander-waloszek> <http://xmlns.com/foaf/0.1/family_name> "Waloszek" .
-<http://data.semanticweb.org/person/aleksander-waloszek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/aleksander-waloszek> <http://www.w3.org/2000/01/rdf-schema#label> "Aleksander Waloszek" .

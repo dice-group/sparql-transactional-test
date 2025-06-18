@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/chunyan-wang> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/chunyan-wang> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/chunyan-wang> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/chunyan-wang> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/chunyan-wang> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/chunyan-wang> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .\n<http://data.semanticweb.org/person/chunyan-wang> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/chunyan-wang> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/msnd/2012/paper/25> .\n<http://data.semanticweb.org/person/chunyan-wang> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"a8f9ccbcaf429aeb1dfc4c70210cb9b1b9d5259a\" .\n<http://data.semanticweb.org/person/chunyan-wang> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/chunyan-wang> <http://www.w3.org/2000/01/rdf-schema#label> \"Chunyan Wang\" .\n<http://data.semanticweb.org/person/chunyan-wang> <http://xmlns.com/foaf/0.1/name> \"Chunyan Wang\" .\n<http://data.semanticweb.org/person/chunyan-wang> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

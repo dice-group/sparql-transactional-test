@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/cristina-baroglio> <http://www.w3.org/2000/01/rdf-schema#label> \"Cristina Baroglio\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/mbox> \" 12b75cdce64eb398de68353577be079cadea10b9 \" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/mbox> <mailto:baroglio@di.unito.it> .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/name> \"Cristina Baroglio\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/cristina-baroglio> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/cristina-baroglio> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/cristina-baroglio> <http://data.semanticweb.org/ns/swc/ontology#affiliation> \"University of Torino\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/family_name> \"Cristina\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/family_name> \"Baroglio\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/firstName> \"Cristina\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/firstName> \"Baroglio\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/homepage> <http://www.di.unito.it/~baroglio> .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-di-torino> .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Italy> .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/ruleml-eu/2011/paper/103> .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/paper-113> .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"372223d1fb213a6dc12d0dc0fac6adb782ba9267\" .\n<http://data.semanticweb.org/person/cristina-baroglio> <http://www.w3.org/2000/01/rdf-schema#comment> \"121347\" .\n"
+    }
+}

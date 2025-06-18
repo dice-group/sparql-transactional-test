@@ -1,6 +1,0 @@
-<http://data.semanticweb.org/person/alejandro-castaneda> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-texas-at-el-paso> .
-<http://data.semanticweb.org/person/alejandro-castaneda> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .
-<http://data.semanticweb.org/person/alejandro-castaneda> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/terra_cognita/2008/paper/main/7> .
-<http://data.semanticweb.org/person/alejandro-castaneda> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "de472d917e7ecdb6db1763c9c9ebdc92e2561f45" .
-<http://data.semanticweb.org/person/alejandro-castaneda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alejandro-castaneda> <http://www.w3.org/2000/01/rdf-schema#label> "Alejandro Castaneda" .

@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/zhipeng-peng> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/zhipeng-peng> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/zhipeng-peng> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/zhipeng-peng> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/zhipeng-peng> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/status> \"Academia\" .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/family_name> \"Peng\" .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/firstName> \"Zhipeng\" .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/homepage> <http://cn.linkedin.com/in/zhipengpeng> .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/zhejiang-university> .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/People%27s_Republic_of_China> .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2010/paper/479> .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"dbf66ea98c2604cac156b0b600a1af6acbb99c3c\" .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://www.w3.org/2000/01/rdf-schema#label> \"Zhipeng Peng\" .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://xmlns.com/foaf/0.1/name> \"Zhipeng Peng\" .\n<http://data.semanticweb.org/person/zhipeng-peng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

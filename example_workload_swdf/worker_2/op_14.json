@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/chide-groenouwe> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/chide-groenouwe> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/chide-groenouwe> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/chide-groenouwe> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/chide-groenouwe> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/vrije-universiteit-amsterdam-the-netherlands> .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/insemtive/2008/paper/main/1> .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"020abbdf6d4d7a266be02b446127b49566b0b147\" .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://www.w3.org/2000/01/rdf-schema#label> \"Chide Groenouwe\" .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://xmlns.com/foaf/0.1/name> \"Chide Groenouwe\" .\n<http://data.semanticweb.org/person/chide-groenouwe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

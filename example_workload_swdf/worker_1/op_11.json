@@ -1,0 +1,15 @@
+{
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/anthony-hunter"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/anthony-hunter> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/anthony-hunter> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/anthony-hunter> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/anthony-hunter> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/anthony-hunter> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Anthony_Hunter> .\n<http://data.semanticweb.org/person/anthony-hunter> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Anthony_Hunter> .\n<http://data.semanticweb.org/person/anthony-hunter> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-college-london> .\n<http://data.semanticweb.org/person/anthony-hunter> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/research/papers/379> .\n<http://data.semanticweb.org/person/anthony-hunter> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"c1349705c2060672913db2a1fbd5fcbf008fea47\" .\n<http://data.semanticweb.org/person/anthony-hunter> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Anthony_Hunter> .\n<http://data.semanticweb.org/person/anthony-hunter> <http://xmlns.com/foaf/0.1/name> \"Anthony Hunter\" .\n<http://data.semanticweb.org/person/anthony-hunter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

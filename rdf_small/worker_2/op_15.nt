@@ -1,3 +1,0 @@
-<http://data.semanticweb.org/person/ahmet-cosar> <http://xmlns.com/foaf/0.1/family_name> "Cosar" .
-<http://data.semanticweb.org/person/ahmet-cosar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/middle-east-technical-university> .
-<http://data.semanticweb.org/person/ahmet-cosar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

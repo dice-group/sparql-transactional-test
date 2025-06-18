@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/simone-sceffer> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/simone-sceffer> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/simone-sceffer> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/simone-sceffer> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/simone-sceffer> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/simone-sceffer> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#simone-sceffer> .\n<http://data.semanticweb.org/person/simone-sceffer> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2006/paper/serafini-zanobini> .\n<http://data.semanticweb.org/person/simone-sceffer> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/simone-sceffer> <http://xmlns.com/foaf/0.1/name> \"Simone Sceffer\" .\n<http://data.semanticweb.org/person/simone-sceffer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

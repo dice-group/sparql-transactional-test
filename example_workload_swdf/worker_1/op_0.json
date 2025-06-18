@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/hongyun-bao> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/China> .\n<http://data.semanticweb.org/person/hongyun-bao> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/75> .\n<http://data.semanticweb.org/person/hongyun-bao> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/59> .\n<http://data.semanticweb.org/person/hongyun-bao> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"13b5839dbee3448c5f052e7d214e8bae8b654fb5\" .\n<http://data.semanticweb.org/person/hongyun-bao> <http://www.w3.org/2000/01/rdf-schema#label> \"Hongyun Bao\" .\n<http://data.semanticweb.org/person/hongyun-bao> <http://xmlns.com/foaf/0.1/name> \"Hongyun Bao\" .\n<http://data.semanticweb.org/person/hongyun-bao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/hongyun-bao> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/hongyun-bao> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/hongyun-bao> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/institute-of-automation-chinese-academy-of-science> .\n"
+    }
+}

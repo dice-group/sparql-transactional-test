@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/adrienne-felt> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-berkeley> .
-<http://data.semanticweb.org/person/adrienne-felt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2010/paper/main/71> .
-<http://data.semanticweb.org/person/adrienne-felt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/adrienne-felt> <http://www.w3.org/2000/01/rdf-schema#label> "Adrienne Felt" .

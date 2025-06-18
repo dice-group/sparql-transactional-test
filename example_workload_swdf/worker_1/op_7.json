@@ -1,0 +1,15 @@
+{
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/helen-morgan"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/helen-morgan> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/helen-morgan> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/helen-morgan> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/helen-morgan> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/helen-morgan> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-melbourne> .\n<http://data.semanticweb.org/person/helen-morgan> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/dh/2010/abstracts/paper/ab-629> .\n<http://data.semanticweb.org/person/helen-morgan> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e58c9556860cc22e04d0c245875bb33669916111\" .\n<http://data.semanticweb.org/person/helen-morgan> <http://www.w3.org/2000/01/rdf-schema#label> \"Helen Morgan\" .\n<http://data.semanticweb.org/person/helen-morgan> <http://xmlns.com/foaf/0.1/name> \"Helen Morgan\" .\n<http://data.semanticweb.org/person/helen-morgan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

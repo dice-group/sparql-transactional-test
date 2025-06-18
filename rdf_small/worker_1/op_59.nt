@@ -1,9 +1,0 @@
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://www.example.org/test> "219" .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://www.w3.org/2004/02/skos/core#altLabel> "Adila A. Krisnadhi" .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2012/pc-member-at-iswc2012-research-track> .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/knoesis-wright-state-university> .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/wright-state-university> .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/a-better-uncle-for-owl-nominal-schemas-for-integra> .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://xmlns.com/foaf/0.1/name> "Adila A. Krisnadhi" .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/adila-a-krisnadhi> <http://www.w3.org/2000/01/rdf-schema#label> "Adila A. Krisnadhi" .

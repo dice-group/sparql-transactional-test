@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/name> "Akiyoshi Nakamizo" . <http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/139> . }

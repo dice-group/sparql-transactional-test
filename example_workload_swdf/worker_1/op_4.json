@@ -1,0 +1,15 @@
+{
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/andrej-hazucha"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/andrej-hazucha> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/andrej-hazucha> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/andrej-hazucha> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/andrej-hazucha> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/andrej-hazucha> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/rr/2011/short/249> .\n<http://data.semanticweb.org/person/andrej-hazucha> <http://www.w3.org/2000/01/rdf-schema#label> \"Andrej Hazucha\" .\n<http://data.semanticweb.org/person/andrej-hazucha> <http://xmlns.com/foaf/0.1/name> \"Andrej Hazucha\" .\n<http://data.semanticweb.org/person/andrej-hazucha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

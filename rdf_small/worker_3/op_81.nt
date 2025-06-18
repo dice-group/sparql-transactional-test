@@ -1,7 +1,0 @@
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://www.example.org/test> "774" .
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://www.example.org/test> "773" .
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/carnegie-mellon-university> .
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/600> .
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://xmlns.com/foaf/0.1/name> "Alexander Hauptmann" .
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alexander-hauptmann> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Hauptmann" .

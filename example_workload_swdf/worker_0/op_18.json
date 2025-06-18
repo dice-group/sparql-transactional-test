@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/yoshiko-arimoto> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/graduate-school-of-bionics-computer-and-media-scie> .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/575> .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://www.w3.org/2000/01/rdf-schema#label> \"Yoshiko Arimoto\" .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://xmlns.com/foaf/0.1/name> \"Yoshiko Arimoto\" .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/yoshiko-arimoto> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/yoshiko-arimoto> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": ""
+    }
+}

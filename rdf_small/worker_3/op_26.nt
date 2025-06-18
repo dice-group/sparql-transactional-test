@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/alejandro-vaisman> <http://xmlns.com/foaf/0.1/lastName> "Vaisman" .
-<http://data.semanticweb.org/person/alejandro-vaisman> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-libre-de-bruxelles> .
-<http://data.semanticweb.org/person/alejandro-vaisman> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Belgium> .
-<http://data.semanticweb.org/person/alejandro-vaisman> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2012/paper/research/134> .

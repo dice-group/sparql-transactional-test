@@ -1,0 +1,15 @@
+{
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/roberto-pinho"
+    },
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/roberto-pinho> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/roberto-pinho> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/roberto-pinho> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/roberto-pinho> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/roberto-pinho> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-sao-paulo> .\n<http://data.semanticweb.org/person/roberto-pinho> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/386> .\n<http://data.semanticweb.org/person/roberto-pinho> <http://www.w3.org/2000/01/rdf-schema#label> \"Roberto Pinho\" .\n<http://data.semanticweb.org/person/roberto-pinho> <http://xmlns.com/foaf/0.1/name> \"Roberto Pinho\" .\n<http://data.semanticweb.org/person/roberto-pinho> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

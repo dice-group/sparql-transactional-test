@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/alexander-paar> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-pretoria> .
-<http://data.semanticweb.org/person/alexander-paar> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/South_Africa> .
-<http://data.semanticweb.org/person/alexander-paar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alexander-paar> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Paar" .

@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"08944a7ab95422017f86ebcb9e16e8ebea93a89a\" .\n<http://data.semanticweb.org/person/adam-westerski> <http://www.w3.org/2000/01/rdf-schema#label> \"Adam Westerski\" .\n<http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/name> \"Adam Westerski\" .\n<http://data.semanticweb.org/person/adam-westerski> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/adam-westerski> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/adam-westerski> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/firstName> \"Adam\" .\n<http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/lastName> \"Westerski\" .\n<http://data.semanticweb.org/person/adam-westerski> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universiadad-politecnica-de-madrid> .\n<http://data.semanticweb.org/person/adam-westerski> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universidad-politecnica-de-madrid> .\n<http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Poland> .\n<http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/swcs/2012/paper/6> .\n<http://data.semanticweb.org/person/adam-westerski> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/sdow/2011/paper/3> .\n"
+    }
+}

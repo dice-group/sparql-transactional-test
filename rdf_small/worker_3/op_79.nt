@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/mbox> <mailto:gelbukh@gelbukh.com> .
-<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/firstName> "Alexander" .
-<http://data.semanticweb.org/person/alexander-gelbukh> <http://xmlns.com/foaf/0.1/name> "Alexander Gelbukh" .
-<http://data.semanticweb.org/person/alexander-gelbukh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

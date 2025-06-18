@@ -1,5 +1,0 @@
-<http://data.semanticweb.org/person/alissa-kaplunova> <http://xmlns.com/foaf/0.1/firstName> "Alissa" .
-<http://data.semanticweb.org/person/alissa-kaplunova> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/hamburg-university-of-technology> .
-<http://data.semanticweb.org/person/alissa-kaplunova> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2007/paper-259> .
-<http://data.semanticweb.org/person/alissa-kaplunova> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "6d51675772c278e8a510592b92a5bfe7b855a4db" .
-<http://data.semanticweb.org/person/alissa-kaplunova> <http://www.w3.org/2000/01/rdf-schema#label> "Alissa Kaplunova" .

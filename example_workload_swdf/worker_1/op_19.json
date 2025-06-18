@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/ming-ma> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/ming-ma> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/ming-ma> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/ming-ma> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/ming-ma> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/ming-ma> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/microsoft-research> .\n<http://data.semanticweb.org/person/ming-ma> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2007/paper/main/111> .\n<http://data.semanticweb.org/person/ming-ma> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/ming-ma> <http://www.w3.org/2000/01/rdf-schema#label> \"Ming Ma\" .\n<http://data.semanticweb.org/person/ming-ma> <http://xmlns.com/foaf/0.1/name> \"Ming Ma\" .\n<http://data.semanticweb.org/person/ming-ma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

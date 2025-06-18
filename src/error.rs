@@ -6,7 +6,7 @@ use thiserror::Error;
 
 #[derive(Debug)]
 pub struct InvalidStateVerboseInfo {
-    pub update: String,
+    pub query: String,
     pub expected: String,
     pub actual: String,
 }
@@ -28,7 +28,6 @@ pub enum WorkerError {
     },
     UpdateVerifyFailed {
         update_id: usize,
-        subject: String,
         err: reqwest::Error,
     },
     UpdateFailed {
@@ -40,47 +39,31 @@ pub enum WorkerError {
     RestartFailed(io::Error),
 }
 
-fn format_insert_or_delete_data(f: &mut Formatter<'_>, q: &str) -> std::fmt::Result {
-    let (head, body) = q.split_once("{ <").unwrap();
-    let (body, _) = body.rsplit_once(". }").unwrap();
-
-    writeln!(f, "{head}{{")?;
-
-    for triple in body.split(". <") {
-        writeln!(f, "    <{triple}.")?;
-    }
-
-    writeln!(f, "}}")?;
-    Ok(())
-}
-
 impl Display for WorkerError {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
             WorkerError::InvalidState { update_id, verbose_info } => {
                 write!(f, "Unexpected result at update {update_id}")?;
 
-                if let Some(InvalidStateVerboseInfo { update, expected, actual }) = verbose_info {
-                    write!(f, "\nQuery: ")?;
-
-                    if update.starts_with("INSERT DATA") || update.starts_with("DELETE DATA") {
-                        format_insert_or_delete_data(f, update)?;
-                    } else {
-                        writeln!(f, "{}", update)?;
+                if let Some(InvalidStateVerboseInfo { query, expected, actual }) = verbose_info {
+                    if expected != actual {
+                        writeln!(
+                            f,
+                            "\nQuery:\n{}\n\nDifference between expected and actual state:\n{}",
+                            query,
+                            prettydiff::diff_lines(expected, actual)
+                        )?;
                     }
 
-                    writeln!(f, "\nExpected:\n{expected}")?;
-                    writeln!(f, "\nActual:\n{actual}")?;
-
-                    write!(f, "\nDiff:\n{}", prettydiff::diff_lines(expected, actual))
+                    Ok(())
                 } else {
                     Ok(())
                 }
             },
-            WorkerError::UpdateVerifyFailed { update_id, subject, err } => {
+            WorkerError::UpdateVerifyFailed { update_id, err } => {
                 write!(
                     f,
-                    "Unable to execute verification query for update {update_id}. Error: {err}\nSubject: {subject}"
+                    "Unable to execute verification query for update {update_id}. Error: {err}"
                 )
             },
             WorkerError::UpdateFailed { update_id, err, verbose_info } => {

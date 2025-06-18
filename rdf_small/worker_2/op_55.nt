@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/family_name> "Nakamizo" .
-<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/firstName> "Akiyoshi" .
-<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/shibaura-institute-of-technology> .
-<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

@@ -1,0 +1,13 @@
+{
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-type": "application/sparql-update"
+    },
+    "method": "POST",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/qin-wu-nie> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/qin-wu-nie> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
+    "validate": {
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/qin-wu-nie> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/qin-wu-nie> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/qin-wu-nie> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://xmlns.com/foaf/0.1/family_name> \"Nie\" .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://xmlns.com/foaf/0.1/firstName> \"Qin-Wu\" .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/hunan-university-of-science-and-technology> .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/150> .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://xmlns.com/foaf/0.1/name> \"Qin-Wu Nie\" .\n<http://data.semanticweb.org/person/qin-wu-nie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+    }
+}

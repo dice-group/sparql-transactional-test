@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/aleksandr-chuklin> <http://xmlns.com/foaf/0.1/firstName> "Aleksandr" .
-<http://data.semanticweb.org/person/aleksandr-chuklin> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/www/2012/poster/212/talk/speaker> .
-<http://data.semanticweb.org/person/aleksandr-chuklin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/aleksandr-chuklin> <http://www.w3.org/2000/01/rdf-schema#label> "Aleksandr Chuklin" .
