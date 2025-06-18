@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/alex-dekhtyar> <http://xmlns.com/foaf/0.1/name> "Alex Dekhtyar" . <http://data.semanticweb.org/person/alex-dekhtyar> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "0d53eb3f121425146549a906808b541ce2daf570" . }

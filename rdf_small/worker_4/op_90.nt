@@ -1,4 +1,0 @@
-<http://data.semanticweb.org/person/alisa-strizhevskaya> <http://xmlns.com/foaf/0.1/firstName> "Alisa" .
-<http://data.semanticweb.org/person/alisa-strizhevskaya> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yandex> .
-<http://data.semanticweb.org/person/alisa-strizhevskaya> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Russian_Federation> .
-<http://data.semanticweb.org/person/alisa-strizhevskaya> <http://xmlns.com/foaf/0.1/name> "Alisa Strizhevskaya" .

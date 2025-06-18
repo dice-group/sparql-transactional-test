@@ -1,8 +1,0 @@
-<http://data.semanticweb.org/person/ada-hungerford> <http://www.example.org/test> "124" .
-<http://data.semanticweb.org/person/ada-hungerford> <http://www.example.org/test> "125" .
-<http://data.semanticweb.org/person/ada-hungerford> <http://www.example.org/test> "123" .
-<http://data.semanticweb.org/person/ada-hungerford> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/participant> .
-<http://data.semanticweb.org/person/ada-hungerford> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/nih> .
-<http://data.semanticweb.org/person/ada-hungerford> <http://xmlns.com/foaf/0.1/name> "Ada Hungerford" .
-<http://data.semanticweb.org/person/ada-hungerford> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/ada-hungerford> <http://www.w3.org/2000/01/rdf-schema#label> "Ada Hungerford" .

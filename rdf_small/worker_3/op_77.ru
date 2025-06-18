@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/alexander-felfernig> <http://xmlns.com/foaf/0.1/name> "Alexander Felfernig" . <http://data.semanticweb.org/person/alexander-felfernig> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/proceedings/paper-28> . }

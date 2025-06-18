@@ -1,3 +1,0 @@
-<http://data.semanticweb.org/person/akihiko-ohsuga> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-electro-communications> .
-<http://data.semanticweb.org/person/akihiko-ohsuga> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/proceedings-1/paper-24> .
-<http://data.semanticweb.org/person/akihiko-ohsuga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

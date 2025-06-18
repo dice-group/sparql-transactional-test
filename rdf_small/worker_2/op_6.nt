@@ -1,3 +1,0 @@
-<http://data.semanticweb.org/person/ahlem-ben-hassine> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Ahlem_Ben_Hassine> .
-<http://data.semanticweb.org/person/ahlem-ben-hassine> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Ahlem_Ben_Hassine> .
-<http://data.semanticweb.org/person/ahlem-ben-hassine> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc-aswc/2007/tracks/posters-demos/papers/345> .

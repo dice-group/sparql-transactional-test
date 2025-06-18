@@ -1,5 +1,0 @@
-<http://data.semanticweb.org/person/alexandra-roatis> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/universite-paris-sud-11-inria-saclay> .
-<http://data.semanticweb.org/person/alexandra-roatis> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/France> .
-<http://data.semanticweb.org/person/alexandra-roatis> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/poster/68> .
-<http://data.semanticweb.org/person/alexandra-roatis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alexandra-roatis> <http://www.w3.org/2000/01/rdf-schema#label> "Alexandra Roati?" .

@@ -1,7 +1,0 @@
-<http://data.semanticweb.org/person/alfred-kobsa> <http://www.example.org/test> "1010" .
-<http://data.semanticweb.org/person/alfred-kobsa> <http://www.example.org/test> "1009" .
-<http://data.semanticweb.org/person/alfred-kobsa> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2005/pc-member-at-iswc2005-research-track> .
-<http://data.semanticweb.org/person/alfred-kobsa> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-california-irvine> .
-<http://data.semanticweb.org/person/alfred-kobsa> <http://xmlns.com/foaf/0.1/name> "Alfred Kobsa" .
-<http://data.semanticweb.org/person/alfred-kobsa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alfred-kobsa> <http://www.w3.org/2000/01/rdf-schema#label> "Alfred Kobsa" .

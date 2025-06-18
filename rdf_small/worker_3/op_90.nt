@@ -1,6 +1,0 @@
-<http://data.semanticweb.org/person/alexander-lenk> <http://xmlns.com/foaf/0.1/firstName> "Alexander" .
-<http://data.semanticweb.org/person/alexander-lenk> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2012/research-track-committee-member> .
-<http://data.semanticweb.org/person/alexander-lenk> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/fzi-forschungszentrum-informatik> .
-<http://data.semanticweb.org/person/alexander-lenk> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Germany> .
-<http://data.semanticweb.org/person/alexander-lenk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alexander-lenk> <http://www.w3.org/2000/01/rdf-schema#label> "Alexander Lenk" .

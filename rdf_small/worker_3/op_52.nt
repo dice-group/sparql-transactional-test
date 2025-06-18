@@ -1,5 +1,0 @@
-<http://data.semanticweb.org/person/alessandro-lenci> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2013/eswc-2013-track-committee-member> .
-<http://data.semanticweb.org/person/alessandro-lenci> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-pisa-department-of-linguistics> .
-<http://data.semanticweb.org/person/alessandro-lenci> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/315> .
-<http://data.semanticweb.org/person/alessandro-lenci> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/763> .
-<http://data.semanticweb.org/person/alessandro-lenci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

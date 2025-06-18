@@ -1,5 +1,0 @@
-<http://data.semanticweb.org/person/alan-eckhardt> <http://xmlns.com/foaf/0.1/homepage> <http://www.abdn.ac.uk/ncs/profiles/a.eckhardt> .
-<http://data.semanticweb.org/person/alan-eckhardt> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-aberdeen> .
-<http://data.semanticweb.org/person/alan-eckhardt> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/poster-demo-proceedings/paper-19> .
-<http://data.semanticweb.org/person/alan-eckhardt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alan-eckhardt> <http://www.w3.org/2000/01/rdf-schema#label> "Alan Eckhardt" .

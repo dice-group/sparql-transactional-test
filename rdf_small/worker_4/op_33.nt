@@ -1,6 +1,0 @@
-<http://data.semanticweb.org/person/alex-borgida> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2012/research-track-committee-member> .
-<http://data.semanticweb.org/person/alex-borgida> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2003/pc-member> .
-<http://data.semanticweb.org/person/alex-borgida> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/rutgers-university> .
-<http://data.semanticweb.org/person/alex-borgida> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Taiwan> .
-<http://data.semanticweb.org/person/alex-borgida> <http://xmlns.com/foaf/0.1/lastName> "Borgida" .
-<http://data.semanticweb.org/person/alex-borgida> <http://xmlns.com/foaf/0.1/mbox_sha1sum> "d06a067f069937274cca6c2b03a5330b71d660cb" .

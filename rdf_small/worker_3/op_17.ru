@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/alejandro-fernandez-carrera> <http://xmlns.com/foaf/0.1/name> "Alejandro Fernández-Carrera" . <http://data.semanticweb.org/person/alejandro-fernandez-carrera> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ssn/2013/proceedings/paper-07> . }

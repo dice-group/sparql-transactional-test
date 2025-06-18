@@ -1,8 +1,0 @@
-<http://data.semanticweb.org/person/alethia-hume> <http://www.example.org/test> "752" .
-<http://data.semanticweb.org/person/alethia-hume> <http://www.example.org/test> "751" .
-<http://data.semanticweb.org/person/alethia-hume> <http://www.example.org/test> "750" .
-<http://data.semanticweb.org/person/alethia-hume> <http://www.example.org/test> "749" .
-<http://data.semanticweb.org/person/alethia-hume> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/ssws/2013/proceedings/paper-07> .
-<http://data.semanticweb.org/person/alethia-hume> <http://xmlns.com/foaf/0.1/name> "Alethia Hume" .
-<http://data.semanticweb.org/person/alethia-hume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://data.semanticweb.org/person/alethia-hume> <http://www.w3.org/2000/01/rdf-schema#label> "Alethia Hume" .

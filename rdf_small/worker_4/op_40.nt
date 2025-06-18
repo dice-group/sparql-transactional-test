@@ -1,5 +1,0 @@
-<http://data.semanticweb.org/person/alexey-boyarsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/instituut-lorentz-for-theoretical-physics-universiteit-leiden> .
-<http://data.semanticweb.org/person/alexey-boyarsky> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/epfl> .
-<http://data.semanticweb.org/person/alexey-boyarsky> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/proceedings-1/paper-18> .
-<http://data.semanticweb.org/person/alexey-boyarsky> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2011/paper/poster-demo/72> .
-<http://data.semanticweb.org/person/alexey-boyarsky> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

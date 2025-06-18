@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/alex-waibel> <http://xmlns.com/foaf/0.1/name> "Alex Waibel" . <http://data.semanticweb.org/person/alex-waibel> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/392> . <http://data.semanticweb.org/person/alex-waibel> <http://www.w3.org/2000/01/rdf-schema#label> "Alex Waibel" . }

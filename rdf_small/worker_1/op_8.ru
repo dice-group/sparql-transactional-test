@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/abby-neely> <http://xmlns.com/foaf/0.1/name> "Abby Neely" . <http://data.semanticweb.org/person/abby-neely> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/902> . <http://data.semanticweb.org/person/abby-neely> <http://www.w3.org/2000/01/rdf-schema#label> "Abby Neely" . }

@@ -1,1 +1,0 @@
-DELETE DATA { <http://data.semanticweb.org/person/adrian-popescu> <http://xmlns.com/foaf/0.1/name> "Adrian Popescu" . <http://data.semanticweb.org/person/adrian-popescu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/84> . }
