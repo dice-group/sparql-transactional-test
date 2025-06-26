@@ -20,10 +20,7 @@ use std::{
     sync::Arc,
     time::Duration,
 };
-use tokio::{
-    select,
-    sync::{Barrier, Notify},
-};
+use tokio::{select, sync::Barrier};
 use update_worker::UpdateWorker;
 
 type Query = String;
@@ -234,13 +231,13 @@ async fn run(opts: Command) -> anyhow::Result<()> {
         });
     }
 
-    let stop_notify = Arc::new(Notify::new());
+    let (stop_notify_tx, _stop_notify_rx) = tokio::sync::broadcast::channel(1);
     let (readers_finished_tx, mut readers_finished_rx) = tokio::sync::mpsc::channel(num_random_read_workers);
 
     for (mut rr_worker, worker_id) in random_read_workers.into_iter().zip(1..) {
         let start_barrier = start_barrier.clone();
         let finished_tx = readers_finished_tx.clone();
-        let stop_notify = stop_notify.clone();
+        let stop_notify = stop_notify_tx.subscribe();
 
         tokio::spawn(async move {
             start_barrier.wait().await;
@@ -259,7 +256,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
     if let Some(mut kill_worker) = kill_worker {
         let start_barrier = start_barrier.clone();
         let finished_tx = kill_worker_finished_tx.clone();
-        let stop_notify = stop_notify.clone();
+        let stop_notify = stop_notify_tx.subscribe();
 
         tokio::spawn(async move {
             start_barrier.wait().await;
@@ -298,7 +295,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
 
     if let SubCommand::Stress { duration_s, .. } = opts.sub {
         tokio::time::sleep(Duration::from_secs(duration_s)).await;
-        stop_notify.notify_waiters();
+        let _ = stop_notify_tx.send(());
     }
 
     let mut n_update_errors = 0;
@@ -330,7 +327,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
         end_time.duration_since(start_time).as_secs_f64()
     );
 
-    stop_notify.notify_waiters();
+    let _ = stop_notify_tx.send(());
 
     let mut qps_sum: Qps = 0.0;
 
