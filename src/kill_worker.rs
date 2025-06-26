@@ -2,10 +2,9 @@ use crate::error::WorkerError;
 use std::{
     ffi::{OsStr, OsString},
     io,
-    sync::Arc,
     time::Duration,
 };
-use tokio::{process::Command, sync::Notify};
+use tokio::process::Command;
 
 pub struct KillWorker {
     kill_script: OsString,
@@ -41,7 +40,7 @@ impl KillWorker {
         Self::run_command(&self.restart_script, WorkerError::RestartFailed).await
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> Result<(), WorkerError> {
+    pub async fn execute(&mut self, mut stop: tokio::sync::broadcast::Receiver<()>) -> Result<(), WorkerError> {
         let worker = async {
             loop {
                 tokio::time::sleep(self.kill_delay).await;
@@ -52,7 +51,7 @@ impl KillWorker {
 
         tokio::select! {
             res = worker => res,
-            _ = stop.notified() => Ok(())
+            _ = stop.recv() => Ok(())
         }
     }
 }

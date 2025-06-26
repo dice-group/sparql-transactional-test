@@ -7,10 +7,8 @@ use std::{
     future::Future,
     io,
     path::Path,
-    sync::Arc,
     time::{Duration, Instant},
 };
-use tokio::sync::Notify;
 
 pub trait QueryGenerator {
     fn next_query(&mut self) -> (Option<usize>, Cow<str>);
@@ -102,7 +100,10 @@ impl RandomReadWorker {
         }
     }
 
-    pub async fn execute(&mut self, stop: Arc<Notify>) -> Result<BTreeMap<usize, Qps>, WorkerError> {
+    pub async fn execute(
+        &mut self,
+        mut stop: tokio::sync::broadcast::Receiver<()>,
+    ) -> Result<BTreeMap<usize, Qps>, WorkerError> {
         let mut query_timings: BTreeMap<_, Vec<Duration>> = Default::default();
 
         let worker = async {
@@ -122,7 +123,7 @@ impl RandomReadWorker {
 
         let success = tokio::select! {
             res = worker => res,
-            _ = stop.notified() => Ok(())
+            _ = stop.recv() => Ok(())
         };
 
         success?;
