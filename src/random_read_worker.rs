@@ -11,7 +11,7 @@ use std::{
 };
 
 pub trait QueryGenerator {
-    fn next_query(&mut self) -> (Option<usize>, Cow<str>);
+    fn next_query(&mut self) -> (Option<usize>, Cow<'_, str>);
 }
 
 #[derive(Copy, Clone)]
