@@ -1,5 +1,5 @@
 use crate::{error::WorkerError, Qps, Query, WorkerBehaviour};
-use rand::{seq::SliceRandom, Rng};
+use rand::{seq::SliceRandom, RngExt};
 use reqwest::{Client, Response, Url};
 use std::{
     borrow::Cow,
