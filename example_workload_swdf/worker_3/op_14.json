@@ -1,15 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/jens-hartmann"
+        "graph": "http://data.semanticweb.org/person/manohar-chandwani"
     },
     "headers": {
         "Content-type": "application/n-triples"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/jens-hartmann> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/manohar-chandwani> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jens-hartmann> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jens-hartmann> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/manohar-chandwani> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/manohar-chandwani> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/manohar-chandwani> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/manohar-chandwani> <http://xmlns.com/foaf/0.1/firstName> \"Manohar\" .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://xmlns.com/foaf/0.1/family_name> \"Chandwani\" .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/devi-ahilya-university> .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://xmlns.com/foaf/0.1/name> \"Manohar Chandwani\" .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://www.w3.org/2000/01/rdf-schema#label> \"Manohar Chandwani\" .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"6f727dbea50e5503468817ef1b7186fced9b07cb\" .\n<http://data.semanticweb.org/person/manohar-chandwani> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/phd/performance-enhancement-of-scheduling-algorithms-i> .\n"
     }
 }

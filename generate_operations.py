@@ -32,6 +32,7 @@ class OperationKind(enum.Enum):
     GSP_POST = 2
     GSP_PUT = 3
     GSP_DELETE = 4
+    NON_IDEMPOTENT_INSERT = 5
 
 class Method(enum.Enum):
     POST = 0
@@ -155,6 +156,30 @@ class RDFStore:
 
         self._post(url=self.update_endpoint_url, data=update,
                    headers=headers)
+
+        return UpdateOperation(endpoint=Endpoint.UPDATE,
+                               query_params={},
+                               headers=headers,
+                               method=Method.POST,
+                               body=update,
+                               validate=self.validation_default_and_named_graph(ident))
+
+    def non_idempotent_insert(self, ident: rdflib.URIRef):
+        update = f"""
+INSERT {{
+  {ident.n3()} {INSERT_PREDICATE.n3()} ?newX .
+}} WHERE {{
+  {{
+    SELECT (MAX(?x) as ?maxX) WHERE {{
+      OPTIONAL {{ {ident.n3()} {INSERT_PREDICATE.n3()} ?x . }}
+    }}
+  }}
+  
+  BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX) .
+}}
+"""
+        headers = {"Content-Type": "application/sparql-update"}
+        self._post(url=self.update_endpoint_url, data=update, headers=headers)
 
         return UpdateOperation(endpoint=Endpoint.UPDATE,
                                query_params={},
@@ -317,10 +342,17 @@ if __name__ == '__main__':
 
             # Graph Store Protocol: DELETE
             elif op_kind == OperationKind.GSP_DELETE:
-                # select and already used subject
+                # select an already used subject
                 subject = subjects[random.randrange(worker_first_subject_index, subject_index + o_idx)]
 
                 operation = rdfstore.gsp_delete(subject)
+
+            # non-idempotent INSERT WHERE
+            elif op_kind == OperationKind.NON_IDEMPOTENT_INSERT:
+                # select an already used subject
+                subject = subjects[random.randrange(worker_first_subject_index, subject_index + o_idx)]
+
+                operation = rdfstore.non_idempotent_insert(subject)
 
             else:
                 raise "Error: Operation number out of expected range"

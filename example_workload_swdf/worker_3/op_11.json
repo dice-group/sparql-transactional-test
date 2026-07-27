@@ -1,13 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/he-hu"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-Type": "application/sparql-update"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "method": "POST",
+    "body": "\nINSERT {\n  <http://data.semanticweb.org/person/david-hauger> <http://www.example.org/test> ?newX .\n} WHERE {\n  {\n    SELECT (MAX(?x) as ?maxX) WHERE {\n      OPTIONAL { <http://data.semanticweb.org/person/david-hauger> <http://www.example.org/test> ?x . }\n    }\n  }\n  \n  BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX) .\n}\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/he-hu> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/he-hu> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/david-hauger> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/david-hauger> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/david-hauger> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/admire/2012/paper/15> .\n<http://data.semanticweb.org/person/david-hauger> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/johannes-kepler-university> .\n<http://data.semanticweb.org/person/david-hauger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/david-hauger> <http://www.example.org/test> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n<http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Austria> .\n<http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"a3b0ecf604aba7bb6c026903244047398191eb49\" .\n<http://data.semanticweb.org/person/david-hauger> <http://xmlns.com/foaf/0.1/name> \"David Hauger\" .\n<http://data.semanticweb.org/person/david-hauger> <http://www.w3.org/2000/01/rdf-schema#label> \"David Hauger\" .\n"
     }
 }

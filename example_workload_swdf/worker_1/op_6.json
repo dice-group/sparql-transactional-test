@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/edwin-bonilla"
+    },
     "headers": {
-        "Content-type": "application/sparql-update"
+        "Content-type": "application/n-triples"
     },
     "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/barbara-kieslinger> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2002/poster-proceedings/paper-29> .\n<http://data.semanticweb.org/person/barbara-kieslinger> <http://www.w3.org/2000/01/rdf-schema#label> \"Barbara Kieslinger\" .\n<http://data.semanticweb.org/person/barbara-kieslinger> <http://xmlns.com/foaf/0.1/name> \"Barbara Kieslinger\" .\n<http://data.semanticweb.org/person/barbara-kieslinger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "body": "<http://data.semanticweb.org/person/edwin-bonilla> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/barbara-kieslinger> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/barbara-kieslinger> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/edwin-bonilla> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/edwin-bonilla> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/edwin-bonilla> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/edwin-bonilla> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/nicta> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/name> \"Edwin Bonilla\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://www.w3.org/2000/01/rdf-schema#label> \"Edwin Bonilla\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/lastName> \"Bonilla\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/firstName> \"Edwin\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/764> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e73a67bb190d72cc6b64584b0eba7fb6468356a6\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n"
     }
 }

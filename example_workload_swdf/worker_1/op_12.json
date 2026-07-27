@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/sumit-mittal"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-Type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/sumit-mittal> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "\nINSERT {\n  <http://data.semanticweb.org/person/haishan-liu> <http://www.example.org/test> ?newX .\n} WHERE {\n  {\n    SELECT (MAX(?x) as ?maxX) WHERE {\n      OPTIONAL { <http://data.semanticweb.org/person/haishan-liu> <http://www.example.org/test> ?x . }\n    }\n  }\n  \n  BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX) .\n}\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sumit-mittal> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/sumit-mittal> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/sumit-mittal> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
-        "expected": "<http://data.semanticweb.org/person/sumit-mittal> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/ibm-india-research-laboratory-new-delhi> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/India> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2008/paper/396> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2005/proceedings/paper-33> .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"b748b886daf9671fa6b3d421f9ac5e06a4a6a085\" .\n<http://data.semanticweb.org/person/sumit-mittal> <http://www.w3.org/2000/01/rdf-schema#label> \"Sumit Mittal\" .\n<http://data.semanticweb.org/person/sumit-mittal> <http://xmlns.com/foaf/0.1/name> \"Sumit Mittal\" .\n<http://data.semanticweb.org/person/sumit-mittal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/haishan-liu> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/haishan-liu> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/haishan-liu> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/firstName> \"Haishan\" .\n<http://data.semanticweb.org/person/haishan-liu> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/university-of-oregon> .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/United_States> .\n<http://data.semanticweb.org/person/haishan-liu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/name> \"Haishan Liu\" .\n<http://data.semanticweb.org/person/haishan-liu> <http://www.w3.org/2000/01/rdf-schema#label> \"Haishan Liu\" .\n<http://data.semanticweb.org/person/haishan-liu> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/family_name> \"Liu\" .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2010/paper/448> .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/status> \"Academia\" .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/homepage> <http://ix.cs.uoregon.edu/~ahoyleo/> .\n<http://data.semanticweb.org/person/haishan-liu> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"561deb5b705726d2b55a1d171b2d41564aa0154f\" .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
     }
 }

@@ -1,13 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/cristian-confalonieri"
+    "endpoint": "UPDATE",
+    "query_params": {},
+    "headers": {
+        "Content-Type": "application/sparql-update"
     },
-    "headers": {},
-    "method": "DELETE",
-    "body": "",
+    "method": "POST",
+    "body": "\nINSERT {\n  <http://data.semanticweb.org/person/miika-alonen> <http://www.example.org/test> ?newX .\n} WHERE {\n  {\n    SELECT (MAX(?x) as ?maxX) WHERE {\n      OPTIONAL { <http://data.semanticweb.org/person/miika-alonen> <http://www.example.org/test> ?x . }\n    }\n  }\n  \n  BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX) .\n}\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/cristian-confalonieri> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/cristian-confalonieri> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/miika-alonen> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/miika-alonen> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/miika-alonen> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/miika-alonen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/miika-alonen> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"5f1a46c33c8f77147f038f83fdb954dff3f9145c\" .\n<http://data.semanticweb.org/person/miika-alonen> <http://www.example.org/test> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n<http://data.semanticweb.org/person/miika-alonen> <http://xmlns.com/foaf/0.1/name> \"Miika Alonen\" .\n<http://data.semanticweb.org/person/miika-alonen> <http://www.w3.org/2000/01/rdf-schema#label> \"Miika Alonen\" .\n<http://data.semanticweb.org/person/miika-alonen> <http://xmlns.com/foaf/0.1/lastName> \"Alonen\" .\n<http://data.semanticweb.org/person/miika-alonen> <http://xmlns.com/foaf/0.1/mbox> <mailto:miika.alonen@aalto.fi> .\n<http://data.semanticweb.org/person/miika-alonen> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2014/author> .\n<http://data.semanticweb.org/person/miika-alonen> <http://xmlns.com/foaf/0.1/firstName> \"Miika\" .\n<http://data.semanticweb.org/person/miika-alonen> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/eswc/2014/paper/poster/20> .\n"
     }
 }
