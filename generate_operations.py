@@ -164,20 +164,19 @@ class RDFStore:
                                body=update,
                                validate=self.validation_default_and_named_graph(ident))
 
-    def non_idempotent_insert(self, ident: rdflib.URIRef):
-        update = f"""
-INSERT {{
-  {ident.n3()} {INSERT_PREDICATE.n3()} ?newX .
-}} WHERE {{
-  {{
-    SELECT (MAX(?x) as ?maxX) WHERE {{
-      OPTIONAL {{ {ident.n3()} {INSERT_PREDICATE.n3()} ?x . }}
-    }}
-  }}
-  
-  BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX) .
-}}
-"""
+    def non_idempotent_insert(self, ident: rdflib.URIRef) -> UpdateOperation:
+        update = (f"INSERT {{\n"
+                  f"    {ident.n3()} {INSERT_PREDICATE.n3()} ?newX\n"
+                  f"}}\n"
+                  f"WHERE {{\n"
+                  f"    {{\n"
+                  f"        SELECT (MAX(?x) AS ?maxX) WHERE {{\n"
+                  f"            {ident.n3()} {INSERT_PREDICATE.n3()} ?x .\n"
+                  f"        }}\n"
+                  f"    }}\n"
+                  f"    BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX)\n"
+                  f"}}")
+
         headers = {"Content-Type": "application/sparql-update"}
         self._post(url=self.update_endpoint_url, data=update, headers=headers)
 
