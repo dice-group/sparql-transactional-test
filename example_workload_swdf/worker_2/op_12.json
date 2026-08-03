@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/sihong-xie"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/sihong-xie> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/monika-hertel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/monika-hertel> <http://xmlns.com/foaf/0.1/name> \"Monika Hertel\" .\n<http://data.semanticweb.org/person/monika-hertel> <http://www.w3.org/2000/01/rdf-schema#label> \"Monika Hertel\" .\n }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sihong-xie> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/sihong-xie> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/monika-hertel> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/monika-hertel> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "expected": "<http://data.semanticweb.org/person/monika-hertel> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/stanford-university> .\n<http://data.semanticweb.org/person/monika-hertel> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2001/organization-staff> .\n"
     }
 }

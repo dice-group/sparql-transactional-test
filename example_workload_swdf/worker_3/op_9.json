@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/sadao-korohashi"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/sadao-korohashi> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "DELETE DATA { <http://data.semanticweb.org/person/gary-hallmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/gary-hallmark> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/eswc/2006/roles/delegate> .\n<http://data.semanticweb.org/person/gary-hallmark> <http://xmlns.com/foaf/0.1/workplaceHomepage> <http://www.oracle.com/technology/products/ias/business_rules/index.html> .\n<http://data.semanticweb.org/person/gary-hallmark> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ca654ff6e2a51d3dadb5e1dd7c5dcae6e0420eb7\" .\n<http://data.semanticweb.org/person/gary-hallmark> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eswc2006.org/people/#gary-hallmark> .\n<http://data.semanticweb.org/person/gary-hallmark> <http://xmlns.com/foaf/0.1/name> \"Gary Hallmark\" .\n }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sadao-korohashi> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/sadao-korohashi> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/gary-hallmark> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/gary-hallmark> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
         "expected": ""
     }
 }

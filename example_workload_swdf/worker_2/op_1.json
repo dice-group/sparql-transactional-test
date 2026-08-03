@@ -1,13 +1,13 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/jeremy-blackburn"
+        "graph": "http://data.semanticweb.org/person/richard-katz"
     },
     "headers": {},
     "method": "DELETE",
     "body": "",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/jeremy-blackburn> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/jeremy-blackburn> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/richard-katz> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/richard-katz> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }

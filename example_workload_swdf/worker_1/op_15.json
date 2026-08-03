@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/vanesa-lopez"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-Type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/vanesa-lopez> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "\nINSERT {\n  <http://data.semanticweb.org/person/edwin-bonilla> <http://www.example.org/test> ?newX .\n} WHERE {\n  {\n    SELECT (MAX(?x) as ?maxX) WHERE {\n      OPTIONAL { <http://data.semanticweb.org/person/edwin-bonilla> <http://www.example.org/test> ?x . }\n    }\n  }\n  \n  BIND(IF(BOUND(?maxX), ?maxX + 1, 0) AS ?newX) .\n}\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/vanesa-lopez> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/vanesa-lopez> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/vanesa-lopez> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
-        "expected": "<http://data.semanticweb.org/person/vanesa-lopez> <http://xmlns.com/foaf/0.1/page> <http://ontoworld.org/wiki/Vanesa_Lopez> .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://www.w3.org/2002/07/owl#sameAs> <http://ontoworld.org/wiki/Special:URIResolver/Vanesa_Lopez> .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/kmi-the-open-university-uk> .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/workshop/om/2007/papers/451> .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"0ca482ead394fcb71d99aa2fb2e4adfd75448843\" .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontoworld.org/wiki/Special:ExportRDF/Vanesa_Lopez> .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://xmlns.com/foaf/0.1/name> \"Vanesa Lopez\" .\n<http://data.semanticweb.org/person/vanesa-lopez> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/edwin-bonilla> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/edwin-bonilla> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/edwin-bonilla> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/edwin-bonilla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/name> \"Edwin Bonilla\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://www.w3.org/2000/01/rdf-schema#label> \"Edwin Bonilla\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://www.example.org/test> \"0\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/firstName> \"Edwin\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"e73a67bb190d72cc6b64584b0eba7fb6468356a6\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/nicta> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/lastName> \"Bonilla\" .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2012/paper/764> .\n<http://data.semanticweb.org/person/edwin-bonilla> <http://xmlns.com/foaf/0.1/based_near> <http://dbpedia.org/resource/Array> .\n"
     }
 }

@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/sarka-zikanova"
+    },
     "headers": {
-        "Content-type": "application/sparql-update"
+        "Content-type": "application/n-triples"
     },
     "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/yoshiko-arimoto> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/graduate-school-of-bionics-computer-and-media-scie> .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/575> .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://www.w3.org/2000/01/rdf-schema#label> \"Yoshiko Arimoto\" .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://xmlns.com/foaf/0.1/name> \"Yoshiko Arimoto\" .\n<http://data.semanticweb.org/person/yoshiko-arimoto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "body": "<http://data.semanticweb.org/person/sarka-zikanova> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/yoshiko-arimoto> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/yoshiko-arimoto> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/sarka-zikanova> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/sarka-zikanova> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/sarka-zikanova> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/sarka-zikanova> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/charles-university-prague> .\n<http://data.semanticweb.org/person/sarka-zikanova> <http://xmlns.com/foaf/0.1/name> \"S\u00e1rka Zik\u00e1nov\u00e1\" .\n<http://data.semanticweb.org/person/sarka-zikanova> <http://www.w3.org/2000/01/rdf-schema#label> \"S\u00e1rka Zik\u00e1nov\u00e1\" .\n<http://data.semanticweb.org/person/sarka-zikanova> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/sarka-zikanova> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/lrec/2008/papers/638> .\n"
     }
 }

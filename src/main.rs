@@ -232,7 +232,7 @@ async fn run(opts: Command) -> anyhow::Result<()> {
     }
 
     let (stop_notify_tx, _stop_notify_rx) = tokio::sync::broadcast::channel(1);
-    let (readers_finished_tx, mut readers_finished_rx) = tokio::sync::mpsc::channel(num_random_read_workers);
+    let (readers_finished_tx, mut readers_finished_rx) = tokio::sync::mpsc::channel(std::cmp::max(1, num_random_read_workers));
 
     for (mut rr_worker, worker_id) in random_read_workers.into_iter().zip(1..) {
         let start_barrier = start_barrier.clone();

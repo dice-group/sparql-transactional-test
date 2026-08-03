@@ -1,15 +1,15 @@
 {
     "endpoint": "GSP",
     "query_params": {
-        "graph": "http://data.semanticweb.org/person/henson-graves"
+        "graph": "http://data.semanticweb.org/person/montiago-labute"
     },
     "headers": {
         "Content-type": "application/n-triples"
     },
-    "method": "PUT",
-    "body": "<http://data.semanticweb.org/person/henson-graves> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "method": "POST",
+    "body": "<http://data.semanticweb.org/person/montiago-labute> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/henson-graves> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/henson-graves> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
-        "expected": ""
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/montiago-labute> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/montiago-labute> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/montiago-labute> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/montiago-labute> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/iswc/2012/industry-proceedings/paper-04> .\n<http://data.semanticweb.org/person/montiago-labute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/montiago-labute> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/yarcdata> .\n<http://data.semanticweb.org/person/montiago-labute> <http://xmlns.com/foaf/0.1/name> \"Montiago Labute\" .\n<http://data.semanticweb.org/person/montiago-labute> <http://www.w3.org/2000/01/rdf-schema#label> \"Montiago Labute\" .\n"
     }
 }
