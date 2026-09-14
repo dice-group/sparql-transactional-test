@@ -1,13 +1,15 @@
 {
-    "endpoint": "UPDATE",
-    "query_params": {},
-    "headers": {
-        "Content-type": "application/sparql-update"
+    "endpoint": "GSP",
+    "query_params": {
+        "graph": "http://data.semanticweb.org/person/simon-cox"
     },
-    "method": "POST",
-    "body": "DELETE DATA { <http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/family_name> \"Nakamizo\" .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/firstName> \"Akiyoshi\" .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/shibaura-institute-of-technology> .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2009/paper/139> .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://xmlns.com/foaf/0.1/name> \"Akiyoshi Nakamizo\" .\n<http://data.semanticweb.org/person/akiyoshi-nakamizo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n }",
+    "headers": {
+        "Content-type": "application/n-triples"
+    },
+    "method": "PUT",
+    "body": "<http://data.semanticweb.org/person/simon-cox> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/akiyoshi-nakamizo> ?p ?o\n}\nWHERE {\n    <http://data.semanticweb.org/person/akiyoshi-nakamizo> ?p ?o .\n    FILTER(!isBlank(?o))\n}",
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/simon-cox> ?p ?o\n}\nWHERE {\n    GRAPH <http://data.semanticweb.org/person/simon-cox> { <http://www.example.org/graph> ?p ?o . FILTER(!isBlank(?o)) }\n}",
         "expected": ""
     }
 }

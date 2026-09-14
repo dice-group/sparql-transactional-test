@@ -1,15 +1,13 @@
 {
-    "endpoint": "GSP",
-    "query_params": {
-        "graph": "http://data.semanticweb.org/person/gregor-heinrich"
-    },
+    "endpoint": "UPDATE",
+    "query_params": {},
     "headers": {
-        "Content-type": "application/n-triples"
+        "Content-type": "application/sparql-update"
     },
     "method": "POST",
-    "body": "<http://data.semanticweb.org/person/gregor-heinrich> <http://www.example.org/test> <http://www.example.org/test/0> .\n",
+    "body": "INSERT DATA { <http://data.semanticweb.org/person/yookyung-jo> <http://www.example.org/test> <http://www.example.org/test/0> .\n };INSERT DATA { GRAPH <http://data.semanticweb.org/person/yookyung-jo> { <http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n } }",
     "validate": {
-        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/gregor-heinrich> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/gregor-heinrich> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/gregor-heinrich> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
-        "expected": "<http://data.semanticweb.org/person/gregor-heinrich> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/conference/iswc/2013/pc-member-at-iswc2013-evaluation-track> .\n<http://data.semanticweb.org/person/gregor-heinrich> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/semafor-systems> .\n<http://data.semanticweb.org/person/gregor-heinrich> <http://www.w3.org/2000/01/rdf-schema#label> \"Gregor Heinrich\" .\n<http://data.semanticweb.org/person/gregor-heinrich> <http://xmlns.com/foaf/0.1/name> \"Gregor Heinrich\" .\n<http://data.semanticweb.org/person/gregor-heinrich> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n"
+        "query": "CONSTRUCT {\n    <http://data.semanticweb.org/person/yookyung-jo> ?pd ?od .\n    <http://www.example.org/graph> ?pn ?on .\n}\nWHERE {\n    { <http://data.semanticweb.org/person/yookyung-jo> ?pd ?od . FILTER(!isBlank(?od)) }\n    UNION    { GRAPH <http://data.semanticweb.org/person/yookyung-jo> { <http://www.example.org/graph> ?pn ?on . FILTER(!isBlank(?on)) } }\n}",
+        "expected": "<http://data.semanticweb.org/person/yookyung-jo> <http://swrc.ontoware.org/ontology#affiliation> <http://data.semanticweb.org/organization/cornell-university> .\n<http://data.semanticweb.org/person/yookyung-jo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n<http://data.semanticweb.org/person/yookyung-jo> <http://www.example.org/test> <http://www.example.org/test/0> .\n<http://data.semanticweb.org/person/yookyung-jo> <http://xmlns.com/foaf/0.1/name> \"Yookyung Jo\" .\n<http://data.semanticweb.org/person/yookyung-jo> <http://www.w3.org/2000/01/rdf-schema#label> \"Yookyung Jo\" .\n<http://data.semanticweb.org/person/yookyung-jo> <http://xmlns.com/foaf/0.1/family_name> \"Jo\" .\n<http://data.semanticweb.org/person/yookyung-jo> <http://xmlns.com/foaf/0.1/firstName> \"Yookyung\" .\n<http://data.semanticweb.org/person/yookyung-jo> <http://xmlns.com/foaf/0.1/made> <http://data.semanticweb.org/conference/www/2011/paper/the-web-of-topics-discovering-the-topology-of-topi> .\n<http://data.semanticweb.org/person/yookyung-jo> <http://xmlns.com/foaf/0.1/mbox_sha1sum> \"ecffec0fe2753cb4b0651ed8aaa1bcf826f9d989\" .\n<http://www.example.org/graph> <http://www.example.org/test> <http://www.example.org/test/0> .\n"
     }
 }
