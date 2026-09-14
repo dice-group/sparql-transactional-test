@@ -3,7 +3,7 @@ use crate::{
     Query, WorkerBehaviour,
 };
 use anyhow::Context;
-use reqwest::{header, Client, Url};
+use reqwest::{header, Client, StatusCode, Url};
 use serde::Deserialize;
 use std::{collections::HashMap, fs::File, io, ops::ControlFlow, path::Path};
 
@@ -156,6 +156,12 @@ impl UpdateWorker {
             .await;
 
         match resp {
+            Ok(resp)
+                if resp.status() == StatusCode::SERVICE_UNAVAILABLE
+                    && self.behav == WorkerBehaviour::IgnoreConnectionError =>
+            {
+                Ok(ControlFlow::Continue(()))
+            },
             Ok(resp) => {
                 resp.error_for_status()?;
                 Ok(ControlFlow::Break(()))
